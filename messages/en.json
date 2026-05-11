@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "home": "Home",
+    "calculator": "Calculator",
+    "compare": "Compare",
+    "models": "Models"
+  },
+  "home": {
+    "hero": {
+      "title": "AI Model Pricing, Simplified",
+      "subtitle": "Compare token prices, context windows, and capabilities across all major AI models. Always up to date.",
+      "cta": "Explore Models"
+    },
+    "priceTable": {
+      "title": "Model Pricing",
+      "subtitle": "Input & output prices per 1M tokens (USD)",
+      "columns": {
+        "model": "Model",
+        "provider": "Provider",
+        "inputPrice": "Input / 1M",
+        "outputPrice": "Output / 1M",
+        "contextWindow": "Context",
+        "dataSource": "Source"
+      }
+    },
+    "leaderboard": {
+      "title": "Leaderboard",
+      "cheapestInput": "Cheapest Input",
+      "cheapestOutput": "Cheapest Output",
+      "longestContext": "Longest Context"
+    }
+  },
+  "calculator": {
+    "title": "Token Calculator",
+    "subtitle": "Estimate your API costs before you run them.",
+    "inputLabel": "Your text",
+    "inputPlaceholder": "Paste or type your text here…",
+    "modelLabel": "Model",
+    "selectModel": "Select a model",
+    "results": {
+      "tokenCount": "Token Count",
+      "inputCost": "Input Cost",
+      "outputCost": "Output Cost",
+      "totalCost": "Total Cost (est.)"
+    },
+    "outputTokensLabel": "Expected output tokens",
+    "clear": "Clear"
+  },
+  "compare": {
+    "title": "Compare Models",
+    "subtitle": "Select two models to compare their pricing and capabilities side by side.",
+    "model1": "Model A",
+    "model2": "Model B",
+    "selectModel": "Select a model",
+    "table": {
+      "feature": "Feature",
+      "inputPrice": "Input Price / 1M",
+      "outputPrice": "Output Price / 1M",
+      "contextWindow": "Context Window",
+      "maxOutput": "Max Output",
+      "vision": "Vision",
+      "tools": "Tool Use",
+      "releaseDate": "Release Date",
+      "dataSource": "Data Source"
+    },
+    "yes": "Yes",
+    "no": "No"
+  },
+  "model": {
+    "pricing": "Pricing",
+    "inputPrice": "Input",
+    "outputPrice": "Output",
+    "cacheWrite": "Cache Write",
+    "cacheRead": "Cache Read",
+    "perMillionTokens": "per 1M tokens",
+    "contextWindow": "Context Window",
+    "maxOutput": "Max Output",
+    "tokens": "tokens",
+    "capabilities": "Capabilities",
+    "vision": "Vision",
+    "tools": "Tool Use",
+    "releaseDate": "Release Date",
+    "dataSource": "Data Source",
+    "tags": "Tags",
+    "backToModels": "← All Models"
+  },
+  "dataSource": {
+    "official": "Official",
+    "estimated": "Estimated",
+    "experimental": "Experimental"
+  },
+  "footer": {
+    "description": "The most comprehensive AI model pricing reference. Updated regularly.",
+    "links": "Links",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "disclaimer": "Prices are for reference only. Always verify with the official provider.",
+    "copyright": "© {year} TokenCenter. All rights reserved."
+  },
+  "language": {
+    "select": "Language",
+    "en": "English",
+    "zh": "中文",
+    "fr": "Français",
+    "es": "Español",
+    "pt": "Português",
+    "de": "Deutsch",
+    "ja": "日本語",
+    "ar": "العربية",
+    "ko": "한국어",
+    "id": "Indonesia",
+    "ru": "Русский",
+    "vi": "Tiếng Việt"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "tokens": "tokens",
+    "perMillionTokens": "/ 1M tokens",
+    "notAvailable": "N/A"
+  }
+}
