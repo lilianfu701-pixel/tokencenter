@@ -39,11 +39,27 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+const PAGE_META: Record<string, { title: string; description: string }> = {
+  en: { title: "Compare AI Models, Pricing & Performance", description: "Explore the best AI models for coding, writing, image generation, video, reasoning, and APIs. Compare ChatGPT vs Gemini vs Claude and more." },
+  zh: { title: "比较 AI 大模型：价格、性能与分类", description: "探索最佳 AI 大模型：ChatGPT、Gemini、Claude、DeepSeek 等，涵盖编程、写作、图像生成、视频、推理与 API 定价。" },
+  ja: { title: "AIモデル比較：価格・性能・分類", description: "ChatGPT、Gemini、Claude、DeepSeekなど、コーディング・ライティング・画像生成・動画・推論・APIに最適なAIモデルを比較。" },
+  ko: { title: "AI 모델 비교: 가격, 성능 및 분류", description: "코딩, 글쓰기, 이미지 생성, 동영상, 추론, API에 최적인 AI 모델을 비교하세요. ChatGPT vs Gemini vs Claude." },
+  ru: { title: "Сравнение ИИ-моделей: цены, производительность и классификация", description: "Изучите лучшие ИИ-модели для программирования, написания текстов, генерации изображений и видео. ChatGPT vs Gemini vs Claude." },
+  fr: { title: "Comparer les modèles IA : Prix, Performance et Classement", description: "Découvrez les meilleurs modèles d'IA pour le codage, la rédaction, la génération d'images et de vidéos. ChatGPT vs Gemini vs Claude." },
+  de: { title: "KI-Modelle vergleichen: Preise, Leistung und Klassifikation", description: "Entdecken Sie die besten KI-Modelle für Coding, Schreiben, Bildgenerierung und Video. ChatGPT vs Gemini vs Claude." },
+  es: { title: "Comparar modelos IA: Precios, Rendimiento y Clasificación", description: "Explora los mejores modelos de IA para programación, escritura, generación de imágenes y vídeos. ChatGPT vs Gemini vs Claude." },
+  pt: { title: "Comparar modelos IA: Preços, Desempenho e Classificação", description: "Explore os melhores modelos de IA para programação, escrita, geração de imagens e vídeos. ChatGPT vs Gemini vs Claude." },
+  ar: { title: "مقارنة نماذج الذكاء الاصطناعي: الأسعار والأداء والتصنيف", description: "استكشف أفضل نماذج الذكاء الاصطناعي للبرمجة والكتابة وتوليد الصور والفيديو. ChatGPT مقابل Gemini مقابل Claude." },
+  id: { title: "Bandingkan Model AI: Harga, Kinerja, dan Klasifikasi", description: "Jelajahi model AI terbaik untuk coding, penulisan, pembuatan gambar dan video. ChatGPT vs Gemini vs Claude." },
+  vi: { title: "So sánh mô hình AI: Giá, Hiệu suất và Phân loại", description: "Khám phá các mô hình AI tốt nhất cho lập trình, viết lách, tạo ảnh và video. ChatGPT vs Gemini vs Claude." },
+};
+
 export async function generateMetadata({ params }: { params: Params }) {
-  await params;
+  const { locale } = await params;
+  const meta = PAGE_META[locale] ?? PAGE_META.en;
   return {
-    title: "Compare AI Models, Pricing & Performance | TokenCenter",
-    description: "Explore the best AI models for coding, writing, image generation, video, reasoning, and APIs.",
+    title: meta.title,
+    description: meta.description,
   };
 }
 
@@ -84,7 +100,46 @@ export default async function HomePage({ params }: { params: Params }) {
   const latest = getLatestModels();
   const apiModels = models.filter((m) => m.pricing.input > 0);
 
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "AI Language Models Comparison",
+    description: "Comprehensive list of AI models with pricing and capabilities",
+    numberOfItems: apiModels.length,
+    itemListElement: apiModels.map((m, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: m.name,
+      url: `https://tokencenter.cc/models/${m.id}`,
+      item: {
+        "@type": "SoftwareApplication",
+        name: m.name,
+        applicationCategory: "Artificial Intelligence",
+        operatingSystem: "Cloud",
+        offers: m.pricing.input > 0 ? {
+          "@type": "Offer",
+          price: m.pricing.input,
+          priceCurrency: "USD",
+          description: "Per 1M input tokens",
+        } : undefined,
+      },
+    })),
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "What is the cheapest AI model?", acceptedAnswer: { "@type": "Answer", text: "Gemini 2.0 Flash at $0.10/1M input tokens is one of the cheapest capable AI models available via API." } },
+      { "@type": "Question", name: "Which AI model is best for coding?", acceptedAnswer: { "@type": "Answer", text: "Claude Opus 4.7 and DeepSeek V3 are consistently rated highest for coding tasks in 2026." } },
+      { "@type": "Question", name: "What is the largest context window?", acceptedAnswer: { "@type": "Answer", text: "Gemini 2.5 Pro and GPT-4.1 both support up to 1 million tokens of context window." } },
+    ],
+  };
+
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     <div className="mx-auto max-w-7xl px-4 sm:px-6 space-y-20 pb-20">
 
       {/* Hero */}
@@ -280,5 +335,6 @@ export default async function HomePage({ params }: { params: Params }) {
         </section>
       )}
     </div>
+    </>
   );
 }

@@ -13,13 +13,37 @@ export function generateStaticParams() {
   );
 }
 
+const BASE_URL = "https://tokencenter.cc";
+
 export async function generateMetadata({ params }: { params: Params }) {
-  const { id } = await params;
+  const { locale, id } = await params;
   const model = getModelById(id);
   if (!model) return {};
+
+  const description = locale === "zh" ? model.description.zh : model.description.en;
+  const priceNote = model.pricing.input > 0
+    ? ` Input: $${model.pricing.input}/1M tokens.`
+    : model.pricing.note ? ` ${model.pricing.note}.` : "";
+
+  const languages: Record<string, string> = {};
+  for (const l of locales) {
+    languages[l] = l === "en" ? `${BASE_URL}/models/${id}` : `${BASE_URL}/${l}/models/${id}`;
+  }
+  languages["x-default"] = `${BASE_URL}/models/${id}`;
+
   return {
-    title: `${model.name} — Pricing & Details | TokenCenter`,
-    description: `${model.description.en} Input: $${model.pricing.input}/1M tokens.`,
+    title: `${model.name} — Pricing, Features & Comparison`,
+    description: `${description}${priceNote} Compare ${model.name} with other AI models on TokenCenter.`,
+    keywords: `${model.name}, ${model.provider} AI model, ${model.name} pricing, ${model.name} API, ${model.name} vs, LLM comparison`,
+    alternates: {
+      canonical: locale === "en" ? `${BASE_URL}/models/${id}` : `${BASE_URL}/${locale}/models/${id}`,
+      languages,
+    },
+    openGraph: {
+      title: `${model.name} — Pricing & Details`,
+      description: `${description}${priceNote}`,
+      type: "article",
+    },
   };
 }
 
@@ -75,7 +99,49 @@ export default async function ModelDetailPage({ params }: { params: Params }) {
   const description = locale === "zh" ? model.description.zh : model.description.en;
   const relatedCompare = COMPARE_PRESETS.filter((p) => p.left === id || p.right === id);
 
+  const modelSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: model.name,
+    description: model.description.en,
+    applicationCategory: "Artificial Intelligence",
+    operatingSystem: "Cloud",
+    url: `${BASE_URL}/models/${id}`,
+    provider: { "@type": "Organization", name: model.provider },
+    datePublished: model.releaseDate,
+    ...(model.pricing.input > 0 && {
+      offers: {
+        "@type": "Offer",
+        price: model.pricing.input,
+        priceCurrency: "USD",
+        description: "Per 1M input tokens",
+      },
+    }),
+    ...(model.ratingCoding > 0 && {
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: ((model.ratingCoding + model.ratingWriting + model.ratingReasoning) / 3).toFixed(1),
+        bestRating: "5",
+        worstRating: "1",
+        ratingCount: "1",
+      },
+    }),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "TokenCenter", item: BASE_URL },
+      { "@type": "ListItem", position: 2, name: "Models", item: `${BASE_URL}/models` },
+      { "@type": "ListItem", position: 3, name: model.name, item: `${BASE_URL}/models/${id}` },
+    ],
+  };
+
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(modelSchema) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 space-y-8">
       <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="h-4 w-4" /> Back to Models
@@ -236,6 +302,7 @@ export default async function ModelDetailPage({ params }: { params: Params }) {
         </Link>
       </div>
     </div>
+    </>
   );
 }
 
