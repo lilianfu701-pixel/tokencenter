@@ -57,12 +57,12 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 }
 
-const CATEGORY_DEFS: { id: ModelCategory; icon: string; examples: string }[] = [
-  { id: "chat", icon: "💬", examples: "GPT / Claude / Gemini" },
-  { id: "coding", icon: "💻", examples: "Claude / DeepSeek / Qwen" },
-  { id: "reasoning", icon: "🧠", examples: "DeepSeek R1 / o-series" },
-  { id: "image", icon: "🖼️", examples: "FLUX / Midjourney / SDXL" },
-  { id: "video", icon: "🎬", examples: "Sora / Kling / Veo / Runway" },
+const CATEGORY_DEFS: { id: ModelCategory; icon: string }[] = [
+  { id: "chat", icon: "💬" },
+  { id: "coding", icon: "💻" },
+  { id: "reasoning", icon: "🧠" },
+  { id: "image", icon: "🖼️" },
+  { id: "video", icon: "🎬" },
 ];
 
 const PROVIDER_BADGE: Record<string, string> = {
@@ -91,10 +91,19 @@ export default async function HomePage({ params }: { params: Params }) {
   const latest = getLatestModels();
   const apiModels = models.filter((m) => m.pricing.input > 0);
 
-  const CATEGORIES = CATEGORY_DEFS.map((c) => ({
-    ...c,
-    label: t(`categories.${c.id}`),
-  }));
+  const CATEGORIES = CATEGORY_DEFS.map((c) => {
+    const catModels = models
+      .filter((m) => m.category === c.id)
+      .sort((a, b) => (b.isTrending ? 1 : 0) - (a.isTrending ? 1 : 0))
+      .slice(0, 3);
+    return {
+      ...c,
+      name: tCat(`${c.id}Name` as Parameters<typeof tCat>[0]),
+      desc: tCat(`${c.id}Desc` as Parameters<typeof tCat>[0]),
+      count: models.filter((m) => m.category === c.id).length,
+      featured: catModels,
+    };
+  });
 
   const BEST_FOR = [
     { labelKey: "bestFor.coding", models: ["Claude Opus 4.7", "DeepSeek V3", "GPT-4.1"], icon: "💻", color: "text-blue-400", bg: "bg-blue-500/10 border-blue-500/20" },
@@ -192,20 +201,51 @@ export default async function HomePage({ params }: { params: Params }) {
       </section>
 
       {/* Categories */}
-      <section className="space-y-4">
+      <section className="space-y-6">
         <h2 className="text-xl font-semibold text-foreground">{t("categories.title")}</h2>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="space-y-4">
           {CATEGORIES.map((cat) => (
-            <Link key={cat.id} href={`#${cat.id}`}
-              className="group flex flex-col gap-3 rounded-xl border border-border bg-card p-4 transition-all hover:border-blue-500/50 hover:bg-accent">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-500/10 text-xl group-hover:bg-blue-500/20">
-                {cat.icon}
+            <div key={cat.id} className="rounded-xl border border-border bg-card overflow-hidden">
+              {/* Category header */}
+              <div className="flex items-start justify-between gap-4 px-5 py-4 border-b border-border">
+                <div className="flex items-start gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-xl">{cat.icon}</span>
+                  <div>
+                    <p className="font-semibold text-foreground">{cat.name}</p>
+                    <p className="text-sm text-muted-foreground mt-0.5">{cat.desc}</p>
+                  </div>
+                </div>
+                <Link href={`/category/${cat.id}`}
+                  className="shrink-0 text-xs text-blue-400 hover:underline whitespace-nowrap mt-1">
+                  {tCat("viewAll", { count: cat.count })}
+                </Link>
               </div>
-              <div>
-                <p className="font-medium text-foreground text-sm">{cat.label}</p>
-                <p className="text-xs text-muted-foreground mt-0.5">{cat.examples}</p>
+              {/* Featured models */}
+              <div className="divide-y divide-border">
+                {cat.featured.map((m) => (
+                  <div key={m.id} className="flex items-center gap-4 px-5 py-3 hover:bg-accent transition-colors">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium text-foreground text-sm">{m.name}</span>
+                        <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${PROVIDER_BADGE[m.provider] ?? "bg-muted text-muted-foreground"}`}>
+                          {m.provider}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="text-right shrink-0">
+                      {m.pricing.input > 0
+                        ? <span className="font-mono text-sm text-foreground">${m.pricing.input}<span className="text-xs text-muted-foreground">/1M</span></span>
+                        : <span className="text-xs text-muted-foreground">{tCat("freePrice")}</span>
+                      }
+                    </div>
+                    <Link href={`/models/${m.id}`}
+                      className="shrink-0 text-xs text-blue-400 hover:underline">
+                      {t("trending.viewDetails")}
+                    </Link>
+                  </div>
+                ))}
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>

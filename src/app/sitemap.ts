@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { locales } from "@/i18n/routing";
 import { models, COMPARE_PRESETS, PROVIDER_SLUGS } from "@/data/models";
 
+const CATEGORIES = ["chat", "coding", "reasoning", "image", "video"];
+
 const BASE_URL = "https://tokencenter.cc";
 
 function buildAlternates(path: string) {
@@ -46,5 +48,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: buildAlternates(`/providers/${slug}`),
   }));
 
-  return [...staticRoutes, ...modelEntries, ...compareEntries, ...providerEntries];
+  const categoryEntries: MetadataRoute.Sitemap = CATEGORIES.map((cat) => ({
+    url: `${BASE_URL}/category/${cat}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.75,
+    alternates: buildAlternates(`/category/${cat}`),
+  }));
+
+  return [...staticRoutes, ...modelEntries, ...compareEntries, ...providerEntries, ...categoryEntries];
 }
