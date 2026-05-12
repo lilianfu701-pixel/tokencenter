@@ -52,8 +52,8 @@ interface CompareRowProps {
 
 function CompareRow({ label, left, right, winner }: CompareRowProps) {
   return (
-    <tr className="border-b border-neutral-100 last:border-0">
-      <td className="py-3 pr-4 text-sm text-neutral-500 w-40">{label}</td>
+    <tr className="border-b border-border last:border-0">
+      <td className="py-3 pr-4 text-sm text-muted-foreground w-40">{label}</td>
       <td className="py-3 px-4 text-sm text-center relative">
         {winner === "left" && (
           <span className="absolute left-2 top-1/2 -translate-y-1/2 h-2 w-2 rounded-full bg-blue-500" />
@@ -75,13 +75,13 @@ function ModelColumn({ model, tSource }: { model: Model; tSource: ReturnType<typ
 
   return (
     <div className="text-center">
-      <p className="font-semibold text-neutral-900">{model.name}</p>
-      <p className="text-sm text-neutral-500">{model.provider}</p>
+      <p className="font-semibold text-foreground">{model.name}</p>
+      <p className="text-sm text-muted-foreground">{model.provider}</p>
       <div className="mt-2 flex flex-wrap justify-center gap-1">
         {model.tags.slice(0, 3).map((tag) => (
           <span
             key={tag}
-            className="rounded-full border border-neutral-200 bg-neutral-50 px-2 py-0.5 text-xs text-neutral-600"
+            className="rounded-full border border-border bg-card px-2 py-0.5 text-xs text-muted-foreground"
           >
             {tag}
           </span>
@@ -104,18 +104,18 @@ export default function CompareClient() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 space-y-8">
       <div>
-        <h1 className="text-3xl font-semibold tracking-tight text-neutral-900">
+        <h1 className="text-3xl font-semibold tracking-tight text-foreground">
           {t("title")}
         </h1>
-        <p className="mt-1 text-neutral-500">{t("subtitle")}</p>
+        <p className="mt-1 text-muted-foreground">{t("subtitle")}</p>
       </div>
 
       {/* Model selectors */}
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
-          <label className="text-sm font-medium text-neutral-700">{t("model1")}</label>
+          <label className="text-sm font-medium text-foreground">{t("model1")}</label>
           <Select value={leftId} onValueChange={(v) => setLeftId(v ?? "")}>
-            <SelectTrigger className="border-neutral-200">
+            <SelectTrigger className="border-border">
               <SelectValue placeholder={t("selectModel")} />
             </SelectTrigger>
             <SelectContent>
@@ -129,9 +129,9 @@ export default function CompareClient() {
         </div>
 
         <div className="space-y-2">
-          <label className="text-sm font-medium text-neutral-700">{t("model2")}</label>
+          <label className="text-sm font-medium text-foreground">{t("model2")}</label>
           <Select value={rightId} onValueChange={(v) => setRightId(v ?? "")}>
-            <SelectTrigger className="border-neutral-200">
+            <SelectTrigger className="border-border">
               <SelectValue placeholder={t("selectModel")} />
             </SelectTrigger>
             <SelectContent>
@@ -147,11 +147,11 @@ export default function CompareClient() {
 
       {/* Comparison table */}
       {left && right ? (
-        <div className="overflow-hidden rounded-xl border border-neutral-200">
+        <div className="overflow-hidden rounded-xl border border-border">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-neutral-200 bg-neutral-50">
-                <th className="py-4 pr-4 text-left text-sm font-medium text-neutral-600 w-40">
+              <tr className="border-b border-border bg-card">
+                <th className="py-4 pr-4 text-left text-sm font-medium text-muted-foreground w-40">
                   {t("table.feature")}
                 </th>
                 <th className="py-4 px-4 text-center">
@@ -247,8 +247,8 @@ export default function CompareClient() {
               />
               <CompareRow
                 label={t("table.releaseDate")}
-                left={<span className="text-neutral-600">{left.releaseDate}</span>}
-                right={<span className="text-neutral-600">{right.releaseDate}</span>}
+                left={<span className="text-muted-foreground">{left.releaseDate}</span>}
+                right={<span className="text-muted-foreground">{right.releaseDate}</span>}
               />
               <CompareRow
                 label={t("table.dataSource")}
@@ -271,7 +271,7 @@ export default function CompareClient() {
           </table>
         </div>
       ) : (
-        <div className="flex h-48 items-center justify-center rounded-xl border border-dashed border-neutral-200 text-sm text-neutral-400">
+        <div className="flex h-48 items-center justify-center rounded-xl border border-dashed border-border text-sm text-muted-foreground">
           {t("selectModel")} ↑
         </div>
       )}

@@ -43,11 +43,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-neutral-200 bg-white/90 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-sm">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 font-semibold text-neutral-900">
-          <Zap className="h-4 w-4 text-blue-500" />
+        <Link href="/" className="flex items-center gap-2 font-semibold text-foreground">
+          <Zap className="h-4 w-4 text-blue-400" />
           <span>TokenCenter</span>
         </Link>
 
@@ -57,7 +57,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-neutral-600 transition-colors hover:text-neutral-900"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </Link>
@@ -71,7 +71,7 @@ export default function Header() {
             <Button
               variant="ghost"
               size="sm"
-              className="gap-1.5 text-neutral-600"
+              className="gap-1.5 text-muted-foreground hover:text-foreground"
               onClick={() => setLangOpen((o) => !o)}
             >
               <Globe className="h-4 w-4" />
@@ -80,17 +80,14 @@ export default function Header() {
 
             {langOpen && (
               <>
-                <div
-                  className="fixed inset-0 z-10"
-                  onClick={() => setLangOpen(false)}
-                />
-                <div className="absolute right-0 z-20 mt-1 w-40 rounded-lg border border-neutral-200 bg-white py-1 shadow-lg">
+                <div className="fixed inset-0 z-10" onClick={() => setLangOpen(false)} />
+                <div className="absolute right-0 z-20 mt-1 w-40 rounded-lg border border-border bg-card py-1 shadow-lg">
                   {locales.map((l) => (
                     <button
                       key={l}
                       onClick={() => switchLocale(l)}
-                      className={`flex w-full items-center gap-2 px-3 py-1.5 text-left text-sm transition-colors hover:bg-neutral-50 ${
-                        l === locale ? "font-medium text-blue-600" : "text-neutral-700"
+                      className={`flex w-full items-center gap-2 px-3 py-1.5 text-left text-sm transition-colors hover:bg-accent ${
+                        l === locale ? "font-medium text-blue-400" : "text-muted-foreground"
                       }`}
                     >
                       {localeNames[l]}
@@ -105,7 +102,7 @@ export default function Header() {
           <Button
             variant="ghost"
             size="sm"
-            className="md:hidden"
+            className="md:hidden text-muted-foreground"
             onClick={() => setMobileOpen((o) => !o)}
           >
             {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
@@ -115,12 +112,12 @@ export default function Header() {
 
       {/* Mobile nav */}
       {mobileOpen && (
-        <div className="border-t border-neutral-200 bg-white px-4 py-3 md:hidden">
+        <div className="border-t border-border bg-background px-4 py-3 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="block py-2 text-sm text-neutral-600 hover:text-neutral-900"
+              className="block py-2 text-sm text-muted-foreground hover:text-foreground"
               onClick={() => setMobileOpen(false)}
             >
               {link.label}
