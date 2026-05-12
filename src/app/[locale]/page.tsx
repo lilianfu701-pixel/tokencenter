@@ -3,17 +3,12 @@ import { getTranslations } from "next-intl/server";
 import { locales, type Locale } from "@/i18n/routing";
 import {
   models,
-  getTrendingModels,
   getLatestModels,
   COMPARE_PRESETS,
   type ModelCategory,
 } from "@/data/models";
 import Link from "next/link";
-import {
-  ArrowRight,
-  TrendingUp,
-  Star,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 type Params = Promise<{ locale: string }>;
 
@@ -51,78 +46,61 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
 export async function generateMetadata({ params }: { params: Params }) {
   const { locale } = await params;
   const meta = PAGE_META[locale] ?? PAGE_META.en;
-  return {
-    title: meta.title,
-    description: meta.description,
-  };
+  return { title: meta.title, description: meta.description };
 }
 
 const CATEGORY_DEFS: { id: ModelCategory; icon: string }[] = [
-  { id: "chat", icon: "💬" },
-  { id: "coding", icon: "💻" },
+  { id: "chat",      icon: "💬" },
+  { id: "coding",    icon: "💻" },
   { id: "reasoning", icon: "🧠" },
-  { id: "image", icon: "🖼️" },
-  { id: "video", icon: "🎬" },
+  { id: "image",     icon: "🖼️" },
+  { id: "video",     icon: "🎬" },
 ];
 
 const PROVIDER_BADGE: Record<string, string> = {
-  OpenAI: "bg-emerald-500/15 text-emerald-400",
-  Anthropic: "bg-orange-500/15 text-orange-400",
-  Google: "bg-blue-500/15 text-blue-400",
-  DeepSeek: "bg-sky-500/15 text-sky-400",
-  Alibaba: "bg-violet-500/15 text-violet-400",
-  Moonshot: "bg-indigo-500/15 text-indigo-400",
-  "Black Forest Labs": "bg-rose-500/15 text-rose-400",
-  Midjourney: "bg-teal-500/15 text-teal-400",
-  "Stability AI": "bg-amber-500/15 text-amber-400",
-  Runway: "bg-pink-500/15 text-pink-400",
-  "Kling AI": "bg-cyan-500/15 text-cyan-400",
+  OpenAI:             "bg-emerald-500/15 text-emerald-400",
+  Anthropic:          "bg-orange-500/15 text-orange-400",
+  Google:             "bg-blue-500/15 text-blue-400",
+  DeepSeek:           "bg-sky-500/15 text-sky-400",
+  Alibaba:            "bg-violet-500/15 text-violet-400",
+  Moonshot:           "bg-indigo-500/15 text-indigo-400",
+  "Black Forest Labs":"bg-rose-500/15 text-rose-400",
+  Midjourney:         "bg-teal-500/15 text-teal-400",
+  "Stability AI":     "bg-amber-500/15 text-amber-400",
+  Runway:             "bg-pink-500/15 text-pink-400",
+  "Kling AI":         "bg-cyan-500/15 text-cyan-400",
 };
 
 export default async function HomePage({ params }: { params: Params }) {
   const { locale } = await params;
   setRequestLocale(locale as Locale);
 
-  const t = await getTranslations({ locale, namespace: "home" });
+  const t    = await getTranslations({ locale, namespace: "home" });
   const tCat = await getTranslations({ locale, namespace: "category" });
-  const tSpeed = await getTranslations({ locale, namespace: "speedLabel" });
 
-  const trending = getTrendingModels();
   const latest = getLatestModels();
-  const apiModels = models.filter((m) => m.pricing.input > 0);
 
+  // Build per-category model lists (trending first, then by input price)
   const CATEGORIES = CATEGORY_DEFS.map((c) => {
     const catModels = models
       .filter((m) => m.category === c.id)
-      .sort((a, b) => (b.isTrending ? 1 : 0) - (a.isTrending ? 1 : 0))
-      .slice(0, 3);
+      .sort((a, b) => {
+        if (a.isTrending && !b.isTrending) return -1;
+        if (!a.isTrending && b.isTrending) return 1;
+        if (a.pricing.input === 0 && b.pricing.input > 0) return 1;
+        if (b.pricing.input === 0 && a.pricing.input > 0) return -1;
+        return a.pricing.input - b.pricing.input;
+      });
     return {
       ...c,
       name: tCat(`${c.id}Name` as Parameters<typeof tCat>[0]),
       desc: tCat(`${c.id}Desc` as Parameters<typeof tCat>[0]),
-      count: models.filter((m) => m.category === c.id).length,
-      featured: catModels,
+      catModels,
     };
   });
 
-  const BEST_FOR = [
-    { labelKey: "bestFor.coding", models: ["Claude Opus 4.7", "DeepSeek V3", "GPT-4.1"], icon: "💻", color: "text-blue-400", bg: "bg-blue-500/10 border-blue-500/20" },
-    { labelKey: "bestFor.writing", models: ["Claude Sonnet 4.6", "Gemini 2.5 Pro", "GPT-4o"], icon: "✍️", color: "text-purple-400", bg: "bg-purple-500/10 border-purple-500/20" },
-    { labelKey: "bestFor.cheap", models: ["Gemini 2.0 Flash", "DeepSeek V3", "Claude Haiku 4.5"], icon: "💰", color: "text-green-400", bg: "bg-green-500/10 border-green-500/20" },
-    { labelKey: "bestFor.video", models: ["Sora", "Kling AI", "Veo 2"], icon: "🎬", color: "text-orange-400", bg: "bg-orange-500/10 border-orange-500/20" },
-  ];
-
-  const tableHeaders = [
-    t("pricingTable.colModel"),
-    t("pricingTable.colProvider"),
-    t("pricingTable.colCategory"),
-    t("pricingTable.colInput"),
-    t("pricingTable.colOutput"),
-    t("pricingTable.colContext"),
-    t("pricingTable.colApi"),
-    t("pricingTable.colDetails"),
-  ];
-
+  // Schema.org JSON-LD
+  const apiModels = models.filter((m) => m.pricing.input > 0);
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -139,12 +117,7 @@ export default async function HomePage({ params }: { params: Params }) {
         name: m.name,
         applicationCategory: "Artificial Intelligence",
         operatingSystem: "Cloud",
-        offers: m.pricing.input > 0 ? {
-          "@type": "Offer",
-          price: m.pricing.input,
-          priceCurrency: "USD",
-          description: "Per 1M input tokens",
-        } : undefined,
+        offers: { "@type": "Offer", price: m.pricing.input, priceCurrency: "USD" },
       },
     })),
   };
@@ -153,22 +126,22 @@ export default async function HomePage({ params }: { params: Params }) {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "What is the cheapest AI model?", acceptedAnswer: { "@type": "Answer", text: "Gemini 2.0 Flash at $0.10/1M input tokens is one of the cheapest capable AI models available via API." } },
-      { "@type": "Question", name: "Which AI model is best for coding?", acceptedAnswer: { "@type": "Answer", text: "Claude Opus 4.7 and DeepSeek V3 are consistently rated highest for coding tasks in 2026." } },
-      { "@type": "Question", name: "What is the largest context window?", acceptedAnswer: { "@type": "Answer", text: "Gemini 2.5 Pro and GPT-4.1 both support up to 1 million tokens of context window." } },
+      { "@type": "Question", name: "What is the cheapest AI model?",       acceptedAnswer: { "@type": "Answer", text: "Gemini 2.0 Flash at $0.10/1M input tokens is one of the cheapest capable AI models available via API." } },
+      { "@type": "Question", name: "Which AI model is best for coding?",   acceptedAnswer: { "@type": "Answer", text: "Claude Opus 4.7 and DeepSeek V3 are consistently rated highest for coding tasks in 2026." } },
+      { "@type": "Question", name: "What is the largest context window?",  acceptedAnswer: { "@type": "Answer", text: "Gemini 2.5 Pro and GPT-4.1 both support up to 1 million tokens of context window." } },
     ],
   };
 
-  const modelDesc = (m: typeof trending[0]) =>
-    locale === "zh" ? m.description.zh : m.description.en;
+  const trendingLabel  = locale === "zh" ? "热门" : "Hot";
+  const latestLabel    = locale === "zh" ? "最新" : "New";
 
   return (
     <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 space-y-20 pb-20">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 space-y-16 pb-20">
 
-      {/* Hero */}
+      {/* ── Hero ── */}
       <section className="pt-16 pb-4 text-center space-y-6">
         <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground">
           <span className="h-1.5 w-1.5 rounded-full bg-blue-400 inline-block" />
@@ -182,10 +155,12 @@ export default async function HomePage({ params }: { params: Params }) {
           {t("hero.subtitle")}
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
-          <Link href="/compare" className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-600">
+          <Link href="/compare"
+            className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-600">
             {t("hero.compareBtn")} <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link href="#pricing" className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-accent">
+          <Link href="#chat"
+            className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-accent">
             {t("hero.pricingBtn")}
           </Link>
         </div>
@@ -200,114 +175,115 @@ export default async function HomePage({ params }: { params: Params }) {
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="space-y-6">
-        <h2 className="text-xl font-semibold text-foreground">{t("categories.title")}</h2>
-        <div className="space-y-4">
-          {CATEGORIES.map((cat) => (
-            <div key={cat.id} className="rounded-xl border border-border bg-card overflow-hidden">
-              {/* Category header */}
-              <div className="flex items-start justify-between gap-4 px-5 py-4 border-b border-border">
-                <div className="flex items-start gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-xl">{cat.icon}</span>
-                  <div>
-                    <p className="font-semibold text-foreground">{cat.name}</p>
-                    <p className="text-sm text-muted-foreground mt-0.5">{cat.desc}</p>
-                  </div>
-                </div>
-                <Link href={`/category/${cat.id}`}
-                  className="shrink-0 text-xs text-blue-400 hover:underline whitespace-nowrap mt-1">
-                  {tCat("viewAll", { count: cat.count })}
-                </Link>
+      {/* ── Category Sections (one full table per category) ── */}
+      <div className="space-y-12">
+        {CATEGORIES.map((cat) => (
+          <section key={cat.id} id={cat.id} className="space-y-0">
+
+            {/* Category header */}
+            <div className="flex items-start gap-3 mb-4">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-500/10 text-2xl">
+                {cat.icon}
+              </span>
+              <div>
+                <h2 className="text-xl font-semibold text-foreground">{cat.name}</h2>
+                <p className="text-sm text-muted-foreground mt-0.5">{cat.desc}</p>
               </div>
-              {/* Featured models */}
-              <div className="divide-y divide-border">
-                {cat.featured.map((m) => (
-                  <div key={m.id} className="flex items-center gap-4 px-5 py-3 hover:bg-accent transition-colors">
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
-                        <span className="font-medium text-foreground text-sm">{m.name}</span>
+            </div>
+
+            {/* Full model table */}
+            <div className="overflow-x-auto rounded-xl border border-border">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-border bg-card">
+                    <th className="px-4 py-3 text-left font-medium text-muted-foreground">{tCat("colModel")}</th>
+                    <th className="px-4 py-3 text-left font-medium text-muted-foreground">{tCat("colProvider")}</th>
+                    <th className="px-4 py-3 text-right font-medium text-muted-foreground">{tCat("colInput")}</th>
+                    <th className="px-4 py-3 text-right font-medium text-muted-foreground">{tCat("colOutput")}</th>
+                    <th className="px-4 py-3 text-right font-medium text-muted-foreground">{tCat("colContext")}</th>
+                    <th className="px-4 py-3 text-center font-medium text-muted-foreground">{tCat("colApi")}</th>
+                    <th className="px-4 py-3 text-left font-medium text-muted-foreground">{tCat("colDetails")}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cat.catModels.map((m, i) => (
+                    <tr key={m.id}
+                      className={`border-b border-border last:border-0 hover:bg-accent transition-colors ${i % 2 === 0 ? "" : "bg-card/30"}`}>
+
+                      {/* Model name + desc + badges */}
+                      <td className="px-4 py-3">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <Link href={`/models/${m.id}`}
+                            className="font-medium text-foreground hover:text-blue-400 transition-colors">
+                            {m.name}
+                          </Link>
+                          {m.isTrending && (
+                            <span className="rounded-full bg-orange-500/15 px-1.5 py-0.5 text-xs text-orange-400">{trendingLabel}</span>
+                          )}
+                          {m.isLatest && (
+                            <span className="rounded-full bg-green-500/15 px-1.5 py-0.5 text-xs text-green-400">{latestLabel}</span>
+                          )}
+                        </div>
+                        <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1 max-w-xs">
+                          {locale === "zh" ? m.description.zh : m.description.en}
+                        </p>
+                      </td>
+
+                      {/* Provider */}
+                      <td className="px-4 py-3">
                         <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${PROVIDER_BADGE[m.provider] ?? "bg-muted text-muted-foreground"}`}>
                           {m.provider}
                         </span>
-                      </div>
-                    </div>
-                    <div className="text-right shrink-0">
-                      {m.pricing.input > 0
-                        ? <span className="font-mono text-sm text-foreground">${m.pricing.input}<span className="text-xs text-muted-foreground">/1M</span></span>
-                        : <span className="text-xs text-muted-foreground">{tCat("freePrice")}</span>
-                      }
-                    </div>
-                    <Link href={`/models/${m.id}`}
-                      className="shrink-0 text-xs text-blue-400 hover:underline">
-                      {t("trending.viewDetails")}
-                    </Link>
-                  </div>
-                ))}
-              </div>
+                      </td>
+
+                      {/* Input price */}
+                      <td className="px-4 py-3 text-right font-mono text-foreground">
+                        {m.pricing.input > 0
+                          ? formatPrice(m.pricing.input)
+                          : <span className="text-xs text-muted-foreground not-mono">{tCat("freePrice")}</span>
+                        }
+                      </td>
+
+                      {/* Output price */}
+                      <td className="px-4 py-3 text-right font-mono text-foreground">
+                        {m.pricing.output > 0 ? formatPrice(m.pricing.output) : "—"}
+                      </td>
+
+                      {/* Context window */}
+                      <td className="px-4 py-3 text-right text-muted-foreground">
+                        {formatContext(m.contextWindow)}
+                      </td>
+
+                      {/* API support */}
+                      <td className="px-4 py-3 text-center">
+                        {m.supportsApi
+                          ? <CheckCircle2 className="mx-auto h-4 w-4 text-green-400" />
+                          : <span className="text-muted-foreground opacity-30">—</span>
+                        }
+                      </td>
+
+                      {/* Details link */}
+                      <td className="px-4 py-3">
+                        <Link href={`/models/${m.id}`}
+                          className="text-blue-400 hover:underline text-xs whitespace-nowrap">
+                          {tCat("viewDetail")}
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-          ))}
-        </div>
-      </section>
+          </section>
+        ))}
+      </div>
 
-      {/* Trending Models */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-foreground flex items-center gap-2">
-          <TrendingUp className="h-5 w-5 text-blue-400" /> {t("trending.title")}
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {trending.map((m) => (
-            <Link key={m.id} href={`/models/${m.id}`}
-              className="group flex flex-col gap-3 rounded-xl border border-border bg-card p-5 transition-all hover:border-blue-500/50 hover:bg-accent">
-              <div className="flex items-center justify-between">
-                <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${PROVIDER_BADGE[m.provider] ?? "bg-muted text-muted-foreground"}`}>
-                  {m.provider}
-                </span>
-                <span className="text-xs text-muted-foreground capitalize">{tCat(m.category)}</span>
-              </div>
-              <div>
-                <p className="font-semibold text-foreground">{m.name}</p>
-                <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{modelDesc(m)}</p>
-              </div>
-              <div className="flex items-center justify-between mt-auto pt-2 border-t border-border">
-                {m.pricing.input > 0
-                  ? <span className="text-xs text-muted-foreground">{t("trending.from")} <span className="font-mono text-foreground">${m.pricing.input}</span>/1M</span>
-                  : <span className="text-xs text-muted-foreground">{m.pricing.note ?? "—"}</span>
-                }
-                <span className="text-xs text-blue-400 group-hover:underline">{t("trending.viewDetails")}</span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Best For */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-foreground">{t("bestFor.title")}</h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {BEST_FOR.map((section) => (
-            <div key={section.labelKey} className={`rounded-xl border p-5 ${section.bg}`}>
-              <div className={`flex items-center gap-2 font-semibold text-sm mb-3 ${section.color}`}>
-                <span>{section.icon}</span> {t(section.labelKey as Parameters<typeof t>[0])}
-              </div>
-              <ul className="space-y-1.5">
-                {section.models.map((name) => (
-                  <li key={name} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Star className="h-3 w-3 shrink-0 text-yellow-500" /> {name}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Compare Presets */}
+      {/* ── Popular Comparisons ── */}
       <section className="space-y-4">
         <h2 className="text-xl font-semibold text-foreground">{t("popular.title")}</h2>
         <div className="grid gap-3 sm:grid-cols-3">
           {COMPARE_PRESETS.map((preset) => {
-            const left = models.find((m) => m.id === preset.left);
+            const left  = models.find((m) => m.id === preset.left);
             const right = models.find((m) => m.id === preset.right);
             if (!left || !right) return null;
             return (
@@ -330,52 +306,7 @@ export default async function HomePage({ params }: { params: Params }) {
         </div>
       </section>
 
-      {/* Pricing Table */}
-      <section id="pricing" className="space-y-4">
-        <div>
-          <h2 className="text-xl font-semibold text-foreground">{t("pricingTable.title")}</h2>
-          <p className="text-sm text-muted-foreground mt-1">{t("pricingTable.subtitle")}</p>
-        </div>
-        <div className="overflow-x-auto rounded-xl border border-border">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-border bg-card">
-                {tableHeaders.map((h, i) => (
-                  <th key={h} className={`px-4 py-3 font-medium text-muted-foreground ${i >= 3 && i <= 5 ? "text-right" : i === 6 ? "text-center" : "text-left"}`}>{h}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {apiModels.map((model, i) => (
-                <tr key={model.id} className={`border-b border-border last:border-0 transition-colors hover:bg-accent ${i % 2 === 0 ? "" : "bg-card/30"}`}>
-                  <td className="px-4 py-3">
-                    <Link href={`/models/${model.id}`} className="font-medium text-foreground hover:text-blue-400 transition-colors">
-                      {model.name}
-                    </Link>
-                  </td>
-                  <td className="px-4 py-3">
-                    <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${PROVIDER_BADGE[model.provider] ?? "bg-muted text-muted-foreground"}`}>
-                      {model.provider}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3 text-muted-foreground">{tCat(model.category)}</td>
-                  <td className="px-4 py-3 text-right font-mono text-foreground">{formatPrice(model.pricing.input)}</td>
-                  <td className="px-4 py-3 text-right font-mono text-foreground">{formatPrice(model.pricing.output)}</td>
-                  <td className="px-4 py-3 text-right text-muted-foreground">{formatContext(model.contextWindow)}</td>
-                  <td className="px-4 py-3 text-center">
-                    <span className={`inline-block h-2 w-2 rounded-full ${model.supportsApi ? "bg-green-400" : "bg-muted"}`} />
-                  </td>
-                  <td className="px-4 py-3">
-                    <Link href={`/models/${model.id}`} className="text-blue-400 hover:underline text-xs">{t("pricingTable.view")}</Link>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      {/* Latest Models */}
+      {/* ── Latest Models ── */}
       {latest.length > 0 && (
         <section className="space-y-4">
           <h2 className="text-xl font-semibold text-foreground">{t("latest.title")}</h2>
@@ -391,6 +322,7 @@ export default async function HomePage({ params }: { params: Params }) {
           </div>
         </section>
       )}
+
     </div>
     </>
   );
