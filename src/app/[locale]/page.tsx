@@ -81,8 +81,9 @@ export default async function HomePage({ params }: { params: Params }) {
   const latest = getLatestModels();
 
   // Build per-category model lists (trending first, then by input price)
+  const HOME_LIMIT = 12;
   const CATEGORIES = CATEGORY_DEFS.map((c) => {
-    const catModels = models
+    const allCatModels = models
       .filter((m) => m.category === c.id)
       .sort((a, b) => {
         if (a.isTrending && !b.isTrending) return -1;
@@ -95,7 +96,8 @@ export default async function HomePage({ params }: { params: Params }) {
       ...c,
       name: tCat(`${c.id}Name` as Parameters<typeof tCat>[0]),
       desc: tCat(`${c.id}Desc` as Parameters<typeof tCat>[0]),
-      catModels,
+      catModels: allCatModels.slice(0, HOME_LIMIT),
+      totalCount: allCatModels.length,
     };
   });
 
@@ -225,7 +227,7 @@ export default async function HomePage({ params }: { params: Params }) {
                           )}
                         </div>
                         <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1 max-w-xs">
-                          {locale === "zh" ? m.description.zh : m.description.en}
+                          {(locale === "zh" && m.description.zh) ? m.description.zh : m.description.en}
                         </p>
                       </td>
 
@@ -274,6 +276,14 @@ export default async function HomePage({ params }: { params: Params }) {
                 </tbody>
               </table>
             </div>
+            {cat.totalCount > HOME_LIMIT && (
+              <div className="text-center">
+                <Link href={`/category/${cat.id}`}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-blue-500/30 px-4 py-1.5 text-sm text-blue-400 hover:border-blue-400 hover:text-blue-300 transition-colors">
+                  {tCat("viewAll", { count: cat.totalCount })} →
+                </Link>
+              </div>
+            )}
           </section>
         ))}
       </div>

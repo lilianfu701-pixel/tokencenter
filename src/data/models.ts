@@ -2,18 +2,7 @@ export type DataSource = "official" | "estimated" | "experimental";
 
 export type ModelCategory = "chat" | "coding" | "reasoning" | "image" | "video";
 
-export type ModelProvider =
-  | "OpenAI"
-  | "Anthropic"
-  | "Google"
-  | "DeepSeek"
-  | "Alibaba"
-  | "Moonshot"
-  | "Black Forest Labs"
-  | "Midjourney"
-  | "Stability AI"
-  | "Runway"
-  | "Kling AI";
+export type ModelProvider = string;
 
 export interface ModelPricing {
   input: number;   // USD per 1M tokens (0 for image/video)
@@ -54,7 +43,11 @@ export interface Model {
   isTrending?: boolean;
 }
 
-export const models: Model[] = [
+import generatedModelsRaw from "./generated-models.json";
+
+const generatedModels = generatedModelsRaw as unknown as Model[];
+
+export const curatedModels: Model[] = [
   // ── OpenAI Chat ────────────────────────────────────────────────────────────
   {
     id: "gpt-4o",
@@ -612,6 +605,13 @@ export const models: Model[] = [
   },
 ];
 
+// ── Merge curated + generated (curated takes precedence) ──────────────────
+const curatedIds = new Set(curatedModels.map((m) => m.id));
+export const models: Model[] = [
+  ...curatedModels,
+  ...generatedModels.filter((m) => !curatedIds.has(m.id)),
+];
+
 // ── Helpers ────────────────────────────────────────────────────────────────
 
 export function getModelById(id: string): Model | undefined {
@@ -642,19 +642,9 @@ export function getLatestModels(): Model[] {
   return models.filter((m) => m.isLatest);
 }
 
-export const providers: ModelProvider[] = [
-  "OpenAI",
-  "Anthropic",
-  "Google",
-  "DeepSeek",
-  "Alibaba",
-  "Moonshot",
-  "Black Forest Labs",
-  "Midjourney",
-  "Stability AI",
-  "Runway",
-  "Kling AI",
-];
+export const providers: ModelProvider[] = Array.from(
+  new Set(models.map((m) => m.provider))
+).sort();
 
 export const PROVIDER_SLUGS: Record<string, ModelProvider> = {
   openai: "OpenAI",
