@@ -2,10 +2,11 @@ import type { MetadataRoute } from "next";
 import { locales } from "@/i18n/routing";
 import { models, COMPARE_PRESETS, PROVIDER_SLUGS } from "@/data/models";
 
-const CATEGORIES = ["chat", "coding", "reasoning", "image", "video"];
-
 const BASE_URL = "https://tokencenter.cc";
 
+const CATEGORIES = ["chat", "coding", "reasoning", "image", "video"];
+
+// Build hreflang alternates for a given path
 function buildAlternates(path: string) {
   const languages: Record<string, string> = {};
   for (const locale of locales) {
@@ -15,46 +16,58 @@ function buildAlternates(path: string) {
   return { languages };
 }
 
+// Generate a URL entry for every locale version of a path
+function allLocaleEntries(
+  path: string,
+  changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"],
+  priority: number,
+  lastModified: Date,
+): MetadataRoute.Sitemap {
+  const alternates = buildAlternates(path);
+  return locales.map((locale) => ({
+    url: locale === "en" ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`,
+    lastModified,
+    changeFrequency,
+    priority,
+    alternates,
+  }));
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes: MetadataRoute.Sitemap = ["/", "/calculator", "/compare"].map((route) => ({
-    url: `${BASE_URL}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === "/" ? "daily" : "weekly",
-    priority: route === "/" ? 1 : 0.8,
-    alternates: buildAlternates(route),
-  }));
+  const now = new Date();
 
-  const modelEntries: MetadataRoute.Sitemap = models.map((model) => ({
-    url: `${BASE_URL}/models/${model.id}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.8,
-    alternates: buildAlternates(`/models/${model.id}`),
-  }));
+  // Static pages
+  const staticEntries = [
+    ...allLocaleEntries("/", "daily", 1.0, now),
+    ...allLocaleEntries("/calculator", "weekly", 0.8, now),
+    ...allLocaleEntries("/compare", "weekly", 0.8, now),
+  ];
 
-  const compareEntries: MetadataRoute.Sitemap = COMPARE_PRESETS.map((preset) => ({
-    url: `${BASE_URL}/compare/${preset.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.75,
-    alternates: buildAlternates(`/compare/${preset.slug}`),
-  }));
+  // Model detail pages
+  const modelEntries = models.flatMap((model) =>
+    allLocaleEntries(`/models/${model.id}`, "weekly", 0.8, now)
+  );
 
-  const providerEntries: MetadataRoute.Sitemap = Object.keys(PROVIDER_SLUGS).map((slug) => ({
-    url: `${BASE_URL}/providers/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.7,
-    alternates: buildAlternates(`/providers/${slug}`),
-  }));
+  // Compare preset pages
+  const compareEntries = COMPARE_PRESETS.flatMap((preset) =>
+    allLocaleEntries(`/compare/${preset.slug}`, "weekly", 0.75, now)
+  );
 
-  const categoryEntries: MetadataRoute.Sitemap = CATEGORIES.map((cat) => ({
-    url: `${BASE_URL}/category/${cat}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.75,
-    alternates: buildAlternates(`/category/${cat}`),
-  }));
+  // Provider pages
+  const providerEntries = Object.keys(PROVIDER_SLUGS).flatMap((slug) =>
+    allLocaleEntries(`/providers/${slug}`, "weekly", 0.7, now)
+  );
 
-  return [...staticRoutes, ...modelEntries, ...compareEntries, ...providerEntries, ...categoryEntries];
+  // Category pages
+  const categoryEntries = CATEGORIES.flatMap((cat) =>
+    allLocaleEntries(`/category/${cat}`, "weekly", 0.75, now)
+  );
+
+  return [
+    ...staticEntries,
+    ...modelEntries,
+    ...compareEntries,
+    ...providerEntries,
+    ...categoryEntries,
+  ];
 }
