@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/_next/", "/api/"],
       },
     ],
-    sitemap: "https://tokencenter.cc/sitemap.xml",
-    host: "https://tokencenter.cc",
+    sitemap: "https://www.tokencenter.cc/sitemap.xml",
+    host: "https://www.tokencenter.cc",
   };
 }

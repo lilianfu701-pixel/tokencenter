@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { locales } from "@/i18n/routing";
 import { models, COMPARE_PRESETS, PROVIDER_SLUGS } from "@/data/models";
 
-const BASE_URL = "https://tokencenter.cc";
+const BASE_URL = "https://www.tokencenter.cc";
 
 const CATEGORIES = ["chat", "coding", "reasoning", "image", "video"];
 
