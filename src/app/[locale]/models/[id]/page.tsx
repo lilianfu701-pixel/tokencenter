@@ -1,4 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { locales, type Locale } from "@/i18n/routing";
@@ -96,6 +97,10 @@ export default async function ModelDetailPage({ params }: { params: Params }) {
   const model = getModelById(id);
   if (!model) notFound();
 
+  const t = await getTranslations({ locale, namespace: "model" });
+  const tSpeed = await getTranslations({ locale, namespace: "speedLabel" });
+  const tDs = await getTranslations({ locale, namespace: "dataSource" });
+
   const description = locale === "zh" ? model.description.zh : model.description.en;
   const relatedCompare = COMPARE_PRESETS.filter((p) => p.left === id || p.right === id);
 
@@ -144,7 +149,7 @@ export default async function ModelDetailPage({ params }: { params: Params }) {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 space-y-8">
       <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="h-4 w-4" /> Back to Models
+        <ArrowLeft className="h-4 w-4" /> {t("backToModels")}
       </Link>
 
       {/* Header */}
@@ -154,10 +159,7 @@ export default async function ModelDetailPage({ params }: { params: Params }) {
             {model.provider}
           </span>
           <span className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${SOURCE_BADGE[model.dataSource]}`}>
-            {model.dataSource}
-          </span>
-          <span className="rounded-full border border-border px-2.5 py-0.5 text-xs capitalize text-muted-foreground">
-            {model.category}
+            {tDs(model.dataSource)}
           </span>
         </div>
         <h1 className="text-3xl font-bold text-foreground">{model.name}</h1>
@@ -173,35 +175,35 @@ export default async function ModelDetailPage({ params }: { params: Params }) {
       <div className="grid gap-4 sm:grid-cols-2">
         {/* Pricing */}
         <div className="rounded-xl border border-border bg-card p-5 space-y-3">
-          <h2 className="font-semibold text-foreground">Pricing</h2>
+          <h2 className="font-semibold text-foreground">{t("pricing")}</h2>
           {model.pricing.input > 0 ? (
             <>
-              <PricingRow label="Input" value={formatPrice(model.pricing.input)} unit="/1M tokens" />
-              <PricingRow label="Output" value={formatPrice(model.pricing.output)} unit="/1M tokens" />
+              <PricingRow label={t("input")} value={formatPrice(model.pricing.input)} unit={t("perMillionTokens")} />
+              <PricingRow label={t("output")} value={formatPrice(model.pricing.output)} unit={t("perMillionTokens")} />
               {model.pricing.cacheWrite !== undefined && (
-                <PricingRow label="Cache Write" value={formatPrice(model.pricing.cacheWrite)} unit="/1M tokens" />
+                <PricingRow label={t("cacheWrite")} value={formatPrice(model.pricing.cacheWrite)} unit={t("perMillionTokens")} />
               )}
               {model.pricing.cacheRead !== undefined && (
-                <PricingRow label="Cache Read" value={formatPrice(model.pricing.cacheRead)} unit="/1M tokens" />
+                <PricingRow label={t("cacheRead")} value={formatPrice(model.pricing.cacheRead)} unit={t("perMillionTokens")} />
               )}
             </>
           ) : (
-            <p className="text-sm text-muted-foreground">{model.pricing.note ?? "Not token-based"}</p>
+            <p className="text-sm text-muted-foreground">{model.pricing.note ?? t("notTokenBased")}</p>
           )}
         </div>
 
         {/* Capabilities */}
         <div className="rounded-xl border border-border bg-card p-5 space-y-3">
-          <h2 className="font-semibold text-foreground">Capabilities</h2>
-          {model.contextWindow > 0 && <SpecRow label="Context Window" value={`${formatContext(model.contextWindow)} tokens`} />}
-          {model.maxOutput > 0 && <SpecRow label="Max Output" value={`${formatContext(model.maxOutput)} tokens`} />}
-          <SpecRow label="Speed" value={<span className="capitalize">{model.speed}</span>} />
-          <SpecRow label="Release" value={model.releaseDate} />
+          <h2 className="font-semibold text-foreground">{t("capabilities")}</h2>
+          {model.contextWindow > 0 && <SpecRow label={t("contextWindow")} value={`${formatContext(model.contextWindow)} ${t("tokens")}`} />}
+          {model.maxOutput > 0 && <SpecRow label={t("maxOutput")} value={`${formatContext(model.maxOutput)} ${t("tokens")}`} />}
+          <SpecRow label={t("speed")} value={<span>{tSpeed(model.speed)}</span>} />
+          <SpecRow label={t("release")} value={model.releaseDate} />
           <div className="pt-1 border-t border-border space-y-2">
-            <CapRow label="Vision" value={model.supportsVision} />
-            <CapRow label="Tool Use" value={model.supportsTools} />
-            <CapRow label="API Access" value={model.supportsApi} />
-            <CapRow label="Local / Open" value={model.supportsLocal} />
+            <CapRow label={t("vision")} value={model.supportsVision} />
+            <CapRow label={t("toolUse")} value={model.supportsTools} />
+            <CapRow label={t("apiAccess")} value={model.supportsApi} />
+            <CapRow label={t("localOpen")} value={model.supportsLocal} />
           </div>
         </div>
       </div>
@@ -209,18 +211,18 @@ export default async function ModelDetailPage({ params }: { params: Params }) {
       {/* Best For Ratings */}
       {(model.ratingCoding > 0 || model.ratingWriting > 0 || model.ratingReasoning > 0) && (
         <div className="rounded-xl border border-border bg-card p-5 space-y-4">
-          <h2 className="font-semibold text-foreground">Best For</h2>
+          <h2 className="font-semibold text-foreground">{t("bestFor")}</h2>
           <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">Coding</span>
+              <span className="text-sm text-muted-foreground">{t("ratingCoding")}</span>
               <RatingStars rating={model.ratingCoding} />
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">Writing</span>
+              <span className="text-sm text-muted-foreground">{t("ratingWriting")}</span>
               <RatingStars rating={model.ratingWriting} />
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">Reasoning</span>
+              <span className="text-sm text-muted-foreground">{t("ratingReasoning")}</span>
               <RatingStars rating={model.ratingReasoning} />
             </div>
           </div>
@@ -230,7 +232,7 @@ export default async function ModelDetailPage({ params }: { params: Params }) {
       {/* Use Cases */}
       {model.useCases.length > 0 && (
         <div className="rounded-xl border border-border bg-card p-5 space-y-3">
-          <h2 className="font-semibold text-foreground">Use Cases</h2>
+          <h2 className="font-semibold text-foreground">{t("useCases")}</h2>
           <ul className="grid grid-cols-2 gap-2">
             {model.useCases.map((u) => (
               <li key={u} className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -244,38 +246,38 @@ export default async function ModelDetailPage({ params }: { params: Params }) {
       {/* API Access & Links */}
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="rounded-xl border border-border bg-card p-5 space-y-3">
-          <h2 className="font-semibold text-foreground">API Access</h2>
+          <h2 className="font-semibold text-foreground">{t("apiAccess")}</h2>
           <div className="space-y-2">
             {model.supportsApi ? (
               <>
                 <a href={model.officialUrl} target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-blue-400 hover:underline">
-                  <ExternalLink className="h-3.5 w-3.5" /> Official API
+                  <ExternalLink className="h-3.5 w-3.5" /> {t("officialApi")}
                 </a>
                 {model.docsUrl && (
                   <a href={model.docsUrl} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
-                    <ExternalLink className="h-3.5 w-3.5" /> API Documentation
+                    <ExternalLink className="h-3.5 w-3.5" /> {t("apiDocumentation")}
                   </a>
                 )}
               </>
             ) : (
-              <p className="text-sm text-muted-foreground">No public API available</p>
+              <p className="text-sm text-muted-foreground">{t("noPublicApi")}</p>
             )}
           </div>
         </div>
 
         <div className="rounded-xl border border-border bg-card p-5 space-y-3">
-          <h2 className="font-semibold text-foreground">Official Links</h2>
+          <h2 className="font-semibold text-foreground">{t("officialLinks")}</h2>
           <div className="space-y-2">
             <a href={model.officialUrl} target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-blue-400 hover:underline">
-              <ExternalLink className="h-3.5 w-3.5" /> Official Website
+              <ExternalLink className="h-3.5 w-3.5" /> {t("officialWebsite")}
             </a>
             {model.docsUrl && (
               <a href={model.docsUrl} target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
-                <ExternalLink className="h-3.5 w-3.5" /> Documentation
+                <ExternalLink className="h-3.5 w-3.5" /> {t("documentation")}
               </a>
             )}
           </div>
@@ -285,8 +287,8 @@ export default async function ModelDetailPage({ params }: { params: Params }) {
       {/* Compare CTA */}
       <div className="rounded-xl border border-border bg-card p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <p className="font-semibold text-foreground">Compare {model.name}</p>
-          <p className="text-sm text-muted-foreground">See how it stacks up side by side.</p>
+          <p className="font-semibold text-foreground">{t("compareCta", { name: model.name })}</p>
+          <p className="text-sm text-muted-foreground">{t("compareSubtitle")}</p>
           {relatedCompare.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-2">
               {relatedCompare.map((p) => (
@@ -298,7 +300,7 @@ export default async function ModelDetailPage({ params }: { params: Params }) {
         </div>
         <Link href="/compare"
           className="rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600 transition-colors whitespace-nowrap">
-          Compare Models →
+          {t("compareBtn")}
         </Link>
       </div>
     </div>

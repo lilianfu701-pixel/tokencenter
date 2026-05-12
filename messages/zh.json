@@ -6,14 +6,60 @@
     "models": "模型"
   },
   "home": {
+    "badge": "更新于 2026年5月 · 追踪 20+ 个模型",
     "hero": {
       "title": "AI 模型定价，一目了然",
-      "subtitle": "对比所有主流 AI 模型的 Token 价格、上下文窗口与能力，数据持续更新。",
+      "title1": "AI 大模型对比，",
+      "title2": "价格与性能",
+      "subtitle": "探索最佳 AI 大模型：编程、写作、图像生成、视频、推理与 API 一站查询。",
+      "compareBtn": "对比模型",
+      "pricingBtn": "查看定价",
+      "searchPlaceholder": "搜索模型...",
       "cta": "浏览模型"
+    },
+    "categories": {
+      "title": "按类别浏览",
+      "chat": "对话模型",
+      "coding": "编程模型",
+      "reasoning": "推理模型",
+      "image": "图像生成",
+      "video": "视频生成"
+    },
+    "trending": {
+      "title": "热门模型",
+      "from": "起价",
+      "viewDetails": "查看详情 →"
+    },
+    "bestFor": {
+      "title": "最适合",
+      "coding": "最适合编程",
+      "writing": "最适合写作",
+      "cheap": "最具性价比",
+      "video": "最佳视频模型"
+    },
+    "popular": {
+      "title": "热门对比",
+      "custom": "自定义对比 →"
+    },
+    "pricingTable": {
+      "title": "API 定价表",
+      "subtitle": "每百万词元定价（美元），点击模型查看详情。",
+      "colModel": "模型",
+      "colProvider": "厂商",
+      "colCategory": "类别",
+      "colInput": "输入 /百万词元",
+      "colOutput": "输出 /百万词元",
+      "colContext": "上下文",
+      "colApi": "API",
+      "colDetails": "详情",
+      "view": "查看 →"
+    },
+    "latest": {
+      "title": "最新模型"
     },
     "priceTable": {
       "title": "模型定价",
-      "subtitle": "每百万 Token 的输入与输出价格（美元）",
+      "subtitle": "每百万词元的输入与输出价格（美元）",
       "columns": {
         "model": "模型",
         "provider": "提供商",
@@ -31,19 +77,19 @@
     }
   },
   "calculator": {
-    "title": "Token 计算器",
+    "title": "词元计算器",
     "subtitle": "在调用 API 前预估您的费用。",
     "inputLabel": "输入文本",
     "inputPlaceholder": "在此粘贴或输入文本…",
     "modelLabel": "模型",
     "selectModel": "选择模型",
     "results": {
-      "tokenCount": "Token 数量",
+      "tokenCount": "词元数量",
       "inputCost": "输入费用",
       "outputCost": "输出费用",
       "totalCost": "总费用（估算）"
     },
-    "outputTokensLabel": "预期输出 Token 数",
+    "outputTokensLabel": "预期输出词元数",
     "clear": "清空"
   },
   "compare": {
@@ -52,13 +98,33 @@
     "model1": "模型 A",
     "model2": "模型 B",
     "selectModel": "选择模型",
+    "back": "← 返回对比",
+    "sideBy": "并排对比",
+    "feature": "功能",
+    "fullDetails": "查看详情 →",
+    "officialSite": "官方网站 ↗",
+    "otherComparisons": "其他对比",
+    "customCompare": "自定义对比 →",
+    "rowInputPrice": "输入价格 /百万词元",
+    "rowOutputPrice": "输出价格 /百万词元",
+    "rowContext": "上下文窗口",
+    "rowMaxOutput": "最大输出",
+    "rowSpeed": "速度",
+    "rowCoding": "编程评分",
+    "rowWriting": "写作评分",
+    "rowReasoning": "推理评分",
+    "rowVision": "视觉理解",
+    "rowToolUse": "工具调用",
+    "rowApi": "API",
+    "rowLocal": "本地 / 开源",
+    "rowRelease": "发布日期",
     "table": {
       "feature": "功能",
       "inputPrice": "输入价格 / 百万",
       "outputPrice": "输出价格 / 百万",
       "contextWindow": "上下文窗口",
       "maxOutput": "最大输出",
-      "vision": "视觉",
+      "vision": "视觉理解",
       "tools": "工具调用",
       "releaseDate": "发布日期",
       "dataSource": "数据来源"
@@ -67,22 +133,71 @@
     "no": "不支持"
   },
   "model": {
+    "backToModels": "← 返回模型列表",
     "pricing": "定价",
+    "input": "输入",
+    "output": "输出",
     "inputPrice": "输入",
     "outputPrice": "输出",
     "cacheWrite": "缓存写入",
     "cacheRead": "缓存读取",
-    "perMillionTokens": "/ 百万 Token",
+    "perMillionTokens": "/ 百万词元",
+    "perMillionTokens2": "每百万词元",
+    "notTokenBased": "非词元计费",
+    "capabilities": "能力",
     "contextWindow": "上下文窗口",
     "maxOutput": "最大输出",
-    "tokens": "个 Token",
-    "capabilities": "能力",
-    "vision": "视觉理解",
-    "tools": "工具调用",
+    "tokens": "个词元",
+    "speed": "速度",
+    "release": "发布日期",
     "releaseDate": "发布日期",
     "dataSource": "数据来源",
-    "tags": "标签",
-    "backToModels": "← 所有模型"
+    "vision": "视觉理解",
+    "toolUse": "工具调用",
+    "tools": "工具调用",
+    "apiAccess": "API 访问",
+    "localOpen": "本地 / 开源",
+    "bestFor": "最适合",
+    "ratingCoding": "编程",
+    "ratingWriting": "写作",
+    "ratingReasoning": "推理",
+    "useCases": "使用场景",
+    "officialApi": "官方 API",
+    "apiDocumentation": "API 文档",
+    "noPublicApi": "暂无公开 API",
+    "officialLinks": "官方链接",
+    "officialWebsite": "官方网站",
+    "documentation": "文档",
+    "compareCta": "对比 {name}",
+    "compareSubtitle": "查看并排对比效果。",
+    "compareBtn": "对比模型 →",
+    "tags": "标签"
+  },
+  "provider": {
+    "back": "← 返回首页",
+    "models": "个模型",
+    "colModel": "模型",
+    "colCategory": "类别",
+    "colInput": "输入 /百万词元",
+    "colOutput": "输出 /百万词元",
+    "colContext": "上下文",
+    "colApi": "API",
+    "colDetails": "详情",
+    "view": "查看 →",
+    "officialWebsite": "官方网站",
+    "apiDocs": "API 文档"
+  },
+  "category": {
+    "chat": "对话",
+    "coding": "编程",
+    "reasoning": "推理",
+    "image": "图像",
+    "video": "视频"
+  },
+  "speedLabel": {
+    "fast": "快",
+    "medium": "中等",
+    "slow": "慢"
   },
   "dataSource": {
     "official": "官方",
@@ -96,7 +211,10 @@
     "privacy": "隐私政策",
     "terms": "服务条款",
     "disclaimer": "价格仅供参考，请以官方提供商为准。",
-    "copyright": "© {year} TokenCenter. 保留所有权利。"
+    "copyright": "© {year} TokenCenter. 保留所有权利。",
+    "home": "首页",
+    "calculator": "计算器",
+    "compare": "对比"
   },
   "language": {
     "select": "语言",
@@ -116,8 +234,8 @@
   "common": {
     "learnMore": "了解更多",
     "viewAll": "查看全部",
-    "tokens": "个 Token",
-    "perMillionTokens": "/ 百万 Token",
+    "tokens": "个词元",
+    "perMillionTokens": "/ 百万词元",
     "notAvailable": "暂无"
   }
 }

@@ -6,10 +6,56 @@
     "models": "Models"
   },
   "home": {
+    "badge": "Updated May 2026 · 20+ models tracked",
     "hero": {
       "title": "AI Model Pricing, Simplified",
-      "subtitle": "Compare token prices, context windows, and capabilities across all major AI models. Always up to date.",
+      "title1": "Compare AI Models,",
+      "title2": "Pricing & Performance",
+      "subtitle": "Explore the best AI models for coding, writing, image generation, video, reasoning, and APIs.",
+      "compareBtn": "Compare Models",
+      "pricingBtn": "Explore Pricing",
+      "searchPlaceholder": "Search models...",
       "cta": "Explore Models"
+    },
+    "categories": {
+      "title": "Browse by Category",
+      "chat": "Chat Models",
+      "coding": "Coding Models",
+      "reasoning": "Reasoning Models",
+      "image": "Image Generation",
+      "video": "Video Generation"
+    },
+    "trending": {
+      "title": "Trending Models",
+      "from": "from",
+      "viewDetails": "View Details →"
+    },
+    "bestFor": {
+      "title": "Best For",
+      "coding": "Best for Coding",
+      "writing": "Best for Writing",
+      "cheap": "Best Cheap Models",
+      "video": "Best Video Models"
+    },
+    "popular": {
+      "title": "Popular Comparisons",
+      "custom": "Build your own comparison →"
+    },
+    "pricingTable": {
+      "title": "API Pricing Table",
+      "subtitle": "Per 1M tokens — USD. Click any model for full details.",
+      "colModel": "Model",
+      "colProvider": "Provider",
+      "colCategory": "Category",
+      "colInput": "Input /1M",
+      "colOutput": "Output /1M",
+      "colContext": "Context",
+      "colApi": "API",
+      "colDetails": "Details",
+      "view": "View →"
+    },
+    "latest": {
+      "title": "Latest Models"
     },
     "priceTable": {
       "title": "Model Pricing",
@@ -52,6 +98,26 @@
     "model1": "Model A",
     "model2": "Model B",
     "selectModel": "Select a model",
+    "back": "← Back to Compare",
+    "sideBy": "Side-by-side comparison",
+    "feature": "Feature",
+    "fullDetails": "Full Details →",
+    "officialSite": "Official Site ↗",
+    "otherComparisons": "Other Comparisons",
+    "customCompare": "Custom Compare →",
+    "rowInputPrice": "Input Price /1M",
+    "rowOutputPrice": "Output Price /1M",
+    "rowContext": "Context Window",
+    "rowMaxOutput": "Max Output",
+    "rowSpeed": "Speed",
+    "rowCoding": "Coding Rating",
+    "rowWriting": "Writing Rating",
+    "rowReasoning": "Reasoning Rating",
+    "rowVision": "Vision",
+    "rowToolUse": "Tool Use",
+    "rowApi": "API",
+    "rowLocal": "Local / Open-source",
+    "rowRelease": "Release Date",
     "table": {
       "feature": "Feature",
       "inputPrice": "Input Price / 1M",
@@ -67,22 +133,71 @@
     "no": "No"
   },
   "model": {
+    "backToModels": "← Back to Models",
     "pricing": "Pricing",
+    "input": "Input",
+    "output": "Output",
     "inputPrice": "Input",
     "outputPrice": "Output",
     "cacheWrite": "Cache Write",
     "cacheRead": "Cache Read",
-    "perMillionTokens": "per 1M tokens",
+    "perMillionTokens": "/1M tokens",
+    "perMillionTokens2": "per 1M tokens",
+    "notTokenBased": "Not token-based",
+    "capabilities": "Capabilities",
     "contextWindow": "Context Window",
     "maxOutput": "Max Output",
     "tokens": "tokens",
-    "capabilities": "Capabilities",
-    "vision": "Vision",
-    "tools": "Tool Use",
+    "speed": "Speed",
+    "release": "Release",
     "releaseDate": "Release Date",
     "dataSource": "Data Source",
-    "tags": "Tags",
-    "backToModels": "← All Models"
+    "vision": "Vision",
+    "toolUse": "Tool Use",
+    "tools": "Tool Use",
+    "apiAccess": "API Access",
+    "localOpen": "Local / Open",
+    "bestFor": "Best For",
+    "ratingCoding": "Coding",
+    "ratingWriting": "Writing",
+    "ratingReasoning": "Reasoning",
+    "useCases": "Use Cases",
+    "officialApi": "Official API",
+    "apiDocumentation": "API Documentation",
+    "noPublicApi": "No public API available",
+    "officialLinks": "Official Links",
+    "officialWebsite": "Official Website",
+    "documentation": "Documentation",
+    "compareCta": "Compare {name}",
+    "compareSubtitle": "See how it stacks up side by side.",
+    "compareBtn": "Compare Models →",
+    "tags": "Tags"
+  },
+  "provider": {
+    "back": "← Back to Models",
+    "models": "models",
+    "colModel": "Model",
+    "colCategory": "Category",
+    "colInput": "Input /1M",
+    "colOutput": "Output /1M",
+    "colContext": "Context",
+    "colApi": "API",
+    "colDetails": "Details",
+    "view": "View →",
+    "officialWebsite": "Official Website",
+    "apiDocs": "API Docs"
+  },
+  "category": {
+    "chat": "Chat",
+    "coding": "Coding",
+    "reasoning": "Reasoning",
+    "image": "Image",
+    "video": "Video"
+  },
+  "speedLabel": {
+    "fast": "Fast",
+    "medium": "Medium",
+    "slow": "Slow"
   },
   "dataSource": {
     "official": "Official",
@@ -96,7 +211,10 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "disclaimer": "Prices are for reference only. Always verify with the official provider.",
-    "copyright": "© {year} TokenCenter. All rights reserved."
+    "copyright": "© {year} TokenCenter. All rights reserved.",
+    "home": "Home",
+    "calculator": "Calculator",
+    "compare": "Compare"
   },
   "language": {
     "select": "Language",

@@ -1,4 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { locales, type Locale } from "@/i18n/routing";
@@ -39,6 +40,9 @@ export default async function CompareSlugPage({ params }: { params: Params }) {
   const { locale, slug } = await params;
   setRequestLocale(locale as Locale);
 
+  const t = await getTranslations({ locale, namespace: "compare" });
+  const tSpeed = await getTranslations({ locale, namespace: "speedLabel" });
+
   const preset = COMPARE_PRESETS.find((p) => p.slug === slug);
   if (!preset) notFound();
 
@@ -48,95 +52,98 @@ export default async function CompareSlugPage({ params }: { params: Params }) {
 
   const rows: { label: string; leftVal: React.ReactNode; rightVal: React.ReactNode; winner?: "left" | "right" | "tie" }[] = [
     {
-      label: "Input Price /1M",
+      label: t("rowInputPrice"),
       leftVal: <span className="font-mono">{formatPrice(left.pricing.input)}</span>,
       rightVal: <span className="font-mono">{formatPrice(right.pricing.input)}</span>,
       winner: left.pricing.input < right.pricing.input ? "left" : right.pricing.input < left.pricing.input ? "right" : "tie",
     },
     {
-      label: "Output Price /1M",
+      label: t("rowOutputPrice"),
       leftVal: <span className="font-mono">{formatPrice(left.pricing.output)}</span>,
       rightVal: <span className="font-mono">{formatPrice(right.pricing.output)}</span>,
       winner: left.pricing.output < right.pricing.output ? "left" : right.pricing.output < left.pricing.output ? "right" : "tie",
     },
     {
-      label: "Context Window",
+      label: t("rowContext"),
       leftVal: <span className="font-mono">{formatContext(left.contextWindow)}</span>,
       rightVal: <span className="font-mono">{formatContext(right.contextWindow)}</span>,
       winner: left.contextWindow > right.contextWindow ? "left" : right.contextWindow > left.contextWindow ? "right" : "tie",
     },
     {
-      label: "Max Output",
+      label: t("rowMaxOutput"),
       leftVal: <span className="font-mono">{formatContext(left.maxOutput)}</span>,
       rightVal: <span className="font-mono">{formatContext(right.maxOutput)}</span>,
       winner: left.maxOutput > right.maxOutput ? "left" : right.maxOutput > left.maxOutput ? "right" : "tie",
     },
     {
-      label: "Speed",
-      leftVal: <span className="capitalize">{left.speed}</span>,
-      rightVal: <span className="capitalize">{right.speed}</span>,
+      label: t("rowSpeed"),
+      leftVal: <span>{tSpeed(left.speed)}</span>,
+      rightVal: <span>{tSpeed(right.speed)}</span>,
     },
     {
-      label: "Coding Rating",
+      label: t("rowCoding"),
       leftVal: "★".repeat(left.ratingCoding) + "☆".repeat(5 - left.ratingCoding),
       rightVal: "★".repeat(right.ratingCoding) + "☆".repeat(5 - right.ratingCoding),
       winner: left.ratingCoding > right.ratingCoding ? "left" : right.ratingCoding > left.ratingCoding ? "right" : "tie",
     },
     {
-      label: "Writing Rating",
+      label: t("rowWriting"),
       leftVal: "★".repeat(left.ratingWriting) + "☆".repeat(5 - left.ratingWriting),
       rightVal: "★".repeat(right.ratingWriting) + "☆".repeat(5 - right.ratingWriting),
       winner: left.ratingWriting > right.ratingWriting ? "left" : right.ratingWriting > left.ratingWriting ? "right" : "tie",
     },
     {
-      label: "Reasoning Rating",
+      label: t("rowReasoning"),
       leftVal: "★".repeat(left.ratingReasoning) + "☆".repeat(5 - left.ratingReasoning),
       rightVal: "★".repeat(right.ratingReasoning) + "☆".repeat(5 - right.ratingReasoning),
       winner: left.ratingReasoning > right.ratingReasoning ? "left" : right.ratingReasoning > left.ratingReasoning ? "right" : "tie",
     },
     {
-      label: "Vision",
+      label: t("rowVision"),
       leftVal: left.supportsVision ? <CheckCircle2 className="mx-auto h-4 w-4 text-green-400" /> : <XCircle className="mx-auto h-4 w-4 text-muted-foreground" />,
       rightVal: right.supportsVision ? <CheckCircle2 className="mx-auto h-4 w-4 text-green-400" /> : <XCircle className="mx-auto h-4 w-4 text-muted-foreground" />,
     },
     {
-      label: "Tool Use",
+      label: t("rowToolUse"),
       leftVal: left.supportsTools ? <CheckCircle2 className="mx-auto h-4 w-4 text-green-400" /> : <XCircle className="mx-auto h-4 w-4 text-muted-foreground" />,
       rightVal: right.supportsTools ? <CheckCircle2 className="mx-auto h-4 w-4 text-green-400" /> : <XCircle className="mx-auto h-4 w-4 text-muted-foreground" />,
     },
     {
-      label: "API",
+      label: t("rowApi"),
       leftVal: left.supportsApi ? <CheckCircle2 className="mx-auto h-4 w-4 text-green-400" /> : <XCircle className="mx-auto h-4 w-4 text-muted-foreground" />,
       rightVal: right.supportsApi ? <CheckCircle2 className="mx-auto h-4 w-4 text-green-400" /> : <XCircle className="mx-auto h-4 w-4 text-muted-foreground" />,
     },
     {
-      label: "Local / Open-source",
+      label: t("rowLocal"),
       leftVal: left.supportsLocal ? <CheckCircle2 className="mx-auto h-4 w-4 text-green-400" /> : <XCircle className="mx-auto h-4 w-4 text-muted-foreground" />,
       rightVal: right.supportsLocal ? <CheckCircle2 className="mx-auto h-4 w-4 text-green-400" /> : <XCircle className="mx-auto h-4 w-4 text-muted-foreground" />,
     },
     {
-      label: "Release Date",
+      label: t("rowRelease"),
       leftVal: left.releaseDate,
       rightVal: right.releaseDate,
     },
   ];
 
+  const leftDesc = locale === "zh" ? left.description.zh : left.description.en;
+  const rightDesc = locale === "zh" ? right.description.zh : right.description.en;
+
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 space-y-8">
       <Link href="/compare" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="h-4 w-4" /> Back to Compare
+        <ArrowLeft className="h-4 w-4" /> {t("back")}
       </Link>
 
       <div>
         <h1 className="text-3xl font-bold text-foreground">{preset.label}</h1>
-        <p className="text-muted-foreground mt-1">Side-by-side comparison</p>
+        <p className="text-muted-foreground mt-1">{t("sideBy")}</p>
       </div>
 
       <div className="overflow-hidden rounded-xl border border-border">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border bg-card">
-              <th className="px-4 py-4 text-left font-medium text-muted-foreground w-40">Feature</th>
+              <th className="px-4 py-4 text-left font-medium text-muted-foreground w-40">{t("feature")}</th>
               <th className="px-4 py-4 text-center">
                 <div>
                   <p className="font-semibold text-foreground">{left.name}</p>
@@ -170,28 +177,28 @@ export default async function CompareSlugPage({ params }: { params: Params }) {
       </div>
 
       <div className="grid grid-cols-2 gap-4">
-        {[left, right].map((m) => (
+        {[{ m: left, desc: leftDesc }, { m: right, desc: rightDesc }].map(({ m, desc }) => (
           <div key={m.id} className="rounded-xl border border-border bg-card p-5 space-y-3">
             <div>
               <p className="font-semibold text-foreground">{m.name}</p>
               <p className="text-xs text-muted-foreground">{m.provider}</p>
             </div>
-            <p className="text-sm text-muted-foreground">{m.description.en}</p>
+            <p className="text-sm text-muted-foreground">{desc}</p>
             <div className="flex gap-2 flex-wrap">
               {m.useCases.slice(0, 3).map((u) => (
                 <span key={u} className="rounded-full bg-accent border border-border px-2 py-0.5 text-xs text-muted-foreground">{u}</span>
               ))}
             </div>
             <div className="flex gap-2">
-              <Link href={`/models/${m.id}`} className="text-xs text-blue-400 hover:underline">Full Details →</Link>
-              <a href={m.officialUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-foreground">Official Site ↗</a>
+              <Link href={`/models/${m.id}`} className="text-xs text-blue-400 hover:underline">{t("fullDetails")}</Link>
+              <a href={m.officialUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-foreground">{t("officialSite")}</a>
             </div>
           </div>
         ))}
       </div>
 
       <div className="rounded-xl border border-border bg-card p-5">
-        <p className="text-sm font-medium text-foreground mb-3">Other Comparisons</p>
+        <p className="text-sm font-medium text-foreground mb-3">{t("otherComparisons")}</p>
         <div className="flex flex-wrap gap-2">
           {COMPARE_PRESETS.filter((p) => p.slug !== slug).map((p) => (
             <Link key={p.slug} href={`/compare/${p.slug}`}
@@ -200,7 +207,7 @@ export default async function CompareSlugPage({ params }: { params: Params }) {
             </Link>
           ))}
           <Link href="/compare" className="rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs text-blue-400 hover:bg-blue-500/20 transition-colors">
-            Custom Compare →
+            {t("customCompare")}
           </Link>
         </div>
       </div>

@@ -25,9 +25,9 @@ export default function Footer() {
               {t("links")}
             </p>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/" className="hover:text-foreground transition-colors">Home</Link></li>
-              <li><Link href="/calculator" className="hover:text-foreground transition-colors">Calculator</Link></li>
-              <li><Link href="/compare" className="hover:text-foreground transition-colors">Compare</Link></li>
+              <li><Link href="/" className="hover:text-foreground transition-colors">{t("home")}</Link></li>
+              <li><Link href="/calculator" className="hover:text-foreground transition-colors">{t("calculator")}</Link></li>
+              <li><Link href="/compare" className="hover:text-foreground transition-colors">{t("compare")}</Link></li>
             </ul>
           </div>
 

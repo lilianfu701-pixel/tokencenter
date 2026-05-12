@@ -1,4 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { locales, type Locale } from "@/i18n/routing";
 import {
   models,
@@ -9,15 +10,8 @@ import {
 } from "@/data/models";
 import Link from "next/link";
 import {
-  MessageSquare,
-  Code2,
-  PenLine,
-  ImageIcon,
-  Video,
-  Brain,
   ArrowRight,
   TrendingUp,
-  Zap,
   Star,
 } from "lucide-react";
 
@@ -63,19 +57,12 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 }
 
-const CATEGORIES: { id: ModelCategory; icon: string; label: string; examples: string }[] = [
-  { id: "chat", icon: "💬", label: "Chat Models", examples: "GPT / Claude / Gemini" },
-  { id: "coding", icon: "💻", label: "Coding Models", examples: "Claude / DeepSeek / Qwen" },
-  { id: "reasoning", icon: "🧠", label: "Reasoning Models", examples: "DeepSeek R1 / o-series" },
-  { id: "image", icon: "🖼️", label: "Image Generation", examples: "FLUX / Midjourney / SDXL" },
-  { id: "video", icon: "🎬", label: "Video Generation", examples: "Sora / Kling / Veo / Runway" },
-];
-
-const BEST_FOR = [
-  { label: "Best for Coding", models: ["Claude Opus 4.7", "DeepSeek V3", "GPT-4.1"], icon: "💻", color: "text-blue-400", bg: "bg-blue-500/10 border-blue-500/20" },
-  { label: "Best for Writing", models: ["Claude Sonnet 4.6", "Gemini 2.5 Pro", "GPT-4o"], icon: "✍️", color: "text-purple-400", bg: "bg-purple-500/10 border-purple-500/20" },
-  { label: "Best Cheap Models", models: ["Gemini 2.0 Flash", "DeepSeek V3", "Claude Haiku 4.5"], icon: "💰", color: "text-green-400", bg: "bg-green-500/10 border-green-500/20" },
-  { label: "Best Video Models", models: ["Sora", "Kling AI", "Veo 2"], icon: "🎬", color: "text-orange-400", bg: "bg-orange-500/10 border-orange-500/20" },
+const CATEGORY_DEFS: { id: ModelCategory; icon: string; examples: string }[] = [
+  { id: "chat", icon: "💬", examples: "GPT / Claude / Gemini" },
+  { id: "coding", icon: "💻", examples: "Claude / DeepSeek / Qwen" },
+  { id: "reasoning", icon: "🧠", examples: "DeepSeek R1 / o-series" },
+  { id: "image", icon: "🖼️", examples: "FLUX / Midjourney / SDXL" },
+  { id: "video", icon: "🎬", examples: "Sora / Kling / Veo / Runway" },
 ];
 
 const PROVIDER_BADGE: Record<string, string> = {
@@ -96,9 +83,36 @@ export default async function HomePage({ params }: { params: Params }) {
   const { locale } = await params;
   setRequestLocale(locale as Locale);
 
+  const t = await getTranslations({ locale, namespace: "home" });
+  const tCat = await getTranslations({ locale, namespace: "category" });
+  const tSpeed = await getTranslations({ locale, namespace: "speedLabel" });
+
   const trending = getTrendingModels();
   const latest = getLatestModels();
   const apiModels = models.filter((m) => m.pricing.input > 0);
+
+  const CATEGORIES = CATEGORY_DEFS.map((c) => ({
+    ...c,
+    label: t(`categories.${c.id}`),
+  }));
+
+  const BEST_FOR = [
+    { labelKey: "bestFor.coding", models: ["Claude Opus 4.7", "DeepSeek V3", "GPT-4.1"], icon: "💻", color: "text-blue-400", bg: "bg-blue-500/10 border-blue-500/20" },
+    { labelKey: "bestFor.writing", models: ["Claude Sonnet 4.6", "Gemini 2.5 Pro", "GPT-4o"], icon: "✍️", color: "text-purple-400", bg: "bg-purple-500/10 border-purple-500/20" },
+    { labelKey: "bestFor.cheap", models: ["Gemini 2.0 Flash", "DeepSeek V3", "Claude Haiku 4.5"], icon: "💰", color: "text-green-400", bg: "bg-green-500/10 border-green-500/20" },
+    { labelKey: "bestFor.video", models: ["Sora", "Kling AI", "Veo 2"], icon: "🎬", color: "text-orange-400", bg: "bg-orange-500/10 border-orange-500/20" },
+  ];
+
+  const tableHeaders = [
+    t("pricingTable.colModel"),
+    t("pricingTable.colProvider"),
+    t("pricingTable.colCategory"),
+    t("pricingTable.colInput"),
+    t("pricingTable.colOutput"),
+    t("pricingTable.colContext"),
+    t("pricingTable.colApi"),
+    t("pricingTable.colDetails"),
+  ];
 
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -136,6 +150,9 @@ export default async function HomePage({ params }: { params: Params }) {
     ],
   };
 
+  const modelDesc = (m: typeof trending[0]) =>
+    locale === "zh" ? m.description.zh : m.description.en;
+
   return (
     <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
@@ -146,26 +163,26 @@ export default async function HomePage({ params }: { params: Params }) {
       <section className="pt-16 pb-4 text-center space-y-6">
         <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground">
           <span className="h-1.5 w-1.5 rounded-full bg-blue-400 inline-block" />
-          Updated May 2026 · 20+ models tracked
+          {t("badge")}
         </div>
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-          Compare AI Models,<br />
-          <span className="text-blue-400">Pricing &amp; Performance</span>
+          {t("hero.title1")}<br />
+          <span className="text-blue-400">{t("hero.title2")}</span>
         </h1>
         <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-          Explore the best AI models for coding, writing, image generation, video, reasoning, and APIs.
+          {t("hero.subtitle")}
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Link href="/compare" className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-600">
-            Compare Models <ArrowRight className="h-4 w-4" />
+            {t("hero.compareBtn")} <ArrowRight className="h-4 w-4" />
           </Link>
           <Link href="#pricing" className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-accent">
-            Explore Pricing
+            {t("hero.pricingBtn")}
           </Link>
         </div>
         <div className="mx-auto max-w-lg">
           <div className="relative">
-            <input type="text" placeholder="Search models..." readOnly
+            <input type="text" placeholder={t("hero.searchPlaceholder")} readOnly
               className="w-full rounded-xl border border-border bg-card px-4 py-3 pl-10 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:border-blue-500 transition-all cursor-text" />
             <svg className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -176,7 +193,7 @@ export default async function HomePage({ params }: { params: Params }) {
 
       {/* Categories */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-foreground">Browse by Category</h2>
+        <h2 className="text-xl font-semibold text-foreground">{t("categories.title")}</h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
           {CATEGORIES.map((cat) => (
             <Link key={cat.id} href={`#${cat.id}`}
@@ -196,7 +213,7 @@ export default async function HomePage({ params }: { params: Params }) {
       {/* Trending Models */}
       <section className="space-y-4">
         <h2 className="text-xl font-semibold text-foreground flex items-center gap-2">
-          <TrendingUp className="h-5 w-5 text-blue-400" /> Trending Models
+          <TrendingUp className="h-5 w-5 text-blue-400" /> {t("trending.title")}
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {trending.map((m) => (
@@ -206,18 +223,18 @@ export default async function HomePage({ params }: { params: Params }) {
                 <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${PROVIDER_BADGE[m.provider] ?? "bg-muted text-muted-foreground"}`}>
                   {m.provider}
                 </span>
-                <span className="text-xs text-muted-foreground capitalize">{m.category}</span>
+                <span className="text-xs text-muted-foreground capitalize">{tCat(m.category)}</span>
               </div>
               <div>
                 <p className="font-semibold text-foreground">{m.name}</p>
-                <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{m.description.en}</p>
+                <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{modelDesc(m)}</p>
               </div>
               <div className="flex items-center justify-between mt-auto pt-2 border-t border-border">
                 {m.pricing.input > 0
-                  ? <span className="text-xs text-muted-foreground">from <span className="font-mono text-foreground">${m.pricing.input}</span>/1M</span>
+                  ? <span className="text-xs text-muted-foreground">{t("trending.from")} <span className="font-mono text-foreground">${m.pricing.input}</span>/1M</span>
                   : <span className="text-xs text-muted-foreground">{m.pricing.note ?? "—"}</span>
                 }
-                <span className="text-xs text-blue-400 group-hover:underline">View Details →</span>
+                <span className="text-xs text-blue-400 group-hover:underline">{t("trending.viewDetails")}</span>
               </div>
             </Link>
           ))}
@@ -226,12 +243,12 @@ export default async function HomePage({ params }: { params: Params }) {
 
       {/* Best For */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-foreground">Best For</h2>
+        <h2 className="text-xl font-semibold text-foreground">{t("bestFor.title")}</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {BEST_FOR.map((section) => (
-            <div key={section.label} className={`rounded-xl border p-5 ${section.bg}`}>
+            <div key={section.labelKey} className={`rounded-xl border p-5 ${section.bg}`}>
               <div className={`flex items-center gap-2 font-semibold text-sm mb-3 ${section.color}`}>
-                <span>{section.icon}</span> {section.label}
+                <span>{section.icon}</span> {t(section.labelKey as Parameters<typeof t>[0])}
               </div>
               <ul className="space-y-1.5">
                 {section.models.map((name) => (
@@ -247,7 +264,7 @@ export default async function HomePage({ params }: { params: Params }) {
 
       {/* Compare Presets */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-foreground">Popular Comparisons</h2>
+        <h2 className="text-xl font-semibold text-foreground">{t("popular.title")}</h2>
         <div className="grid gap-3 sm:grid-cols-3">
           {COMPARE_PRESETS.map((preset) => {
             const left = models.find((m) => m.id === preset.left);
@@ -268,7 +285,7 @@ export default async function HomePage({ params }: { params: Params }) {
         </div>
         <div className="text-center">
           <Link href="/compare" className="text-sm text-blue-400 hover:underline">
-            Build your own comparison →
+            {t("popular.custom")}
           </Link>
         </div>
       </section>
@@ -276,14 +293,14 @@ export default async function HomePage({ params }: { params: Params }) {
       {/* Pricing Table */}
       <section id="pricing" className="space-y-4">
         <div>
-          <h2 className="text-xl font-semibold text-foreground">API Pricing Table</h2>
-          <p className="text-sm text-muted-foreground mt-1">Per 1M tokens — USD. Click any model for full details.</p>
+          <h2 className="text-xl font-semibold text-foreground">{t("pricingTable.title")}</h2>
+          <p className="text-sm text-muted-foreground mt-1">{t("pricingTable.subtitle")}</p>
         </div>
         <div className="overflow-x-auto rounded-xl border border-border">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border bg-card">
-                {["Model","Provider","Category","Input /1M","Output /1M","Context","API","Details"].map((h, i) => (
+                {tableHeaders.map((h, i) => (
                   <th key={h} className={`px-4 py-3 font-medium text-muted-foreground ${i >= 3 && i <= 5 ? "text-right" : i === 6 ? "text-center" : "text-left"}`}>{h}</th>
                 ))}
               </tr>
@@ -301,7 +318,7 @@ export default async function HomePage({ params }: { params: Params }) {
                       {model.provider}
                     </span>
                   </td>
-                  <td className="px-4 py-3 capitalize text-muted-foreground">{model.category}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{tCat(model.category)}</td>
                   <td className="px-4 py-3 text-right font-mono text-foreground">{formatPrice(model.pricing.input)}</td>
                   <td className="px-4 py-3 text-right font-mono text-foreground">{formatPrice(model.pricing.output)}</td>
                   <td className="px-4 py-3 text-right text-muted-foreground">{formatContext(model.contextWindow)}</td>
@@ -309,7 +326,7 @@ export default async function HomePage({ params }: { params: Params }) {
                     <span className={`inline-block h-2 w-2 rounded-full ${model.supportsApi ? "bg-green-400" : "bg-muted"}`} />
                   </td>
                   <td className="px-4 py-3">
-                    <Link href={`/models/${model.id}`} className="text-blue-400 hover:underline text-xs">View →</Link>
+                    <Link href={`/models/${model.id}`} className="text-blue-400 hover:underline text-xs">{t("pricingTable.view")}</Link>
                   </td>
                 </tr>
               ))}
@@ -321,7 +338,7 @@ export default async function HomePage({ params }: { params: Params }) {
       {/* Latest Models */}
       {latest.length > 0 && (
         <section className="space-y-4">
-          <h2 className="text-xl font-semibold text-foreground">Latest Models</h2>
+          <h2 className="text-xl font-semibold text-foreground">{t("latest.title")}</h2>
           <div className="flex flex-wrap gap-3">
             {latest.map((m) => (
               <Link key={m.id} href={`/models/${m.id}`}
