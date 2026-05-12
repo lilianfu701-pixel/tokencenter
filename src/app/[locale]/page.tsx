@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { locales, type Locale } from "@/i18n/routing";
 import {
   models,
+  curatedModels,
   getLatestModels,
   COMPARE_PRESETS,
   type ModelCategory,
@@ -79,6 +80,15 @@ export default async function HomePage({ params }: { params: Params }) {
   const tCat = await getTranslations({ locale, namespace: "category" });
 
   const latest = getLatestModels();
+
+  // 主流大模型比价（只显示精选的 20 个，按输入价格排序，零价格排末尾）
+  const featuredModels = curatedModels
+    .filter((m) => m.category !== "video" && m.contextWindow > 0)
+    .sort((a, b) => {
+      if (a.pricing.input === 0 && b.pricing.input > 0) return 1;
+      if (b.pricing.input === 0 && a.pricing.input > 0) return -1;
+      return a.pricing.input - b.pricing.input;
+    });
 
   // Build per-category model lists (trending first, then by input price)
   const HOME_LIMIT = 12;
@@ -174,6 +184,74 @@ export default async function HomePage({ params }: { params: Params }) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </div>
+        </div>
+      </section>
+
+      {/* ── 主流大模型比价表（精选）── */}
+      <section id="pricing" className="space-y-4">
+        <div>
+          <h2 className="text-xl font-semibold text-foreground">{t("pricingTable.title")}</h2>
+          <p className="text-sm text-muted-foreground mt-1">{t("pricingTable.subtitle")}</p>
+        </div>
+        <div className="overflow-x-auto rounded-xl border border-border">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border bg-card">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">{t("pricingTable.colModel")}</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">{t("pricingTable.colProvider")}</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">{t("pricingTable.colCategory")}</th>
+                <th className="px-4 py-3 text-right font-medium text-muted-foreground">{t("pricingTable.colInput")}</th>
+                <th className="px-4 py-3 text-right font-medium text-muted-foreground">{t("pricingTable.colOutput")}</th>
+                <th className="px-4 py-3 text-right font-medium text-muted-foreground">{t("pricingTable.colContext")}</th>
+                <th className="px-4 py-3 text-center font-medium text-muted-foreground">{t("pricingTable.colApi")}</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">{t("pricingTable.colDetails")}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {featuredModels.map((model, i) => (
+                <tr key={model.id}
+                  className={`border-b border-border last:border-0 transition-colors hover:bg-accent ${i % 2 === 0 ? "" : "bg-card/30"}`}>
+                  <td className="px-4 py-3">
+                    <div className="flex items-center gap-2">
+                      <Link href={`/models/${model.id}`} className="font-medium text-foreground hover:text-blue-400 transition-colors">
+                        {model.name}
+                      </Link>
+                      {model.isTrending && (
+                        <span className="rounded-full bg-orange-500/15 px-1.5 py-0.5 text-xs text-orange-400">🔥</span>
+                      )}
+                      {model.isLatest && (
+                        <span className="rounded-full bg-green-500/15 px-1.5 py-0.5 text-xs text-green-400">NEW</span>
+                      )}
+                    </div>
+                  </td>
+                  <td className="px-4 py-3">
+                    <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${PROVIDER_BADGE[model.provider] ?? "bg-muted text-muted-foreground"}`}>
+                      {model.provider}
+                    </span>
+                  </td>
+                  <td className="px-4 py-3 text-muted-foreground capitalize">
+                    {tCat(`${model.category}Name` as Parameters<typeof tCat>[0])}
+                  </td>
+                  <td className="px-4 py-3 text-right font-mono text-foreground">
+                    {model.pricing.input > 0 ? formatPrice(model.pricing.input) : <span className="text-xs text-muted-foreground">{tCat("freePrice")}</span>}
+                  </td>
+                  <td className="px-4 py-3 text-right font-mono text-foreground">
+                    {model.pricing.output > 0 ? formatPrice(model.pricing.output) : "—"}
+                  </td>
+                  <td className="px-4 py-3 text-right text-muted-foreground">{formatContext(model.contextWindow)}</td>
+                  <td className="px-4 py-3 text-center">
+                    {model.supportsApi
+                      ? <CheckCircle2 className="mx-auto h-4 w-4 text-green-400" />
+                      : <span className="text-muted-foreground opacity-30">—</span>
+                    }
+                  </td>
+                  <td className="px-4 py-3">
+                    <Link href={`/models/${model.id}`} className="text-blue-400 hover:underline text-xs">{t("pricingTable.view")}</Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 
