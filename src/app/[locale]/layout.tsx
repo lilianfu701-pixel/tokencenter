@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locales, type Locale } from "@/i18n/routing";
 import Header from "@/components/layout/Header";
@@ -164,6 +164,7 @@ export default async function LocaleLayout({
   }
 
   setRequestLocale(locale);
+  const messages = await getMessages();
 
   return (
     <>
@@ -172,7 +173,7 @@ export default async function LocaleLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }}
       />
-      <NextIntlClientProvider>
+      <NextIntlClientProvider messages={messages}>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
