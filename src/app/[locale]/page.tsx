@@ -305,7 +305,7 @@ export default async function HomePage({ params }: { params: Params }) {
                           )}
                         </div>
                         <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1 max-w-xs">
-                          {(locale === "zh" && m.description.zh) ? m.description.zh : m.description.en}
+                          {(m.description[locale] || m.description.en)}
                         </p>
                       </td>
 

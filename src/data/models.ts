@@ -24,10 +24,7 @@ export interface Model {
   releaseDate: string;     // YYYY-MM
   dataSource: DataSource;
   tags: string[];
-  description: {
-    en: string;
-    zh: string;
-  };
+  description: Record<string, string>;
   supportsVision: boolean;
   supportsTools: boolean;
   supportsApi: boolean;
@@ -64,6 +61,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "GPT-4o is a fast multimodal model optimized for chat, coding, and vision tasks.",
       zh: "GPT-4o 是快速的多模态模型，适用于对话、编程和视觉任务。",
+      fr: "GPT-4o est un modèle multimodal rapide d'OpenAI, optimisé pour le dialogue, le code et l'analyse d'images.",
     },
     supportsVision: true,
     supportsTools: true,
@@ -93,6 +91,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "GPT-4.1 is OpenAI's latest iteration with 1M token context and improved instruction following.",
       zh: "GPT-4.1 是 OpenAI 最新版本，支持 100 万 Token 上下文，指令遵循更精准。",
+      fr: "GPT-4.1 est la dernière génération d'OpenAI avec un contexte d'un million de tokens et un meilleur suivi des instructions.",
     },
     supportsVision: true,
     supportsTools: true,
@@ -122,6 +121,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "GPT-5 is OpenAI's most capable model, integrating advanced reasoning and multimodal understanding.",
       zh: "GPT-5 是 OpenAI 最强模型，融合高级推理与多模态理解能力。",
+      fr: "GPT-5 est le modèle le plus puissant d'OpenAI, alliant raisonnement avancé et compréhension multimodale.",
     },
     supportsVision: true,
     supportsTools: true,
@@ -154,6 +154,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "Claude Opus is Anthropic's most intelligent model for complex reasoning and agentic tasks.",
       zh: "Claude Opus 是 Anthropic 最智能的模型，擅长复杂推理与智能体任务。",
+      fr: "Claude Opus est le modèle le plus intelligent d'Anthropic, conçu pour le raisonnement complexe et les tâches agentiques.",
     },
     supportsVision: true,
     supportsTools: true,
@@ -183,6 +184,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "Claude Sonnet offers the best balance of intelligence and speed for high-throughput tasks.",
       zh: "Claude Sonnet 提供最佳的智能与速度平衡，适合高吞吐量任务。",
+      fr: "Claude Sonnet offre le meilleur équilibre entre intelligence et vitesse pour les tâches à fort débit.",
     },
     supportsVision: true,
     supportsTools: true,
@@ -212,6 +214,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "Claude Haiku is Anthropic's fastest and most compact model for near-instant responsiveness.",
       zh: "Claude Haiku 是 Anthropic 最快速、最紧凑的模型，接近即时响应。",
+      fr: "Claude Haiku est le modèle le plus rapide et compact d'Anthropic, pour une réactivité quasi instantanée.",
     },
     supportsVision: true,
     supportsTools: true,
@@ -242,6 +245,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "Gemini 2.5 Pro is Google's most capable model with native 1M token context and state-of-the-art reasoning.",
       zh: "Gemini 2.5 Pro 是 Google 最强模型，原生 100 万 Token 上下文，最先进的推理能力。",
+      fr: "Gemini 2.5 Pro est le modèle phare de Google avec un contexte natif d'un million de tokens et un raisonnement de pointe.",
     },
     supportsVision: true,
     supportsTools: true,
@@ -271,6 +275,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "Gemini 2.0 Flash is Google's workhorse model — fast, efficient, and multimodal.",
       zh: "Gemini 2.0 Flash 是 Google 主力模型，快速高效，支持多模态输入。",
+      fr: "Gemini 2.0 Flash est le modèle polyvalent de Google — rapide, efficace et multimodal.",
     },
     supportsVision: true,
     supportsTools: true,
@@ -301,6 +306,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "DeepSeek V3 is a highly competitive MoE model for coding and general reasoning at low cost.",
       zh: "DeepSeek V3 是极具竞争力的 MoE 模型，代码能力强，成本低廉。",
+      fr: "DeepSeek V3 est un modèle MoE très compétitif pour le code et le raisonnement général, à faible coût.",
     },
     supportsVision: false,
     supportsTools: true,
@@ -330,6 +336,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "DeepSeek R1 is a chain-of-thought reasoning model rivaling o1 at a fraction of the cost.",
       zh: "DeepSeek R1 是链式思维推理模型，以极低成本媲美 o1。",
+      fr: "DeepSeek R1 est un modèle de raisonnement par chaîne de pensée rivalisant avec o1 pour une fraction du prix.",
     },
     supportsVision: false,
     supportsTools: false,
@@ -361,6 +368,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "Qwen 2.5 72B is Alibaba's open-source flagship with strong multilingual and coding capabilities.",
       zh: "Qwen 2.5 72B 是阿里巴巴开源旗舰模型，多语言与代码能力突出。",
+      fr: "Qwen 2.5 72B est le modèle open-source phare d'Alibaba, avec d'excellentes capacités multilingues et de code.",
     },
     supportsVision: false,
     supportsTools: true,
@@ -391,6 +399,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "Moonshot Kimi K1.5 is a multimodal reasoning model with strong Chinese language support.",
       zh: "月之暗面 Kimi K1.5 是多模态推理模型，中文能力强劲。",
+      fr: "Moonshot Kimi K1.5 est un modèle de raisonnement multimodal avec un excellent support du chinois.",
     },
     supportsVision: true,
     supportsTools: true,
@@ -421,6 +430,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "FLUX.1 is a state-of-the-art image generation model known for photorealism and prompt accuracy.",
       zh: "FLUX.1 是最先进的图像生成模型，以照片级真实感和提示词准确性著称。",
+      fr: "FLUX.1 est un modèle de génération d'images de pointe, reconnu pour son photoréalisme et sa précision.",
     },
     supportsVision: false,
     supportsTools: false,
@@ -450,6 +460,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "Midjourney v6 produces stunning artistic images with exceptional aesthetic quality.",
       zh: "Midjourney v6 生成令人惊叹的艺术图像，美学质量卓越。",
+      fr: "Midjourney v6 produit des images artistiques époustouflantes d'une qualité esthétique exceptionnelle.",
     },
     supportsVision: false,
     supportsTools: false,
@@ -477,6 +488,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "Stable Diffusion XL is the leading open-source image generation model for local deployment.",
       zh: "Stable Diffusion XL 是领先的开源图像生成模型，支持本地部署。",
+      fr: "Stable Diffusion XL est le modèle open-source de référence pour la génération d'images en local.",
     },
     supportsVision: false,
     supportsTools: false,
@@ -507,6 +519,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "Sora generates realistic and imaginative videos from text prompts up to 60 seconds.",
       zh: "Sora 根据文本提示生成逼真且富有想象力的视频，时长最长 60 秒。",
+      fr: "Sora génère des vidéos réalistes et créatives à partir de texte, jusqu'à 60 secondes.",
     },
     supportsVision: false,
     supportsTools: false,
@@ -535,6 +548,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "Kling AI generates high-quality videos with realistic motion and fluid transitions.",
       zh: "Kling AI 生成高质量视频，具有真实的运动效果和流畅的转场。",
+      fr: "Kling AI génère des vidéos de haute qualité avec des mouvements réalistes et des transitions fluides.",
     },
     supportsVision: false,
     supportsTools: false,
@@ -563,6 +577,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "Veo 2 is Google's advanced video generation model with cinematic quality and physics understanding.",
       zh: "Veo 2 是 Google 的高级视频生成模型，具有电影级质量和物理理解能力。",
+      fr: "Veo 2 est le modèle vidéo avancé de Google, avec une qualité cinématographique et une compréhension physique.",
     },
     supportsVision: false,
     supportsTools: false,
@@ -590,6 +605,7 @@ export const curatedModels: Model[] = [
     description: {
       en: "Runway Gen-3 Alpha is a powerful video generation model with API access for developers.",
       zh: "Runway Gen-3 Alpha 是功能强大的视频生成模型，为开发者提供 API 访问。",
+      fr: "Runway Gen-3 Alpha est un puissant modèle de génération vidéo avec accès API pour les développeurs.",
     },
     supportsVision: false,
     supportsTools: false,

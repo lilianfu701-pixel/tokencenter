@@ -147,7 +147,7 @@ export default async function CategoryPage({ params }: { params: Params }) {
                     )}
                   </div>
                   <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1">
-                    {(locale === "zh" && model.description.zh) ? model.description.zh : model.description.en}
+                    {(model.description[locale] || model.description.en)}
                   </p>
                 </td>
                 <td className="px-4 py-3">

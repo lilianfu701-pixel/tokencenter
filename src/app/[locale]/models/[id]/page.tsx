@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Params }) {
   const model = getModelById(id);
   if (!model) return {};
 
-  const description = (locale === "zh" && model.description.zh) ? model.description.zh : model.description.en;
+  const description = (model.description[locale] || model.description.en);
   const priceNote = model.pricing.input > 0
     ? ` Input: $${model.pricing.input}/1M tokens.`
     : model.pricing.note ? ` ${model.pricing.note}.` : "";
@@ -101,7 +101,7 @@ export default async function ModelDetailPage({ params }: { params: Params }) {
   const tSpeed = await getTranslations({ locale, namespace: "speedLabel" });
   const tDs = await getTranslations({ locale, namespace: "dataSource" });
 
-  const description = (locale === "zh" && model.description.zh) ? model.description.zh : model.description.en;
+  const description = (model.description[locale] || model.description.en);
   const relatedCompare = COMPARE_PRESETS.filter((p) => p.left === id || p.right === id);
 
   const modelSchema = {

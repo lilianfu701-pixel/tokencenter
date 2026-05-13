@@ -125,8 +125,8 @@ export default async function CompareSlugPage({ params }: { params: Params }) {
     },
   ];
 
-  const leftDesc = (locale === "zh" && left.description.zh) ? left.description.zh : left.description.en;
-  const rightDesc = (locale === "zh" && right.description.zh) ? right.description.zh : right.description.en;
+  const leftDesc = (left.description[locale] || left.description.en);
+  const rightDesc = (right.description[locale] || right.description.en);
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 space-y-8">
