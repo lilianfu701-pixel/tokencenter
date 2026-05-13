@@ -1,7 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/routing";
 import { models, PROVIDER_SLUGS } from "@/data/models";
 import { ArrowLeft, ExternalLink } from "lucide-react";

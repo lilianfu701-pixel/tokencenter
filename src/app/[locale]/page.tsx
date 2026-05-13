@@ -8,7 +8,7 @@ import {
   COMPARE_PRESETS,
   type ModelCategory,
 } from "@/data/models";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 type Params = Promise<{ locale: string }>;
