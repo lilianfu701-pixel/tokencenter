@@ -82,10 +82,6 @@ export default async function CategoryPage({ params }: { params: Params }) {
     .sort((a, b) => {
       if (a.isTrending && !b.isTrending) return -1;
       if (!a.isTrending && b.isTrending) return 1;
-      const aHasZh = !!a.description.zh;
-      const bHasZh = !!b.description.zh;
-      if (aHasZh && !bHasZh) return -1;
-      if (!aHasZh && bHasZh) return 1;
       if (a.pricing.input === 0 && b.pricing.input > 0) return 1;
       if (b.pricing.input === 0 && a.pricing.input > 0) return -1;
       return a.pricing.input - b.pricing.input;
@@ -150,11 +146,9 @@ export default async function CategoryPage({ params }: { params: Params }) {
                       <span className="rounded-full bg-green-500/15 px-1.5 py-0.5 text-xs text-green-400">最新</span>
                     )}
                   </div>
-                  {(locale !== "zh" || model.description.zh) && (
-                    <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1">
-                      {(locale === "zh" && model.description.zh) ? model.description.zh : model.description.en}
-                    </p>
-                  )}
+                  <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1">
+                    {(locale === "zh" && model.description.zh) ? model.description.zh : model.description.en}
+                  </p>
                 </td>
                 <td className="px-4 py-3">
                   <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${PROVIDER_BADGE[model.provider] ?? "bg-muted text-muted-foreground"}`}>

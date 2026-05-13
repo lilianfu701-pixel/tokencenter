@@ -90,8 +90,7 @@ export default async function HomePage({ params }: { params: Params }) {
       return a.pricing.input - b.pricing.input;
     });
 
-  // Build per-category model lists
-  // Sort: trending first → curated (has zh desc) before generated → by price (free last)
+  // Build per-category model lists: trending first → by price (free last)
   const HOME_LIMIT = 12;
   const CATEGORIES = CATEGORY_DEFS.map((c) => {
     const allCatModels = models
@@ -99,10 +98,6 @@ export default async function HomePage({ params }: { params: Params }) {
       .sort((a, b) => {
         if (a.isTrending && !b.isTrending) return -1;
         if (!a.isTrending && b.isTrending) return 1;
-        const aHasZh = !!a.description.zh;
-        const bHasZh = !!b.description.zh;
-        if (aHasZh && !bHasZh) return -1;
-        if (!aHasZh && bHasZh) return 1;
         if (a.pricing.input === 0 && b.pricing.input > 0) return 1;
         if (b.pricing.input === 0 && a.pricing.input > 0) return -1;
         return a.pricing.input - b.pricing.input;
@@ -309,11 +304,9 @@ export default async function HomePage({ params }: { params: Params }) {
                             <span className="rounded-full bg-green-500/15 px-1.5 py-0.5 text-xs text-green-400">{latestLabel}</span>
                           )}
                         </div>
-                        {(locale !== "zh" || m.description.zh) && (
-                          <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1 max-w-xs">
-                            {(locale === "zh" && m.description.zh) ? m.description.zh : m.description.en}
-                          </p>
-                        )}
+                        <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1 max-w-xs">
+                          {(locale === "zh" && m.description.zh) ? m.description.zh : m.description.en}
+                        </p>
                       </td>
 
                       {/* Provider */}
