@@ -7,7 +7,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { HtmlLang } from "@/components/HtmlLang";
 
-const BASE_URL = "https://tokencenter.cc";
+const BASE_URL = "https://www.tokencenter.cc";
 
 type Params = Promise<{ locale: string }>;
 
