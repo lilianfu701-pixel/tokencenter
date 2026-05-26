@@ -1,0 +1,457 @@
+{
+  "NousResearch/hermes-agent": [
+    {
+      "date": "2026-05-26",
+      "stars": 168565,
+      "daily_growth": 0
+    }
+  ],
+  "Snailclimb/JavaGuide": [
+    {
+      "date": "2026-05-26",
+      "stars": 155893,
+      "daily_growth": 0
+    }
+  ],
+  "langflow-ai/langflow": [
+    {
+      "date": "2026-05-26",
+      "stars": 148784,
+      "daily_growth": 0
+    }
+  ],
+  "langgenius/dify": [
+    {
+      "date": "2026-05-26",
+      "stars": 142742,
+      "daily_growth": 0
+    }
+  ],
+  "x1xhlol/system-prompts-and-models-of-ai-tools": [
+    {
+      "date": "2026-05-26",
+      "stars": 138301,
+      "daily_growth": 0
+    }
+  ],
+  "langchain-ai/langchain": [
+    {
+      "date": "2026-05-26",
+      "stars": 137700,
+      "daily_growth": 0
+    }
+  ],
+  "firecrawl/firecrawl": [
+    {
+      "date": "2026-05-26",
+      "stars": 124707,
+      "daily_growth": 0
+    }
+  ],
+  "Shubhamsaboo/awesome-llm-apps": [
+    {
+      "date": "2026-05-26",
+      "stars": 111816,
+      "daily_growth": 0
+    }
+  ],
+  "affaan-m/ECC": [
+    {
+      "date": "2026-05-26",
+      "stars": 194180,
+      "daily_growth": 0
+    }
+  ],
+  "Significant-Gravitas/AutoGPT": [
+    {
+      "date": "2026-05-26",
+      "stars": 184566,
+      "daily_growth": 0
+    }
+  ],
+  "ollama/ollama": [
+    {
+      "date": "2026-05-26",
+      "stars": 172363,
+      "daily_growth": 0
+    }
+  ],
+  "f/prompts.chat": [
+    {
+      "date": "2026-05-26",
+      "stars": 162869,
+      "daily_growth": 0
+    }
+  ],
+  "huggingface/transformers": [
+    {
+      "date": "2026-05-26",
+      "stars": 160954,
+      "daily_growth": 0
+    }
+  ],
+  "multica-ai/andrej-karpathy-skills": [
+    {
+      "date": "2026-05-26",
+      "stars": 156932,
+      "daily_growth": 0
+    }
+  ],
+  "n8n-io/n8n": [
+    {
+      "date": "2026-05-26",
+      "stars": 189805,
+      "daily_growth": 0
+    }
+  ],
+  "open-webui/open-webui": [
+    {
+      "date": "2026-05-26",
+      "stars": 138756,
+      "daily_growth": 0
+    }
+  ],
+  "punkpeye/awesome-mcp-servers": [
+    {
+      "date": "2026-05-26",
+      "stars": 87940,
+      "daily_growth": 0
+    }
+  ],
+  "farion1231/cc-switch": [
+    {
+      "date": "2026-05-26",
+      "stars": 81708,
+      "daily_growth": 0
+    }
+  ],
+  "netdata/netdata": [
+    {
+      "date": "2026-05-26",
+      "stars": 78945,
+      "daily_growth": 0
+    }
+  ],
+  "ChatGPTNextWeb/NextChat": [
+    {
+      "date": "2026-05-26",
+      "stars": 88092,
+      "daily_growth": 0
+    }
+  ],
+  "Mintplex-Labs/anything-llm": [
+    {
+      "date": "2026-05-26",
+      "stars": 60642,
+      "daily_growth": 0
+    }
+  ],
+  "siyuan-note/siyuan": [
+    {
+      "date": "2026-05-26",
+      "stars": 44135,
+      "daily_growth": 0
+    }
+  ],
+  "chatboxai/chatbox": [
+    {
+      "date": "2026-05-26",
+      "stars": 40128,
+      "daily_growth": 0
+    }
+  ],
+  "1Panel-dev/1Panel": [
+    {
+      "date": "2026-05-26",
+      "stars": 35604,
+      "daily_growth": 0
+    }
+  ],
+  "PDFMathTranslate/PDFMathTranslate": [
+    {
+      "date": "2026-05-26",
+      "stars": 34070,
+      "daily_growth": 0
+    }
+  ],
+  "anthropics/claude-code": [
+    {
+      "date": "2026-05-26",
+      "stars": 126725,
+      "daily_growth": 0
+    }
+  ],
+  "garrytan/gstack": [
+    {
+      "date": "2026-05-26",
+      "stars": 103188,
+      "daily_growth": 0
+    }
+  ],
+  "thedotmack/claude-mem": [
+    {
+      "date": "2026-05-26",
+      "stars": 78565,
+      "daily_growth": 0
+    }
+  ],
+  "JuliusBrussee/caveman": [
+    {
+      "date": "2026-05-26",
+      "stars": 65127,
+      "daily_growth": 0
+    }
+  ],
+  "mudler/LocalAI": [
+    {
+      "date": "2026-05-26",
+      "stars": 46479,
+      "daily_growth": 0
+    }
+  ],
+  "khoj-ai/khoj": [
+    {
+      "date": "2026-05-26",
+      "stars": 34715,
+      "daily_growth": 0
+    }
+  ],
+  "blakeblackshear/frigate": [
+    {
+      "date": "2026-05-26",
+      "stars": 33259,
+      "daily_growth": 0
+    }
+  ],
+  "iOfficeAI/AionUi": [
+    {
+      "date": "2026-05-26",
+      "stars": 26692,
+      "daily_growth": 0
+    }
+  ],
+  "Fosowl/agenticSeek": [
+    {
+      "date": "2026-05-26",
+      "stars": 26425,
+      "daily_growth": 0
+    }
+  ],
+  "dyad-sh/dyad": [
+    {
+      "date": "2026-05-26",
+      "stars": 20433,
+      "daily_growth": 0
+    }
+  ],
+  "screenpipe/screenpipe": [
+    {
+      "date": "2026-05-26",
+      "stars": 18930,
+      "daily_growth": 0
+    }
+  ],
+  "tirth8205/code-review-graph": [
+    {
+      "date": "2026-05-26",
+      "stars": 17449,
+      "daily_growth": 0
+    }
+  ],
+  "vercel/next.js": [
+    {
+      "date": "2026-05-26",
+      "stars": 139575,
+      "daily_growth": 0
+    }
+  ],
+  "shadcn-ui/ui": [
+    {
+      "date": "2026-05-26",
+      "stars": 115082,
+      "daily_growth": 0
+    }
+  ],
+  "supabase/supabase": [
+    {
+      "date": "2026-05-26",
+      "stars": 103035,
+      "daily_growth": 0
+    }
+  ],
+  "appwrite/appwrite": [
+    {
+      "date": "2026-05-26",
+      "stars": 56148,
+      "daily_growth": 0
+    }
+  ],
+  "coollabsio/coolify": [
+    {
+      "date": "2026-05-26",
+      "stars": 56036,
+      "daily_growth": 0
+    }
+  ],
+  "browser-use/browser-use": [
+    {
+      "date": "2026-05-26",
+      "stars": 95675,
+      "daily_growth": 0
+    }
+  ],
+  "gohugoio/hugo": [
+    {
+      "date": "2026-05-26",
+      "stars": 88254,
+      "daily_growth": 0
+    }
+  ],
+  "thedaviddias/Front-End-Checklist": [
+    {
+      "date": "2026-05-26",
+      "stars": 72731,
+      "daily_growth": 0
+    }
+  ],
+  "facebook/docusaurus": [
+    {
+      "date": "2026-05-26",
+      "stars": 65016,
+      "daily_growth": 0
+    }
+  ],
+  "withastro/astro": [
+    {
+      "date": "2026-05-26",
+      "stars": 59581,
+      "daily_growth": 0
+    }
+  ],
+  "DavidHDev/react-bits": [
+    {
+      "date": "2026-05-26",
+      "stars": 40033,
+      "daily_growth": 0
+    }
+  ],
+  "CorentinTh/it-tools": [
+    {
+      "date": "2026-05-26",
+      "stars": 38981,
+      "daily_growth": 0
+    }
+  ],
+  "ripienaar/free-for-dev": [
+    {
+      "date": "2026-05-26",
+      "stars": 122688,
+      "daily_growth": 0
+    }
+  ],
+  "ComposioHQ/awesome-claude-skills": [
+    {
+      "date": "2026-05-26",
+      "stars": 61950,
+      "daily_growth": 0
+    }
+  ],
+  "juspay/hyperswitch": [
+    {
+      "date": "2026-05-26",
+      "stars": 42755,
+      "daily_growth": 0
+    }
+  ],
+  "chakra-ui/chakra-ui": [
+    {
+      "date": "2026-05-26",
+      "stars": 40413,
+      "daily_growth": 0
+    }
+  ],
+  "YunaiV/ruoyi-vue-pro": [
+    {
+      "date": "2026-05-26",
+      "stars": 37294,
+      "daily_growth": 0
+    }
+  ],
+  "dgtlmoon/changedetection.io": [
+    {
+      "date": "2026-05-26",
+      "stars": 31726,
+      "daily_growth": 0
+    }
+  ],
+  "kriasoft/react-starter-kit": [
+    {
+      "date": "2026-05-26",
+      "stars": 23595,
+      "daily_growth": 0
+    }
+  ],
+  "lTbgykio/Books-Free-Books": [
+    {
+      "date": "2026-05-26",
+      "stars": 17450,
+      "daily_growth": 0
+    }
+  ],
+  "grafana/grafana": [
+    {
+      "date": "2026-05-26",
+      "stars": 73988,
+      "daily_growth": 0
+    }
+  ],
+  "strapi/strapi": [
+    {
+      "date": "2026-05-26",
+      "stars": 72250,
+      "daily_growth": 0
+    }
+  ],
+  "pi-hole/pi-hole": [
+    {
+      "date": "2026-05-26",
+      "stars": 58977,
+      "daily_growth": 0
+    }
+  ],
+  "koala73/worldmonitor": [
+    {
+      "date": "2026-05-26",
+      "stars": 54953,
+      "daily_growth": 0
+    }
+  ],
+  "metabase/metabase": [
+    {
+      "date": "2026-05-26",
+      "stars": 47451,
+      "daily_growth": 0
+    }
+  ],
+  "santifer/career-ops": [
+    {
+      "date": "2026-05-26",
+      "stars": 47352,
+      "daily_growth": 0
+    }
+  ],
+  "ColorlibHQ/AdminLTE": [
+    {
+      "date": "2026-05-26",
+      "stars": 45405,
+      "daily_growth": 0
+    }
+  ],
+  "tabler/tabler": [
+    {
+      "date": "2026-05-26",
+      "stars": 41091,
+      "daily_growth": 0
+    }
+  ]
+}
