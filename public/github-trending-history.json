@@ -2,8 +2,8 @@
   "NousResearch/hermes-agent": [
     {
       "date": "2026-05-26",
-      "stars": 168578,
-      "daily_growth": 13
+      "stars": 168582,
+      "daily_growth": 4
     }
   ],
   "Snailclimb/JavaGuide": [
@@ -23,8 +23,8 @@
   "langgenius/dify": [
     {
       "date": "2026-05-26",
-      "stars": 142742,
-      "daily_growth": 0
+      "stars": 142743,
+      "daily_growth": 1
     }
   ],
   "x1xhlol/system-prompts-and-models-of-ai-tools": [
@@ -58,8 +58,8 @@
   "affaan-m/ECC": [
     {
       "date": "2026-05-26",
-      "stars": 194192,
-      "daily_growth": 12
+      "stars": 194196,
+      "daily_growth": 4
     }
   ],
   "Significant-Gravitas/AutoGPT": [
@@ -72,7 +72,7 @@
   "ollama/ollama": [
     {
       "date": "2026-05-26",
-      "stars": 172364,
+      "stars": 172365,
       "daily_growth": 1
     }
   ],
@@ -93,22 +93,22 @@
   "multica-ai/andrej-karpathy-skills": [
     {
       "date": "2026-05-26",
-      "stars": 156952,
-      "daily_growth": 20
+      "stars": 156962,
+      "daily_growth": 10
     }
   ],
   "n8n-io/n8n": [
     {
       "date": "2026-05-26",
       "stars": 189808,
-      "daily_growth": 3
+      "daily_growth": 0
     }
   ],
   "open-webui/open-webui": [
     {
       "date": "2026-05-26",
       "stars": 138758,
-      "daily_growth": 2
+      "daily_growth": 0
     }
   ],
   "punkpeye/awesome-mcp-servers": [
@@ -205,7 +205,7 @@
   "mudler/LocalAI": [
     {
       "date": "2026-05-26",
-      "stars": 46480,
+      "stars": 46481,
       "daily_growth": 1
     }
   ],
@@ -213,7 +213,7 @@
     {
       "date": "2026-05-26",
       "stars": 34716,
-      "daily_growth": 1
+      "daily_growth": 0
     }
   ],
   "blakeblackshear/frigate": [
@@ -304,7 +304,7 @@
     {
       "date": "2026-05-26",
       "stars": 88256,
-      "daily_growth": 2
+      "daily_growth": 0
     }
   ],
   "thedaviddias/Front-End-Checklist": [
@@ -346,14 +346,14 @@
     {
       "date": "2026-05-26",
       "stars": 122689,
-      "daily_growth": 1
+      "daily_growth": 0
     }
   ],
   "ComposioHQ/awesome-claude-skills": [
     {
       "date": "2026-05-26",
       "stars": 61951,
-      "daily_growth": 1
+      "daily_growth": 0
     }
   ],
   "juspay/hyperswitch": [

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-26T21:44:22.609872+00:00",
+  "updated_at": "2026-05-26T21:56:15.793263+00:00",
   "title": "GitHub中文趋势榜",
   "categories": [
     "AI项目",
@@ -12,12 +12,12 @@
       "name": "NousResearch/hermes-agent",
       "category": "AI项目",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": 168578,
-      "forks": 27981,
+      "stars": 168582,
+      "forks": 27983,
       "language": "Python",
       "description": "The agent that grows with you",
       "created_at": "2025-07-22T22:22:28Z",
-      "updated_at": "2026-05-26T21:42:06Z",
+      "updated_at": "2026-05-26T21:51:33Z",
       "daily_growth": 0,
       "weekly_growth": 0,
       "monthly_growth": 0,
@@ -26,11 +26,11 @@
       "history": [
         {
           "date": "2026-05-26",
-          "stars": 168578,
-          "daily_growth": 13
+          "stars": 168582,
+          "daily_growth": 4
         }
       ],
-      "local_ai_summary": "The agent that grows with you"
+      "local_ai_summary": "项目名：NousResearch/hermes-agent\n\n中文简介：\n随你成长的代理工具\n\n语言：Python\n\n星标数：168,582\n\n项目介绍：\nHermes-Agent 是一个灵活、可扩展的监控与管理工具，旨在伴随用户需求和技术环境变化而动态调整。\n\n适用用户：\n技术运维团队、系统管理员以及对自动化监控有需求的应用开发者。\n\n值得关注的原因：\n- 星标数超过16万，社区活跃度高。\n- 具备强大的自适应能力，适用于多种场景。\n- 开源免费，代码开放透明。"
     },
     {
       "name": "Snailclimb/JavaGuide",
@@ -54,18 +54,18 @@
           "daily_growth": 0
         }
       ],
-      "local_ai_summary": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发"
+      "local_ai_summary": "Java面试 & 后端通用面试指南（Snailclimb/JavaGuide），涵盖计算机基础、数据库、分布式系统、高并发编程、系统设计及AI应用开发等内容。\n\n适合对象：面向Java开发者和应届毕业生，尤其是准备面试或希望提升技术能力的人群。\n\n值得关注的原因：该项目提供了详尽的面试知识点总结与实战经验分享，包括但不限于理论知识和实践经验，有助于快速掌握后端开发核心技能。"
     },
     {
       "name": "affaan-m/ECC",
       "category": "AI项目",
       "url": "https://github.com/affaan-m/ECC",
-      "stars": 194192,
-      "forks": 29951,
+      "stars": 194196,
+      "forks": 29952,
       "language": "JavaScript",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "created_at": "2026-01-18T00:51:51Z",
-      "updated_at": "2026-05-26T21:42:53Z",
+      "updated_at": "2026-05-26T21:51:58Z",
       "daily_growth": 0,
       "weekly_growth": 0,
       "monthly_growth": 0,
@@ -74,11 +74,11 @@
       "history": [
         {
           "date": "2026-05-26",
-          "stars": 194192,
-          "daily_growth": 12
+          "stars": 194196,
+          "daily_growth": 4
         }
       ],
-      "local_ai_summary": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond."
+      "local_ai_summary": "项目名：affaan-m/ECC\n\n中文简介：\nECC 是一个代理框架性能优化系统，集成了技能、直觉、记忆、安全与研究导向的开发方法，适用于 Claude Code、Codex、Opencode、Cursor 等项目。\n\n适用用户：\n开发者和技术团队。\n\n值得关注的原因：\n1. 通过优化代理框架提升性能。\n2. 结合多种先进技术，如技能和直觉机制。\n3. 强调安全性及研究导向的开发流程。\n\nStar 数量：194,196\n\n简要总结：\nECC 是一个高性能代理框架优化系统，采用先进的技术和理念，专注于提升 Claude Code、Codex 等项目的性能与安全性。适合开发者和技术团队关注。"
     },
     {
       "name": "Significant-Gravitas/AutoGPT",
@@ -102,14 +102,14 @@
           "daily_growth": 0
         }
       ],
-      "local_ai_summary": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters."
+      "local_ai_summary": "AutoGPT 是面向所有人的可访问 AI，用于使用和构建。我们的使命是提供所需工具，让您专注于关键事项。\n\n语言：Python\n\n星数：184,566\n\n项目简介：\n- **项目用途**：AutoGPT 旨在实现通用的 AI 自动化，支持开发者轻松创建基于 AI 的应用。\n- **适用用户**：适合所有希望利用 AI 技术进行开发和创新的技术爱好者与专业开发者。\n- **值得关注的原因**：其庞大的社区支持、广泛的功能覆盖以及持续更新使其成为当前最活跃的开源项目之一。\n\n关注 AutoGPT，探索无限可能。"
     },
     {
       "name": "n8n-io/n8n",
       "category": "AI项目",
       "url": "https://github.com/n8n-io/n8n",
       "stars": 189808,
-      "forks": 58035,
+      "forks": 58036,
       "language": "TypeScript",
       "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
       "created_at": "2019-06-22T09:24:21Z",
@@ -118,26 +118,26 @@
       "weekly_growth": 0,
       "monthly_growth": 0,
       "growth_slope": 0.0,
-      "burst_time": "2026-05-26",
+      "burst_time": "数据积累中",
       "history": [
         {
           "date": "2026-05-26",
           "stars": 189808,
-          "daily_growth": 3
+          "daily_growth": 0
         }
       ],
-      "local_ai_summary": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations."
+      "local_ai_summary": "n8n-io/n8n 是一个具备内置AI功能的工作流自动化平台，支持可视化搭建与自定义代码结合。提供本地托管或云端选项，集成400多种服务。\n\n适合需要构建复杂自动化流程的技术人员和开发团队使用。\n\n值得关注的原因是其强大的AI整合能力、丰富的集成资源以及灵活的部署方式。"
     },
     {
       "name": "ollama/ollama",
       "category": "AI项目",
       "url": "https://github.com/ollama/ollama",
-      "stars": 172364,
-      "forks": 16299,
+      "stars": 172365,
+      "forks": 16300,
       "language": "Go",
       "description": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
       "created_at": "2023-06-26T19:39:32Z",
-      "updated_at": "2026-05-26T21:42:27Z",
+      "updated_at": "2026-05-26T21:45:28Z",
       "daily_growth": 0,
       "weekly_growth": 0,
       "monthly_growth": 0,
@@ -146,11 +146,11 @@
       "history": [
         {
           "date": "2026-05-26",
-          "stars": 172364,
+          "stars": 172365,
           "daily_growth": 1
         }
       ],
-      "local_ai_summary": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models."
+      "local_ai_summary": "GitHub项目名：ollama/ollama\n\n项目简介：\n使用 Kimo-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen 和 Gemma 等模型快速启动。\n\n编程语言：Go\n\n星标数：172,365\n\n该项目提供了一套可用于多种模型的 Go 语言实现，支持包括 Kimo-K2.5、GLM-5、MiniMax 等在内的多个预训练模型。适合对这些模型感兴趣的开发者和研究者。\n\n值得关注的原因：\n- 星标数高，社区活跃度大。\n- 提供多种流行的文本生成模型。\n- 使用 Go 语言实现，性能优越。\n\n适用用户：模型开发者、AI 研究人员及相关领域工程师。"
     },
     {
       "name": "open-webui/open-webui",
@@ -161,31 +161,31 @@
       "language": "Python",
       "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "created_at": "2023-10-06T22:08:27Z",
-      "updated_at": "2026-05-26T21:27:37Z",
+      "updated_at": "2026-05-26T21:48:21Z",
       "daily_growth": 0,
       "weekly_growth": 0,
       "monthly_growth": 0,
       "growth_slope": 0.0,
-      "burst_time": "2026-05-26",
+      "burst_time": "数据积累中",
       "history": [
         {
           "date": "2026-05-26",
           "stars": 138758,
-          "daily_growth": 2
+          "daily_growth": 0
         }
       ],
-      "local_ai_summary": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)"
+      "local_ai_summary": "项目名：open-webui/open-webui\n\n简介：\n易于使用的AI界面（支持Ollama、OpenAI API等）\n\n语言：Python\n\n星数：138758\n\n说明：\n这是一个用户友好的AI接口项目，支持多种API，包括Ollama和OpenAI。它简化了与这些API交互的过程。\n\n适合用户：\n对AI开发有一定了解的开发者或有兴趣使用多种AI服务的普通用户。\n\n值得关注的原因：\n拥有大量星标，表明其受欢迎程度高；功能全面，适用于多个场景；易于上手，能够快速集成不同API。\n\n总结：这是一款功能强大且用户友好的开源项目，值得尝试和学习。"
     },
     {
       "name": "multica-ai/andrej-karpathy-skills",
       "category": "AI项目",
       "url": "https://github.com/multica-ai/andrej-karpathy-skills",
-      "stars": 156952,
+      "stars": 156962,
       "forks": 16086,
       "language": "Unknown",
       "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
       "created_at": "2026-01-27T03:53:13Z",
-      "updated_at": "2026-05-26T21:41:32Z",
+      "updated_at": "2026-05-26T21:48:59Z",
       "daily_growth": 0,
       "weekly_growth": 0,
       "monthly_growth": 0,
@@ -194,22 +194,22 @@
       "history": [
         {
           "date": "2026-05-26",
-          "stars": 156952,
-          "daily_growth": 20
+          "stars": 156962,
+          "daily_growth": 10
         }
       ],
-      "local_ai_summary": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls."
+      "local_ai_summary": "项目名：multica-ai/andrej-karpathy-skills\n\n简介：\n该项目包含一个名为CLAUDE.md的文件，旨在改进Claude代码行为。该文件基于Andrej Karpathy对大规模语言模型编程常见问题的观察。\n\n适合用户：\n对使用Claude进行编程和希望优化其性能的开发者。\n\n值得关注的原因：\n- 提供了解决Claude编程中常见问题的方法。\n- 由知名专家Andrej Karpathy编撰，具有参考价值。\n- 星标数高达156,962，社区认可度高。"
     },
     {
       "name": "mudler/LocalAI",
       "category": "AI项目",
       "url": "https://github.com/mudler/LocalAI",
-      "stars": 46480,
+      "stars": 46481,
       "forks": 4104,
       "language": "Go",
       "description": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
       "created_at": "2023-03-18T22:58:02Z",
-      "updated_at": "2026-05-26T21:30:49Z",
+      "updated_at": "2026-05-26T21:52:24Z",
       "daily_growth": 0,
       "weekly_growth": 0,
       "monthly_growth": 0,
@@ -218,11 +218,11 @@
       "history": [
         {
           "date": "2026-05-26",
-          "stars": 46480,
+          "stars": 46481,
           "daily_growth": 1
         }
       ],
-      "local_ai_summary": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required."
+      "local_ai_summary": "项目名：mudler/LocalAI\n\n中文简介：\nLocalAI 是一款开源 AI 引擎，可在任意硬件上运行包括大语言模型（LLMs）、视觉、语音、图像和视频在内的任何模型。无需 GPU。\n\n核心信息：\n- 语言：Go\n- 星标数：46,481\n\n适用用户：\n适合需要在各种设备上部署 AI 模型的技术开发者与研究者。\n\n值得关注的原因：\nLocalAI 提供了灵活性，可在多种硬件上运行复杂的 AI 模型，无需依赖 GPU。这对于希望降低开发成本、提高模型可访问性的用户极具吸引力。"
     },
     {
       "name": "khoj-ai/khoj",
@@ -238,15 +238,15 @@
       "weekly_growth": 0,
       "monthly_growth": 0,
       "growth_slope": 0.0,
-      "burst_time": "2026-05-26",
+      "burst_time": "数据积累中",
       "history": [
         {
           "date": "2026-05-26",
           "stars": 34716,
-          "daily_growth": 1
+          "daily_growth": 0
         }
       ],
-      "local_ai_summary": "Your AI second brain. Self-hostable. Get answers from the web or your docs. Build custom agents, schedule automations, do deep research. Turn any online or local LLM into your personal, autonomous AI (gpt, claude, gemini, llama, qwen, mistral). Get started - free."
+      "local_ai_summary": "Khoj-ai/Khoj：你的AI第二大脑。可自行托管，从网络或文档获取答案，构建自定义代理，安排自动化任务，进行深入研究。将任何在线或本地语言模型（如GPT、Claude、Gemini、LLaMA、Qwen、Mistral）转化为个人自主AI。免费开始。\n\n适用用户：需要高效处理信息和自动化的科研人员、开发者及企业。\n值得关注原因：该工具能显著提升工作效率，实现个性化AI应用，无需依赖外部服务，增强数据控制权。"
     },
     {
       "name": "f/prompts.chat",
@@ -270,31 +270,31 @@
           "daily_growth": 0
         }
       ],
-      "local_ai_summary": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy."
+      "local_ai_summary": "项目名：f/prompts.chat\n\n中文简介：\n前称为 Awesome ChatGPT Prompts。分享、发现和收集来自社区的提示。免费且开源——为组织提供自托管选项，确保完全隐私。\n\n适合用户：\n喜欢使用ChatGPT生成创意内容或需要定制对话策略的技术爱好者和开发者。\n\n值得关注的原因：\n- 免费且开放源代码\n- 支持自托管，保障数据安全与隐私\n- 社区贡献的提示丰富多样\n\n项目简介：f/prompts.chat 是一个免费开源平台，旨在分享、发现和收集 ChatGPT 的创意提示。用户可以在这里找到各种场景下的对话策略和创意构思，同时也可以贡献自己的想法。该项目支持自托管，允许组织在不牺牲隐私的前提下使用相关功能。"
     },
     {
       "name": "langgenius/dify",
       "category": "网站项目",
       "url": "https://github.com/langgenius/dify",
-      "stars": 142742,
+      "stars": 142743,
       "forks": 22457,
       "language": "TypeScript",
       "description": "Production-ready platform for agentic workflow development.",
       "created_at": "2023-04-12T07:40:24Z",
-      "updated_at": "2026-05-26T21:18:21Z",
+      "updated_at": "2026-05-26T21:47:35Z",
       "daily_growth": 0,
       "weekly_growth": 0,
       "monthly_growth": 0,
       "growth_slope": 0.0,
-      "burst_time": "数据积累中",
+      "burst_time": "2026-05-26",
       "history": [
         {
           "date": "2026-05-26",
-          "stars": 142742,
-          "daily_growth": 0
+          "stars": 142743,
+          "daily_growth": 1
         }
       ],
-      "local_ai_summary": "Production-ready platform for agentic workflow development."
+      "local_ai_summary": "项目名：\nlanggenius/dify\n\n中文简介：\n面向生产的专业代理工作流开发平台。\n\n语言：\nTypeScript\n\n星标数：\n14,274 星\n\n项目介绍：\ndify 是一个专业的代理工作流开发平台，为用户提供了一个高效、灵活的工具来构建和管理复杂的工作流程。它基于 TypeScript 开发，确保了代码的质量与稳定性。\n\n适合用户：\n适用于需要自动化处理业务流程的企业和个人开发者。\n\n值得关注的原因：\n1. 高效且稳定的生产环境支持。\n2. 强大的灵活性和可扩展性。\n3. 活跃的社区和丰富的资源。\n\n关注此项目，有助于获取最新的工作流开发技术和最佳实践。"
     },
     {
       "name": "browser-use/browser-use",
@@ -318,7 +318,7 @@
           "daily_growth": 0
         }
       ],
-      "local_ai_summary": "🌐 Make websites accessible for AI agents. Automate tasks online with ease."
+      "local_ai_summary": "项目名：browser-use/browser-use\n\n中文简介：\n🌐 让AI代理访问网站更便捷。轻松自动化在线任务。\n\n项目说明：\n该项目旨在让人工智能代理能够方便地访问和操作网页，从而实现自动化在线任务的功能。\n\n适用用户：\n适合希望利用Python进行Web自动化脚本开发、测试或机器人创建的开发者及研究人员。\n\n值得关注的原因：\n拥有95675颗星，表明该项目广受认可。它提供了一种简单而强大的方式来自动化网页交互，适用于各种应用场景。"
     },
     {
       "name": "gohugoio/hugo",
@@ -334,15 +334,15 @@
       "weekly_growth": 0,
       "monthly_growth": 0,
       "growth_slope": 0.0,
-      "burst_time": "2026-05-26",
+      "burst_time": "数据积累中",
       "history": [
         {
           "date": "2026-05-26",
           "stars": 88256,
-          "daily_growth": 2
+          "daily_growth": 0
         }
       ],
-      "local_ai_summary": "The world’s fastest framework for building websites."
+      "local_ai_summary": "项目名：gohugoio/hugo\n\n简介：\n全球最快的网站构建框架。\n\n语言：Go\n\n星数：88,256\n\n介绍：\nHugo 是一个用 Go 编写的静态站点生成器，以其极致的速度著称。它能够快速地将 Markdown 文件转换为 HTML，并支持多种主题和插件，适用于各种类型的网站项目。\n\n适用用户：\n- 需要快速构建网站的开发者\n- 喜欢使用 Go 语言的技术爱好者\n- 对性能有高要求的内容创作者\n\n值得关注的原因：\nHugo 因其卓越的速度、强大的功能以及活跃的社区支持而备受关注。无论是个人博客还是企业官网，Hugo 都能提供出色的构建体验。"
     },
     {
       "name": "ripienaar/free-for-dev",
@@ -358,15 +358,15 @@
       "weekly_growth": 0,
       "monthly_growth": 0,
       "growth_slope": 0.0,
-      "burst_time": "2026-05-26",
+      "burst_time": "数据积累中",
       "history": [
         {
           "date": "2026-05-26",
           "stars": 122689,
-          "daily_growth": 1
+          "daily_growth": 0
         }
       ],
-      "local_ai_summary": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev"
+      "local_ai_summary": "项目名：\nripienaar/free-for-dev\n\n中文简介：\n一个列出对开发运维和基础设施运维（DevOps 和 InfraDev）人员感兴趣的 SaaS、PaaS 和 IaaS 的免费试用版集合。\n\n适用用户：\n开发运维及基础设施运维专业人士。\n\n值得关注的原因：\n这个项目汇集了多个云服务提供商的免费试用版本，帮助 DevOps 从业者在无需成本的情况下测试和评估各种工具和服务。无论是寻找新的 CI/CD 工具、监控解决方案还是其他基础设施资源，这里都能找到有价值的信息。\n\n星标数量：122,689"
     },
     {
       "name": "ComposioHQ/awesome-claude-skills",
@@ -382,15 +382,15 @@
       "weekly_growth": 0,
       "monthly_growth": 0,
       "growth_slope": 0.0,
-      "burst_time": "2026-05-26",
+      "burst_time": "数据积累中",
       "history": [
         {
           "date": "2026-05-26",
           "stars": 61951,
-          "daily_growth": 1
+          "daily_growth": 0
         }
       ],
-      "local_ai_summary": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows"
+      "local_ai_summary": "项目名：ComposioHQ/awesome-claude-skills\n\n中文简介：\n这是一个精选列表，汇集了Claude AI工作流程自定义所需的优质技能、资源和工具。\n\n适用用户：\n适用于希望定制Claude AI工作流程的开发者和技术爱好者。\n\n值得关注的原因：\n此项目提供了丰富的Claude AI技能和工具，帮助用户优化AI工作流程。高Star数量证明了其价值与实用性。\n\n说明：\n这个GitHub项目是一个精选列表，包含了各种Claude AI技能、资源和工具，旨在帮助用户更好地定制Claude AI的工作流程，提高开发效率和创新能力。适合对个性化AI应用感兴趣的开发者和技术爱好者关注。"
     },
     {
       "name": "grafana/grafana",
@@ -414,7 +414,7 @@
           "daily_growth": 0
         }
       ],
-      "local_ai_summary": "The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more. "
+      "local_ai_summary": "Grafana 是一个开源且可组合的可观测性和数据可视化平台。它可以用于从Prometheus、Loki、Elasticsearch、InfluxDB、Postgres等多种数据源中可视化指标、日志和跟踪。\n\n适合需要监控和分析来自多种数据源的数据的技术人员和团队。\n\n值得关注的原因在于其强大的功能和广泛的兼容性，能够帮助用户高效地管理和展示复杂的数据。"
     },
     {
       "name": "strapi/strapi",
@@ -438,7 +438,7 @@
           "daily_growth": 0
         }
       ],
-      "local_ai_summary": "🚀 Strapi is the leading open-source headless CMS. It’s 100% JavaScript/TypeScript, fully customizable, and developer-first."
+      "local_ai_summary": "🔥 Strapi 是领先的开源无头 CMS。它完全是用 JavaScript/TypeScript 编写的，完全可定制，并以开发者为中心。\n\n语言：TypeScript\n\n星标数：72,250\n\n项目介绍：\nStrapi 是一个用于构建后端服务的开源框架，支持高度自定义和灵活配置，特别适用于需要无头 CMS 的项目。它适合前端开发人员、全栈工程师以及任何希望使用现代技术构建强大内容管理系统的开发者。\n\n值得关注的原因：Strapi 拥有庞大的用户基础和技术社区支持，广泛应用于各种项目中，能够显著提高开发效率并简化内容管理流程。"
     }
   ]
 }
