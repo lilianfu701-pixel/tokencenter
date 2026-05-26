@@ -1,0 +1,206 @@
+{
+  "updated_at": "2026-05-26T21:13:08.989588+00:00",
+  "title": "GitHub AI Trending Projects",
+  "items": [
+    {
+      "name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 194172,
+      "forks": 29951,
+      "language": "JavaScript",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "updated_at": "2026-05-26T21:08:50Z",
+      "local_ai_summary": "1. 一句话总结：ECC是一个专注于Claude Code等项目的代理性能优化系统，集成了多种先进技能和研究驱动的开发方法。\n\n2. 为什么值得关注：该项目拥有极高的关注度（超过19万星），展示了其在JavaScript领域的影响力和技术实力，是性能优化领域的优质资源。\n\n3. 适合人群：对代理性能优化、JavaScript技术栈及Claude Code等项目感兴趣的开发者和研究人员。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "stars": 189804,
+      "forks": 58034,
+      "language": "TypeScript",
+      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "updated_at": "2026-05-26T21:06:03Z",
+      "local_ai_summary": "1. 一句话总结：n8n 是一个具备内置AI功能的可视化工作流自动化平台，支持自托管和云端部署。\n\n2. 为什么值得关注：凭借丰富的集成资源（400+）和结合图形化构建与自定义代码的能力，为开发者和企业提供了强大的工作流自动化解决方案。\n\n3. 适合人群：开发者、数据工程师、企业IT部门等需要进行复杂流程自动化的人群。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "Significant-Gravitas/AutoGPT",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "stars": 184566,
+      "forks": 46223,
+      "language": "Python",
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "updated_at": "2026-05-26T21:03:01Z",
+      "local_ai_summary": "1. 一句话总结：AutoGPT 是一个用 Python 编写的开源 AI 自动化工具，旨在让每个人都能访问和利用 AI 技术。\n\n2. 为什么值得关注：该项目拥有超过 18.46 万颗星，社区活跃度高，且致力于提供易于使用的 AI 工具，适合开发者和研究者探索和定制 AI 应用。\n\n3. 适合人群：AI 研究者、开发者、技术爱好者及希望利用 AI 技术构建应用的人员。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "ollama/ollama",
+      "url": "https://github.com/ollama/ollama",
+      "stars": 172363,
+      "forks": 16299,
+      "language": "Go",
+      "description": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+      "updated_at": "2026-05-26T20:55:47Z",
+      "local_ai_summary": "1. 一句话总结：Ollama 是一个基于 Go 语言的开源项目，提供多种大模型的部署和运行支持。\n\n2. 为什么值得关注：该项目汇集了多个流行的大语言模型，且以开源形式提供便捷的部署方式，对于开发者和研究者具有很高的参考价值。\n\n3. 适合人群：技术爱好者、研究者、开发者以及对大模型部署感兴趣的用户。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "stars": 168557,
+      "forks": 27977,
+      "language": "Python",
+      "description": "The agent that grows with you",
+      "updated_at": "2026-05-26T21:09:51Z",
+      "local_ai_summary": "1. 一句话总结：NousResearch/hermes-agent 是一个随着用户需求增长的 Python 代理工具。\n\n2. 为什么值得关注：该项目拥有极高的人气，Star 数超过 16.8 万，表明其在社区中有广泛的应用和认可度。\n\n3. 适合人群：开发者、运维人员以及需要网络代理解决方案的技术团队。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "anomalyco/opencode",
+      "url": "https://github.com/anomalyco/opencode",
+      "stars": 165681,
+      "forks": 19677,
+      "language": "TypeScript",
+      "description": "The open source coding agent.",
+      "updated_at": "2026-05-26T21:02:35Z",
+      "local_ai_summary": "1. 一句话总结：Anomalyco/opencode 是一个用 TypeScript 编写的开源代码生成器。\n2. 为什么值得关注：因其庞大的用户基础和活跃度，展示了强大的社区支持和技术潜力。\n3. 适合人群：对自动化编码、代码生成感兴趣的开发者及技术团队。\n4. 关注程度：高"
+    },
+    {
+      "name": "f/prompts.chat",
+      "url": "https://github.com/f/prompts.chat",
+      "stars": 162868,
+      "forks": 21178,
+      "language": "HTML",
+      "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+      "updated_at": "2026-05-26T20:45:55Z",
+      "local_ai_summary": "1. 一句话总结：f/prompts.chat 是一个开源的聊天生成式预训练模型（ChatGPT）提示词共享平台。\n\n2. 为什么值得关注：该平台提供了一个方便的社区资源，促进提示词分享与收集，支持自托管以保障隐私，star数高，表明其受欢迎程度和实用价值。\n\n3. 适合人群：AI爱好者、开发者、数据科学家及需要定制化聊天机器人场景的专业人士。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "multica-ai/andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "stars": 156926,
+      "forks": 16086,
+      "language": "Unknown",
+      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "updated_at": "2026-05-26T21:09:56Z",
+      "local_ai_summary": "1. 一句话总结：这是一个基于Andrej Karpathy观察的LLM编程陷阱改进Claude代码行为的单个文档。\n\n2. 为什么值得关注：该项目提供了理解和避免大型语言模型在编程中的常见错误的方法，对于开发者和研究者具有较高参考价值。\n\n3. 适合人群：所有对提高大型语言模型编程输出质量感兴趣的开发者、研究人员以及相关技术爱好者。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "Snailclimb/JavaGuide",
+      "url": "https://github.com/Snailclimb/JavaGuide",
+      "stars": 155893,
+      "forks": 46134,
+      "language": "JavaScript",
+      "description": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
+      "updated_at": "2026-05-26T20:01:19Z",
+      "local_ai_summary": "1. 一句话总结：这是一个全面覆盖Java面试相关知识点的开源项目。\n\n2. 为什么值得关注：该项目提供了详尽的Java面试及后端开发指南，包括多个技术领域的内容，对于正在准备Java面试或从事相关技术工作的开发者极具参考价值。\n\n3. 适合人群：正在备考Java面试、希望提升后端开发技能的技术人员和应届毕业生。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "langflow-ai/langflow",
+      "url": "https://github.com/langflow-ai/langflow",
+      "stars": 148784,
+      "forks": 9122,
+      "language": "Python",
+      "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.",
+      "updated_at": "2026-05-26T20:34:43Z",
+      "local_ai_summary": "1. 一句话总结：\nLangflow 是一个用 Python 编写的强大工具，用于构建和部署 AI 动力代理和工作流。\n\n2. 为什么值得关注：\n该项目拥有极高的 Star 数量，表明其在社区中有广泛的应用和认可度，适合开发者探索和使用最新的AI技术。\n\n3. 适合人群：\n对 AI 技术感兴趣、希望快速构建复杂工作流或代理应用的开发者和技术团队。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "langgenius/dify",
+      "url": "https://github.com/langgenius/dify",
+      "stars": 142741,
+      "forks": 22457,
+      "language": "TypeScript",
+      "description": "Production-ready platform for agentic workflow development.",
+      "updated_at": "2026-05-26T20:46:45Z",
+      "local_ai_summary": "1. 一句话总结：\n   Dify 是一个用于构建智能代理工作流的生产级平台，基于 TypeScript 开发。\n\n2. 为什么值得关注：\n   该项目拥有极高的 Star 数量，表明其在开发者社区中具有广泛的影响力和认可度；同时作为一个专业的工作流开发平台，适用于复杂业务流程自动化场景。\n\n3. 适合人群：\n   对于需要构建智能代理或复杂工作流的企业开发者、系统集成人员以及希望提高业务流程自动化的团队。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "open-webui/open-webui",
+      "url": "https://github.com/open-webui/open-webui",
+      "stars": 138756,
+      "forks": 19857,
+      "language": "Python",
+      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "updated_at": "2026-05-26T20:45:43Z",
+      "local_ai_summary": "1. 一句话总结：这是一个用户友好的AI界面项目，支持多种AI模型和API，如Ollama、OpenAI API等。\n\n2. 为什么值得关注：该项目提供了一个便捷的接口来访问不同的AI模型和服务，具有较高的实用性和扩展性。\n\n3. 适合人群：开发者、AI爱好者、需要集成AI功能的应用开发人员。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "x1xhlol/system-prompts-and-models-of-ai-tools",
+      "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+      "stars": 138300,
+      "forks": 34450,
+      "language": "Unknown",
+      "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
+      "updated_at": "2026-05-26T20:58:04Z",
+      "local_ai_summary": "1. 一句话总结：该项目集成了多种开源的系统提示和AI模型，提供丰富的开发工具支持。\n2. 为什么值得关注：其庞大的集成规模和广泛的功能覆盖使其成为开发者和研究者的宝贵资源。\n3. 适合人群：广大的软件开发者、研究人员及对AI辅助工具感兴趣的用户。\n4. 关注程度：高"
+    },
+    {
+      "name": "anthropics/claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "stars": 126724,
+      "forks": 20775,
+      "language": "Python",
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "updated_at": "2026-05-26T21:06:05Z",
+      "local_ai_summary": "1. 一句话总结：Claude Code 是一个在终端运行的代码助手，通过自然语言指令帮助开发者更高效地完成编码任务。\n\n2. 为什么值得关注：该项目集成了多种功能如代码解释、Git 工作流处理等，利用 Python 实现，具有较高的开发和学习价值。\n\n3. 适合人群：软件开发人员、代码维护者以及希望通过工具提高编程效率的开发者。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "garrytan/gstack",
+      "url": "https://github.com/garrytan/gstack",
+      "stars": 103185,
+      "forks": 15383,
+      "language": "TypeScript",
+      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+      "updated_at": "2026-05-26T21:07:34Z",
+      "local_ai_summary": "1. 一句话总结：gstack 是一个基于 Garry Tan 的 Claude Code 设置的开源项目，包含 23 个工具以帮助 CEO、设计师、工程经理等高效工作。\n\n2. 为什么值得关注：该项目集合了多种角色所需的功能，对于希望提升团队协作效率和项目管理能力的技术团队来说极具参考价值。\n\n3. 适合人群：技术团队中的项目经理、产品经理、开发人员以及任何对提高工作效率感兴趣的开发者。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "puppeteer/puppeteer",
+      "url": "https://github.com/puppeteer/puppeteer",
+      "stars": 94372,
+      "forks": 9420,
+      "language": "TypeScript",
+      "description": "JavaScript API for Chrome and Firefox",
+      "updated_at": "2026-05-26T16:52:28Z",
+      "local_ai_summary": "1. 一句话总结：Puppeteer 是一个基于 Node.js 的库，提供了一个高级 API 来控制 Chrome 或 Firefox，用于自动化页面抓取和测试。\n2. 为什么值得关注：它极大地简化了与浏览器的交互操作，适用于需要进行网页自动化测试或数据提取的场景。\n3. 适合人群：开发者、自动化测试工程师、数据爬虫从业人员等。\n4. 关注程度：高"
+    },
+    {
+      "name": "microsoft/playwright",
+      "url": "https://github.com/microsoft/playwright",
+      "stars": 89506,
+      "forks": 5785,
+      "language": "TypeScript",
+      "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. ",
+      "updated_at": "2026-05-26T21:10:29Z",
+      "local_ai_summary": "1. 一句话总结：Playwright 是一个用于 Web 测试和自动化的强大框架，支持使用单一 API 测试 Chromium、Firefox 和WebKit。\n\n2. 为什么值得关注：因其提供统一的 API 支持多浏览器测试，简化了前端自动化测试流程，同时社区活跃，星标数高。\n\n3. 适合人群：Web 测试工程师、前端开发者以及需要进行跨浏览器兼容性测试的相关人员。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "ChatGPTNextWeb/NextChat",
+      "url": "https://github.com/ChatGPTNextWeb/NextChat",
+      "stars": 88092,
+      "forks": 59685,
+      "language": "TypeScript",
+      "description": "✨ Light and Fast AI Assistant. Support: Web | iOS | MacOS | Android |  Linux | Windows",
+      "updated_at": "2026-05-26T21:02:55Z",
+      "local_ai_summary": "1. 一句话总结：ChatGPTNextWeb/NextChat 是一个轻量快速的多平台AI助手，支持多种操作系统。\n\n2. 为什么值得关注：其广泛的支持平台和开源性质使其具有很高的实用性和扩展性。\n\n3. 适合人群：开发人员、AI爱好者以及需要跨平台智能助手的用户。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "home-assistant/core",
+      "url": "https://github.com/home-assistant/core",
+      "stars": 87313,
+      "forks": 37570,
+      "language": "Python",
+      "description": ":house_with_garden: Open source home automation that puts local control and privacy first.",
+      "updated_at": "2026-05-26T21:10:18Z",
+      "local_ai_summary": "1. 一句话总结：Home Assistant 是一个注重本地控制和隐私的开源家居自动化平台，使用 Python 编写。\n\n2. 为什么值得关注：它提供了强大的家居自动化功能，并且完全开源，支持自定义扩展，适合追求个性化智能家居体验和技术爱好者。\n\n3. 适合人群：技术爱好者、智能家居系统开发者、对隐私保护有高要求的用户。\n\n4. 关注程度：高"
+    },
+    {
+      "name": "openai/codex",
+      "url": "https://github.com/openai/codex",
+      "stars": 85922,
+      "forks": 12543,
+      "language": "Rust",
+      "description": "Lightweight coding agent that runs in your terminal",
+      "updated_at": "2026-05-26T21:05:49Z",
+      "local_ai_summary": "1. 一句话总结：Codex 是一个用 Rust 编写的轻量级终端代码助手。\n2. 为什么值得关注：该开源项目结合了轻巧的终端工具与强大的编程辅助功能，适合追求高效编码体验的开发者。\n3. 适合人群：热衷于使用 Rust 开发，寻求提高编程效率和生产力的工程师和技术爱好者。\n4. 关注程度：高"
+    }
+  ]
+}
