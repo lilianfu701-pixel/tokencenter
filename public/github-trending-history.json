@@ -2,8 +2,8 @@
   "NousResearch/hermes-agent": [
     {
       "date": "2026-05-26",
-      "stars": 168582,
-      "daily_growth": 4
+      "stars": 168603,
+      "daily_growth": 21
     }
   ],
   "Snailclimb/JavaGuide": [
@@ -23,8 +23,8 @@
   "langgenius/dify": [
     {
       "date": "2026-05-26",
-      "stars": 142743,
-      "daily_growth": 1
+      "stars": 142742,
+      "daily_growth": -1
     }
   ],
   "x1xhlol/system-prompts-and-models-of-ai-tools": [
@@ -58,8 +58,8 @@
   "affaan-m/ECC": [
     {
       "date": "2026-05-26",
-      "stars": 194196,
-      "daily_growth": 4
+      "stars": 194232,
+      "daily_growth": 36
     }
   ],
   "Significant-Gravitas/AutoGPT": [
@@ -72,15 +72,15 @@
   "ollama/ollama": [
     {
       "date": "2026-05-26",
-      "stars": 172365,
+      "stars": 172366,
       "daily_growth": 1
     }
   ],
   "f/prompts.chat": [
     {
       "date": "2026-05-26",
-      "stars": 162869,
-      "daily_growth": 0
+      "stars": 162870,
+      "daily_growth": 1
     }
   ],
   "huggingface/transformers": [
@@ -93,22 +93,22 @@
   "multica-ai/andrej-karpathy-skills": [
     {
       "date": "2026-05-26",
-      "stars": 156962,
-      "daily_growth": 10
+      "stars": 156992,
+      "daily_growth": 30
     }
   ],
   "n8n-io/n8n": [
     {
       "date": "2026-05-26",
-      "stars": 189808,
-      "daily_growth": 0
+      "stars": 189811,
+      "daily_growth": 3
     }
   ],
   "open-webui/open-webui": [
     {
       "date": "2026-05-26",
-      "stars": 138758,
-      "daily_growth": 0
+      "stars": 138757,
+      "daily_growth": -1
     }
   ],
   "punkpeye/awesome-mcp-servers": [
@@ -206,7 +206,7 @@
     {
       "date": "2026-05-26",
       "stars": 46481,
-      "daily_growth": 1
+      "daily_growth": 0
     }
   ],
   "khoj-ai/khoj": [
@@ -296,15 +296,15 @@
   "browser-use/browser-use": [
     {
       "date": "2026-05-26",
-      "stars": 95675,
-      "daily_growth": 0
+      "stars": 95677,
+      "daily_growth": 2
     }
   ],
   "gohugoio/hugo": [
     {
       "date": "2026-05-26",
-      "stars": 88256,
-      "daily_growth": 0
+      "stars": 88257,
+      "daily_growth": 1
     }
   ],
   "thedaviddias/Front-End-Checklist": [
@@ -422,8 +422,8 @@
   "koala73/worldmonitor": [
     {
       "date": "2026-05-26",
-      "stars": 54953,
-      "daily_growth": 0
+      "stars": 54955,
+      "daily_growth": 2
     }
   ],
   "metabase/metabase": [
@@ -451,6 +451,132 @@
     {
       "date": "2026-05-26",
       "stars": 41091,
+      "daily_growth": 0
+    }
+  ],
+  "microsoft/markitdown": [
+    {
+      "date": "2026-05-26",
+      "stars": 125318,
+      "daily_growth": 0
+    }
+  ],
+  "microsoft/ai-agents-for-beginners": [
+    {
+      "date": "2026-05-26",
+      "stars": 65648,
+      "daily_growth": 0
+    }
+  ],
+  "GyulyVGC/sniffnet": [
+    {
+      "date": "2026-05-26",
+      "stars": 37800,
+      "daily_growth": 0
+    }
+  ],
+  "lissy93/web-check": [
+    {
+      "date": "2026-05-26",
+      "stars": 33175,
+      "daily_growth": 0
+    }
+  ],
+  "enaqx/awesome-pentest": [
+    {
+      "date": "2026-05-26",
+      "stars": 26212,
+      "daily_growth": 0
+    }
+  ],
+  "vxcontrol/pentagi": [
+    {
+      "date": "2026-05-26",
+      "stars": 17246,
+      "daily_growth": 0
+    }
+  ],
+  "SuperManito/LinuxMirrors": [
+    {
+      "date": "2026-05-26",
+      "stars": 7521,
+      "daily_growth": 0
+    }
+  ],
+  "leebaird/discover": [
+    {
+      "date": "2026-05-26",
+      "stars": 3882,
+      "daily_growth": 0
+    }
+  ],
+  "swisskyrepo/PayloadsAllTheThings": [
+    {
+      "date": "2026-05-26",
+      "stars": 77968,
+      "daily_growth": 0
+    }
+  ],
+  "x64dbg/x64dbg": [
+    {
+      "date": "2026-05-26",
+      "stars": 48478,
+      "daily_growth": 0
+    }
+  ],
+  "sherlock-project/sherlock": [
+    {
+      "date": "2026-05-26",
+      "stars": 83987,
+      "daily_growth": 0
+    }
+  ],
+  "projectdiscovery/nuclei": [
+    {
+      "date": "2026-05-26",
+      "stars": 28892,
+      "daily_growth": 0
+    }
+  ],
+  "shadow1ng/fscan": [
+    {
+      "date": "2026-05-26",
+      "stars": 13880,
+      "daily_growth": 0
+    }
+  ],
+  "future-architect/vuls": [
+    {
+      "date": "2026-05-26",
+      "stars": 12160,
+      "daily_growth": 0
+    }
+  ],
+  "dkhamsing/open-source-ios-apps": [
+    {
+      "date": "2026-05-26",
+      "stars": 50460,
+      "daily_growth": 0
+    }
+  ],
+  "NativeScript/NativeScript": [
+    {
+      "date": "2026-05-26",
+      "stars": 25515,
+      "daily_growth": 0
+    }
+  ],
+  "flutter/flutter": [
+    {
+      "date": "2026-05-26",
+      "stars": 176472,
+      "daily_growth": 0
+    }
+  ],
+  "Finb/Bark": [
+    {
+      "date": "2026-05-26",
+      "stars": 8092,
       "daily_growth": 0
     }
   ]
