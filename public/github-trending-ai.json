@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29T15:02:21.664379+00:00",
+  "updated_at": "2026-05-30T03:02:20.217981+00:00",
   "title": "GitHub中文趋势榜",
   "categories": [
     "AI项目",
@@ -14,16 +14,16 @@
       "name": "NousResearch/hermes-agent",
       "category": "AI项目",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": 172486,
-      "forks": 29004,
+      "stars": 172922,
+      "forks": 29159,
       "language": "Python",
       "description": "The agent that grows with you",
       "created_at": "2025-07-22T22:22:28Z",
-      "updated_at": "2026-05-29T14:59:49Z",
+      "updated_at": "2026-05-30T02:59:21Z",
       "daily_growth": 0,
-      "weekly_growth": 3876,
-      "monthly_growth": 3876,
-      "growth_slope": 969.0,
+      "weekly_growth": 4312,
+      "monthly_growth": 4312,
+      "growth_slope": 862.4,
       "burst_time": "2026-05-27",
       "history": [
         {
@@ -45,6 +45,11 @@
           "date": "2026-05-29",
           "stars": 172486,
           "daily_growth": 764
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 172922,
+          "daily_growth": 436
         }
       ],
       "local_ai_summary": "The agent that grows with you"
@@ -53,16 +58,16 @@
       "name": "Snailclimb/JavaGuide",
       "category": "AI项目",
       "url": "https://github.com/Snailclimb/JavaGuide",
-      "stars": 155958,
-      "forks": 46144,
+      "stars": 155960,
+      "forks": 46142,
       "language": "JavaScript",
       "description": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
       "created_at": "2018-05-07T13:27:00Z",
-      "updated_at": "2026-05-29T12:51:10Z",
+      "updated_at": "2026-05-30T01:33:17Z",
       "daily_growth": 0,
-      "weekly_growth": 65,
-      "monthly_growth": 65,
-      "growth_slope": 16.25,
+      "weekly_growth": 67,
+      "monthly_growth": 67,
+      "growth_slope": 13.4,
       "burst_time": "2026-05-27",
       "history": [
         {
@@ -84,6 +89,11 @@
           "date": "2026-05-29",
           "stars": 155958,
           "daily_growth": 12
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 155960,
+          "daily_growth": 2
         }
       ],
       "local_ai_summary": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发"
@@ -92,16 +102,16 @@
       "name": "obra/superpowers",
       "category": "AI项目",
       "url": "https://github.com/obra/superpowers",
-      "stars": 212010,
-      "forks": 18878,
+      "stars": 212348,
+      "forks": 18911,
       "language": "Shell",
       "description": "An agentic skills framework & software development methodology that works.",
       "created_at": "2025-10-09T19:45:18Z",
-      "updated_at": "2026-05-29T14:59:59Z",
+      "updated_at": "2026-05-30T02:58:16Z",
       "daily_growth": 0,
-      "weekly_growth": 4135,
-      "monthly_growth": 4135,
-      "growth_slope": 1033.75,
+      "weekly_growth": 4473,
+      "monthly_growth": 4473,
+      "growth_slope": 894.6,
       "burst_time": "2026-05-28",
       "history": [
         {
@@ -123,6 +133,11 @@
           "date": "2026-05-29",
           "stars": 212010,
           "daily_growth": 776
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 212348,
+          "daily_growth": 338
         }
       ],
       "local_ai_summary": "An agentic skills framework & software development methodology that works."
@@ -131,16 +146,16 @@
       "name": "langchain-ai/langchain",
       "category": "AI项目",
       "url": "https://github.com/langchain-ai/langchain",
-      "stars": 137971,
-      "forks": 22843,
+      "stars": 137995,
+      "forks": 22854,
       "language": "Python",
       "description": "The agent engineering platform.",
       "created_at": "2022-10-17T02:58:36Z",
-      "updated_at": "2026-05-29T14:15:40Z",
+      "updated_at": "2026-05-30T02:51:10Z",
       "daily_growth": 0,
-      "weekly_growth": 272,
-      "monthly_growth": 272,
-      "growth_slope": 68.0,
+      "weekly_growth": 296,
+      "monthly_growth": 296,
+      "growth_slope": 59.2,
       "burst_time": "2026-05-27",
       "history": [
         {
@@ -162,6 +177,11 @@
           "date": "2026-05-29",
           "stars": 137971,
           "daily_growth": 65
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 137995,
+          "daily_growth": 24
         }
       ],
       "local_ai_summary": "The agent engineering platform."
@@ -170,16 +190,16 @@
       "name": "affaan-m/ECC",
       "category": "开发工具",
       "url": "https://github.com/affaan-m/ECC",
-      "stars": 198216,
-      "forks": 30468,
+      "stars": 198630,
+      "forks": 30522,
       "language": "JavaScript",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "created_at": "2026-01-18T00:51:51Z",
-      "updated_at": "2026-05-29T15:00:18Z",
+      "updated_at": "2026-05-30T02:58:37Z",
       "daily_growth": 0,
-      "weekly_growth": 3978,
-      "monthly_growth": 3978,
-      "growth_slope": 994.5,
+      "weekly_growth": 4392,
+      "monthly_growth": 4392,
+      "growth_slope": 878.4,
       "burst_time": "2026-05-27",
       "history": [
         {
@@ -201,6 +221,11 @@
           "date": "2026-05-29",
           "stars": 198216,
           "daily_growth": 795
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 198630,
+          "daily_growth": 414
         }
       ],
       "local_ai_summary": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond."
@@ -209,16 +234,16 @@
       "name": "anomalyco/opencode",
       "category": "AI项目",
       "url": "https://github.com/anomalyco/opencode",
-      "stars": 167015,
-      "forks": 19906,
+      "stars": 167182,
+      "forks": 19931,
       "language": "TypeScript",
       "description": "The open source coding agent.",
       "created_at": "2025-04-30T20:08:00Z",
-      "updated_at": "2026-05-29T14:55:40Z",
+      "updated_at": "2026-05-30T02:57:28Z",
       "daily_growth": 0,
-      "weekly_growth": 1321,
-      "monthly_growth": 1321,
-      "growth_slope": 330.25,
+      "weekly_growth": 1488,
+      "monthly_growth": 1488,
+      "growth_slope": 297.6,
       "burst_time": "2026-05-28",
       "history": [
         {
@@ -240,6 +265,11 @@
           "date": "2026-05-29",
           "stars": 167015,
           "daily_growth": 282
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 167182,
+          "daily_growth": 167
         }
       ],
       "local_ai_summary": "The open source coding agent."
@@ -248,16 +278,16 @@
       "name": "browser-use/browser-use",
       "category": "AI项目",
       "url": "https://github.com/browser-use/browser-use",
-      "stars": 96162,
-      "forks": 10789,
+      "stars": 96211,
+      "forks": 10791,
       "language": "Python",
       "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
       "created_at": "2024-10-31T16:00:56Z",
-      "updated_at": "2026-05-29T14:54:12Z",
+      "updated_at": "2026-05-30T02:39:31Z",
       "daily_growth": 0,
-      "weekly_growth": 482,
-      "monthly_growth": 482,
-      "growth_slope": 120.5,
+      "weekly_growth": 531,
+      "monthly_growth": 531,
+      "growth_slope": 106.2,
       "burst_time": "2026-05-27",
       "history": [
         {
@@ -279,6 +309,11 @@
           "date": "2026-05-29",
           "stars": 96162,
           "daily_growth": 80
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 96211,
+          "daily_growth": 49
         }
       ],
       "local_ai_summary": "🌐 Make websites accessible for AI agents. Automate tasks online with ease."
@@ -287,16 +322,16 @@
       "name": "ChromeDevTools/chrome-devtools-mcp",
       "category": "开发工具",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": 42236,
-      "forks": 2700,
+      "stars": 42274,
+      "forks": 2698,
       "language": "TypeScript",
       "description": "Chrome DevTools for coding agents",
       "created_at": "2025-09-11T10:39:55Z",
-      "updated_at": "2026-05-29T14:50:14Z",
+      "updated_at": "2026-05-30T02:39:40Z",
       "daily_growth": 0,
-      "weekly_growth": 384,
-      "monthly_growth": 384,
-      "growth_slope": 96.0,
+      "weekly_growth": 422,
+      "monthly_growth": 422,
+      "growth_slope": 84.4,
       "burst_time": "2026-05-28",
       "history": [
         {
@@ -318,6 +353,11 @@
           "date": "2026-05-29",
           "stars": 42236,
           "daily_growth": 80
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 42274,
+          "daily_growth": 38
         }
       ],
       "local_ai_summary": "Chrome DevTools for coding agents"
@@ -326,16 +366,16 @@
       "name": "langgenius/dify",
       "category": "开发工具",
       "url": "https://github.com/langgenius/dify",
-      "stars": 143103,
-      "forks": 22511,
+      "stars": 143126,
+      "forks": 22516,
       "language": "TypeScript",
       "description": "Production-ready platform for agentic workflow development.",
       "created_at": "2023-04-12T07:40:24Z",
-      "updated_at": "2026-05-29T14:51:47Z",
+      "updated_at": "2026-05-30T02:29:50Z",
       "daily_growth": 0,
-      "weekly_growth": 361,
-      "monthly_growth": 361,
-      "growth_slope": 90.25,
+      "weekly_growth": 384,
+      "monthly_growth": 384,
+      "growth_slope": 76.8,
       "burst_time": "2026-05-27",
       "history": [
         {
@@ -357,6 +397,11 @@
           "date": "2026-05-29",
           "stars": 143103,
           "daily_growth": 82
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 143126,
+          "daily_growth": 23
         }
       ],
       "local_ai_summary": "Production-ready platform for agentic workflow development."
@@ -365,16 +410,16 @@
       "name": "ansible/ansible",
       "category": "AI项目",
       "url": "https://github.com/ansible/ansible",
-      "stars": 68712,
+      "stars": 68714,
       "forks": 24149,
       "language": "Python",
       "description": "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com.",
       "created_at": "2012-03-06T14:58:02Z",
-      "updated_at": "2026-05-29T14:38:32Z",
+      "updated_at": "2026-05-29T20:07:39Z",
       "daily_growth": 0,
-      "weekly_growth": 22,
-      "monthly_growth": 22,
-      "growth_slope": 5.5,
+      "weekly_growth": 24,
+      "monthly_growth": 24,
+      "growth_slope": 4.8,
       "burst_time": "2026-05-28",
       "history": [
         {
@@ -396,6 +441,11 @@
           "date": "2026-05-29",
           "stars": 68712,
           "daily_growth": 0
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 68714,
+          "daily_growth": 2
         }
       ],
       "local_ai_summary": "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com."
@@ -404,16 +454,16 @@
       "name": "n8n-io/n8n",
       "category": "开发工具",
       "url": "https://github.com/n8n-io/n8n",
-      "stars": 190219,
-      "forks": 58125,
+      "stars": 190276,
+      "forks": 58140,
       "language": "TypeScript",
       "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
       "created_at": "2019-06-22T09:24:21Z",
-      "updated_at": "2026-05-29T14:58:42Z",
+      "updated_at": "2026-05-30T02:58:03Z",
       "daily_growth": 0,
-      "weekly_growth": 408,
-      "monthly_growth": 408,
-      "growth_slope": 102.0,
+      "weekly_growth": 465,
+      "monthly_growth": 465,
+      "growth_slope": 93.0,
       "burst_time": "2026-05-27",
       "history": [
         {
@@ -435,6 +485,11 @@
           "date": "2026-05-29",
           "stars": 190219,
           "daily_growth": 79
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 190276,
+          "daily_growth": 57
         }
       ],
       "local_ai_summary": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations."
@@ -443,16 +498,16 @@
       "name": "modelcontextprotocol/servers",
       "category": "AI项目",
       "url": "https://github.com/modelcontextprotocol/servers",
-      "stars": 86452,
-      "forks": 10863,
+      "stars": 86459,
+      "forks": 10866,
       "language": "TypeScript",
       "description": "Model Context Protocol Servers",
       "created_at": "2024-11-19T01:10:17Z",
-      "updated_at": "2026-05-29T14:07:39Z",
+      "updated_at": "2026-05-30T02:58:49Z",
       "daily_growth": 0,
-      "weekly_growth": 179,
-      "monthly_growth": 179,
-      "growth_slope": 44.75,
+      "weekly_growth": 186,
+      "monthly_growth": 186,
+      "growth_slope": 37.2,
       "burst_time": "2026-05-28",
       "history": [
         {
@@ -474,6 +529,11 @@
           "date": "2026-05-29",
           "stars": 86452,
           "daily_growth": 28
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 86459,
+          "daily_growth": 7
         }
       ],
       "local_ai_summary": "Model Context Protocol Servers"
@@ -482,16 +542,16 @@
       "name": "modelcontextprotocol/python-sdk",
       "category": "AI项目",
       "url": "https://github.com/modelcontextprotocol/python-sdk",
-      "stars": 23171,
-      "forks": 3481,
+      "stars": 23174,
+      "forks": 3484,
       "language": "Python",
       "description": "The official Python SDK for Model Context Protocol servers and clients",
       "created_at": "2024-09-24T21:01:35Z",
-      "updated_at": "2026-05-29T14:30:55Z",
+      "updated_at": "2026-05-30T02:42:23Z",
       "daily_growth": 0,
-      "weekly_growth": 28,
-      "monthly_growth": 28,
-      "growth_slope": 7.0,
+      "weekly_growth": 31,
+      "monthly_growth": 31,
+      "growth_slope": 6.2,
       "burst_time": "2026-05-29",
       "history": [
         {
@@ -513,6 +573,11 @@
           "date": "2026-05-29",
           "stars": 23171,
           "daily_growth": 10
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 23174,
+          "daily_growth": 3
         }
       ],
       "local_ai_summary": "The official Python SDK for Model Context Protocol servers and clients"
@@ -521,16 +586,16 @@
       "name": "multica-ai/andrej-karpathy-skills",
       "category": "AI项目",
       "url": "https://github.com/multica-ai/andrej-karpathy-skills",
-      "stars": 161321,
-      "forks": 16523,
+      "stars": 161735,
+      "forks": 16561,
       "language": "Unknown",
       "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
       "created_at": "2026-01-27T03:53:13Z",
-      "updated_at": "2026-05-29T15:00:09Z",
+      "updated_at": "2026-05-30T02:58:59Z",
       "daily_growth": 0,
-      "weekly_growth": 4328,
-      "monthly_growth": 4328,
-      "growth_slope": 1082.0,
+      "weekly_growth": 4742,
+      "monthly_growth": 4742,
+      "growth_slope": 948.4,
       "burst_time": "2026-05-27",
       "history": [
         {
@@ -552,6 +617,11 @@
           "date": "2026-05-29",
           "stars": 161321,
           "daily_growth": 681
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 161735,
+          "daily_growth": 414
         }
       ],
       "local_ai_summary": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls."
@@ -560,16 +630,16 @@
       "name": "openclaw/openclaw",
       "category": "AI项目",
       "url": "https://github.com/openclaw/openclaw",
-      "stars": 375445,
-      "forks": 78343,
+      "stars": 375526,
+      "forks": 78371,
       "language": "TypeScript",
       "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
       "created_at": "2025-11-24T10:16:47Z",
-      "updated_at": "2026-05-29T14:59:05Z",
+      "updated_at": "2026-05-30T03:00:16Z",
       "daily_growth": 0,
-      "weekly_growth": 585,
-      "monthly_growth": 585,
-      "growth_slope": 146.25,
+      "weekly_growth": 666,
+      "monthly_growth": 666,
+      "growth_slope": 133.2,
       "burst_time": "2026-05-28",
       "history": [
         {
@@ -591,6 +661,11 @@
           "date": "2026-05-29",
           "stars": 375445,
           "daily_growth": 115
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 375526,
+          "daily_growth": 81
         }
       ],
       "local_ai_summary": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
@@ -599,16 +674,16 @@
       "name": "farion1231/cc-switch",
       "category": "AI项目",
       "url": "https://github.com/farion1231/cc-switch",
-      "stars": 84507,
-      "forks": 5498,
+      "stars": 84736,
+      "forks": 5512,
       "language": "Rust",
       "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io",
       "created_at": "2025-08-04T14:16:16Z",
-      "updated_at": "2026-05-29T14:57:17Z",
+      "updated_at": "2026-05-30T02:59:58Z",
       "daily_growth": 0,
-      "weekly_growth": 2792,
-      "monthly_growth": 2792,
-      "growth_slope": 698.0,
+      "weekly_growth": 3021,
+      "monthly_growth": 3021,
+      "growth_slope": 604.2,
       "burst_time": "2026-05-27",
       "history": [
         {
@@ -630,92 +705,29 @@
           "date": "2026-05-29",
           "stars": 84507,
           "daily_growth": 655
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 84736,
+          "daily_growth": 229
         }
       ],
       "local_ai_summary": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io"
     },
     {
-      "name": "academicpages/academicpages.github.io",
-      "category": "网站模板",
-      "url": "https://github.com/academicpages/academicpages.github.io",
-      "stars": 17062,
-      "forks": 7130,
-      "language": "SCSS",
-      "description": "Github Pages template based upon HTML and Markdown for personal, portfolio-based websites.",
-      "created_at": "2016-09-15T11:16:04Z",
-      "updated_at": "2026-05-29T14:27:52Z",
-      "daily_growth": 0,
-      "weekly_growth": 15,
-      "monthly_growth": 15,
-      "growth_slope": 5.0,
-      "burst_time": "2026-05-28",
-      "history": [
-        {
-          "date": "2026-05-27",
-          "stars": 17047,
-          "daily_growth": 3
-        },
-        {
-          "date": "2026-05-28",
-          "stars": 17057,
-          "daily_growth": 5
-        },
-        {
-          "date": "2026-05-29",
-          "stars": 17062,
-          "daily_growth": 5
-        }
-      ],
-      "local_ai_summary": "Github Pages template based upon HTML and Markdown for personal, portfolio-based websites."
-    },
-    {
-      "name": "cobiwave/simplefolio",
-      "category": "网站模板",
-      "url": "https://github.com/cobiwave/simplefolio",
-      "stars": 14155,
-      "forks": 6081,
-      "language": "SCSS",
-      "description": "⚡️ A minimal portfolio template for Developers",
-      "created_at": "2019-06-28T06:07:04Z",
-      "updated_at": "2026-05-29T12:35:31Z",
-      "daily_growth": 0,
-      "weekly_growth": 6,
-      "monthly_growth": 6,
-      "growth_slope": 2.0,
-      "burst_time": "2026-05-29",
-      "history": [
-        {
-          "date": "2026-05-27",
-          "stars": 14149,
-          "daily_growth": 0
-        },
-        {
-          "date": "2026-05-28",
-          "stars": 14152,
-          "daily_growth": 1
-        },
-        {
-          "date": "2026-05-29",
-          "stars": 14155,
-          "daily_growth": 3
-        }
-      ],
-      "local_ai_summary": "⚡️ A minimal portfolio template for Developers"
-    },
-    {
       "name": "h5bp/html5-boilerplate",
       "category": "网站模板",
       "url": "https://github.com/h5bp/html5-boilerplate",
-      "stars": 57464,
-      "forks": 12297,
+      "stars": 57463,
+      "forks": 12296,
       "language": "JavaScript",
       "description": "A professional front-end template for building fast, robust, and adaptable web apps or sites.",
       "created_at": "2010-01-24T18:03:24Z",
-      "updated_at": "2026-05-29T13:28:16Z",
+      "updated_at": "2026-05-29T19:32:17Z",
       "daily_growth": 0,
-      "weekly_growth": 3,
-      "monthly_growth": 3,
-      "growth_slope": 1.0,
+      "weekly_growth": 2,
+      "monthly_growth": 2,
+      "growth_slope": 0.5,
       "burst_time": "2026-05-29",
       "history": [
         {
@@ -732,6 +744,11 @@
           "date": "2026-05-29",
           "stars": 57464,
           "daily_growth": 2
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 57463,
+          "daily_growth": -1
         }
       ],
       "local_ai_summary": "A professional front-end template for building fast, robust, and adaptable web apps or sites."
@@ -740,15 +757,15 @@
       "name": "ant-design/ant-design-pro",
       "category": "网站模板",
       "url": "https://github.com/ant-design/ant-design-pro",
-      "stars": 38291,
-      "forks": 8243,
+      "stars": 38294,
+      "forks": 8244,
       "language": "TypeScript",
       "description": "👨🏻‍💻👩🏻‍💻 Use Ant Design like a Pro!",
       "created_at": "2017-08-25T10:40:44Z",
-      "updated_at": "2026-05-29T13:19:58Z",
+      "updated_at": "2026-05-30T01:21:56Z",
       "daily_growth": 0,
-      "weekly_growth": 9,
-      "monthly_growth": 9,
+      "weekly_growth": 12,
+      "monthly_growth": 12,
       "growth_slope": 3.0,
       "burst_time": "2026-05-27",
       "history": [
@@ -766,6 +783,11 @@
           "date": "2026-05-29",
           "stars": 38291,
           "daily_growth": 2
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 38294,
+          "daily_growth": 3
         }
       ],
       "local_ai_summary": "👨🏻‍💻👩🏻‍💻 Use Ant Design like a Pro!"
@@ -774,16 +796,16 @@
       "name": "bradtraversy/design-resources-for-developers",
       "category": "开发工具",
       "url": "https://github.com/bradtraversy/design-resources-for-developers",
-      "stars": 65873,
+      "stars": 65880,
       "forks": 12058,
       "language": "Unknown",
       "description": "Curated list of design and UI resources from stock photos, web templates, CSS frameworks, UI libraries, tools and much more",
       "created_at": "2020-05-06T14:40:35Z",
-      "updated_at": "2026-05-29T14:14:54Z",
+      "updated_at": "2026-05-30T00:02:23Z",
       "daily_growth": 0,
-      "weekly_growth": 98,
-      "monthly_growth": 98,
-      "growth_slope": 24.5,
+      "weekly_growth": 105,
+      "monthly_growth": 105,
+      "growth_slope": 21.0,
       "burst_time": "2026-05-28",
       "history": [
         {
@@ -805,6 +827,11 @@
           "date": "2026-05-29",
           "stars": 65873,
           "daily_growth": 7
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 65880,
+          "daily_growth": 7
         }
       ],
       "local_ai_summary": "Curated list of design and UI resources from stock photos, web templates, CSS frameworks, UI libraries, tools and much more"
@@ -813,16 +840,16 @@
       "name": "CorentinTh/it-tools",
       "category": "开发工具",
       "url": "https://github.com/CorentinTh/it-tools",
-      "stars": 39030,
-      "forks": 4971,
+      "stars": 39035,
+      "forks": 4972,
       "language": "Vue",
       "description": "Collection of handy online tools for developers, with great UX. ",
       "created_at": "2020-04-05T11:50:24Z",
-      "updated_at": "2026-05-29T14:46:38Z",
+      "updated_at": "2026-05-30T02:48:07Z",
       "daily_growth": 0,
-      "weekly_growth": 49,
-      "monthly_growth": 49,
-      "growth_slope": 12.25,
+      "weekly_growth": 54,
+      "monthly_growth": 54,
+      "growth_slope": 10.8,
       "burst_time": "2026-05-28",
       "history": [
         {
@@ -844,6 +871,11 @@
           "date": "2026-05-29",
           "stars": 39030,
           "daily_growth": 9
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 39035,
+          "daily_growth": 5
         }
       ],
       "local_ai_summary": "Collection of handy online tools for developers, with great UX. "
@@ -852,16 +884,16 @@
       "name": "ohmyzsh/ohmyzsh",
       "category": "开发工具",
       "url": "https://github.com/ohmyzsh/ohmyzsh",
-      "stars": 187439,
-      "forks": 26367,
+      "stars": 187451,
+      "forks": 26368,
       "language": "Shell",
       "description": "🙃   A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.",
       "created_at": "2009-08-28T18:15:37Z",
-      "updated_at": "2026-05-29T14:48:58Z",
+      "updated_at": "2026-05-30T02:50:24Z",
       "daily_growth": 0,
-      "weekly_growth": 143,
-      "monthly_growth": 143,
-      "growth_slope": 35.75,
+      "weekly_growth": 155,
+      "monthly_growth": 155,
+      "growth_slope": 31.0,
       "burst_time": "2026-05-27",
       "history": [
         {
@@ -883,6 +915,11 @@
           "date": "2026-05-29",
           "stars": 187439,
           "daily_growth": 27
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 187451,
+          "daily_growth": 12
         }
       ],
       "local_ai_summary": "🙃   A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community."
@@ -891,16 +928,16 @@
       "name": "anthropics/claude-code",
       "category": "开发工具",
       "url": "https://github.com/anthropics/claude-code",
-      "stars": 127686,
-      "forks": 20892,
+      "stars": 127919,
+      "forks": 20915,
       "language": "Python",
       "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
       "created_at": "2025-02-22T17:41:21Z",
-      "updated_at": "2026-05-29T15:01:09Z",
+      "updated_at": "2026-05-30T02:48:28Z",
       "daily_growth": 0,
-      "weekly_growth": 956,
-      "monthly_growth": 956,
-      "growth_slope": 239.0,
+      "weekly_growth": 1189,
+      "monthly_growth": 1189,
+      "growth_slope": 237.8,
       "burst_time": "2026-05-29",
       "history": [
         {
@@ -922,6 +959,11 @@
           "date": "2026-05-29",
           "stars": 127686,
           "daily_growth": 283
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 127919,
+          "daily_growth": 233
         }
       ],
       "local_ai_summary": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands."
@@ -930,16 +972,16 @@
       "name": "surrealdb/surrealdb",
       "category": "开发工具",
       "url": "https://github.com/surrealdb/surrealdb",
-      "stars": 32268,
+      "stars": 32271,
       "forks": 1272,
       "language": "Rust",
       "description": "A scalable, distributed, collaborative, document-graph database, for the realtime web",
       "created_at": "2021-12-09T15:03:29Z",
-      "updated_at": "2026-05-29T14:49:04Z",
+      "updated_at": "2026-05-29T22:27:33Z",
       "daily_growth": 0,
-      "weekly_growth": 27,
-      "monthly_growth": 27,
-      "growth_slope": 6.75,
+      "weekly_growth": 30,
+      "monthly_growth": 30,
+      "growth_slope": 6.0,
       "burst_time": "2026-05-28",
       "history": [
         {
@@ -961,6 +1003,11 @@
           "date": "2026-05-29",
           "stars": 32268,
           "daily_growth": 3
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 32271,
+          "daily_growth": 3
         }
       ],
       "local_ai_summary": "A scalable, distributed, collaborative, document-graph database, for the realtime web"
@@ -969,16 +1016,16 @@
       "name": "GyulyVGC/sniffnet",
       "category": "骇客工具",
       "url": "https://github.com/GyulyVGC/sniffnet",
-      "stars": 37826,
-      "forks": 1538,
+      "stars": 37833,
+      "forks": 1539,
       "language": "Rust",
       "description": "Comfortably monitor your Internet traffic 🕵️‍♂️",
       "created_at": "2022-07-31T21:55:56Z",
-      "updated_at": "2026-05-29T12:51:15Z",
+      "updated_at": "2026-05-30T00:00:04Z",
       "daily_growth": 0,
-      "weekly_growth": 26,
-      "monthly_growth": 26,
-      "growth_slope": 6.5,
+      "weekly_growth": 33,
+      "monthly_growth": 33,
+      "growth_slope": 6.6,
       "burst_time": "2026-05-27",
       "history": [
         {
@@ -1000,6 +1047,11 @@
           "date": "2026-05-29",
           "stars": 37826,
           "daily_growth": 3
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 37833,
+          "daily_growth": 7
         }
       ],
       "local_ai_summary": "Comfortably monitor your Internet traffic 🕵️‍♂️"
@@ -1008,16 +1060,16 @@
       "name": "lissy93/web-check",
       "category": "骇客工具",
       "url": "https://github.com/lissy93/web-check",
-      "stars": 33235,
-      "forks": 2693,
+      "stars": 33246,
+      "forks": 2692,
       "language": "TypeScript",
       "description": "🕵️‍♂️ All-in-one OSINT tool for analysing any website",
       "created_at": "2023-06-25T14:32:11Z",
-      "updated_at": "2026-05-29T13:57:44Z",
+      "updated_at": "2026-05-30T00:47:29Z",
       "daily_growth": 0,
-      "weekly_growth": 60,
-      "monthly_growth": 60,
-      "growth_slope": 15.0,
+      "weekly_growth": 71,
+      "monthly_growth": 71,
+      "growth_slope": 14.2,
       "burst_time": "2026-05-28",
       "history": [
         {
@@ -1039,6 +1091,11 @@
           "date": "2026-05-29",
           "stars": 33235,
           "daily_growth": 4
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 33246,
+          "daily_growth": 11
         }
       ],
       "local_ai_summary": "🕵️‍♂️ All-in-one OSINT tool for analysing any website"
@@ -1047,17 +1104,17 @@
       "name": "enaqx/awesome-pentest",
       "category": "骇客工具",
       "url": "https://github.com/enaqx/awesome-pentest",
-      "stars": 26238,
+      "stars": 26248,
       "forks": 4824,
       "language": "Unknown",
       "description": "A collection of awesome penetration testing resources, tools and other shiny things",
       "created_at": "2014-08-03T23:13:53Z",
-      "updated_at": "2026-05-29T13:30:46Z",
+      "updated_at": "2026-05-30T00:10:22Z",
       "daily_growth": 0,
-      "weekly_growth": 25,
-      "monthly_growth": 25,
-      "growth_slope": 6.25,
-      "burst_time": "2026-05-28",
+      "weekly_growth": 35,
+      "monthly_growth": 35,
+      "growth_slope": 7.0,
+      "burst_time": "2026-05-30",
       "history": [
         {
           "date": "2026-05-26",
@@ -1078,6 +1135,11 @@
           "date": "2026-05-29",
           "stars": 26238,
           "daily_growth": 4
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 26248,
+          "daily_growth": 10
         }
       ],
       "local_ai_summary": "A collection of awesome penetration testing resources, tools and other shiny things"
@@ -1086,16 +1148,16 @@
       "name": "vxcontrol/pentagi",
       "category": "骇客工具",
       "url": "https://github.com/vxcontrol/pentagi",
-      "stars": 17314,
-      "forks": 2371,
+      "stars": 17319,
+      "forks": 2374,
       "language": "Go",
       "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
       "created_at": "2025-01-06T22:22:48Z",
-      "updated_at": "2026-05-29T13:17:37Z",
+      "updated_at": "2026-05-30T01:16:36Z",
       "daily_growth": 0,
-      "weekly_growth": 68,
-      "monthly_growth": 68,
-      "growth_slope": 17.0,
+      "weekly_growth": 73,
+      "monthly_growth": 73,
+      "growth_slope": 14.6,
       "burst_time": "2026-05-28",
       "history": [
         {
@@ -1117,9 +1179,82 @@
           "date": "2026-05-29",
           "stars": 17314,
           "daily_growth": 12
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 17319,
+          "daily_growth": 5
         }
       ],
       "local_ai_summary": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks"
+    },
+    {
+      "name": "SuperManito/LinuxMirrors",
+      "category": "骇客工具",
+      "url": "https://github.com/SuperManito/LinuxMirrors",
+      "stars": 7531,
+      "forks": 691,
+      "language": "Shell",
+      "description": "GNU/Linux 更换系统软件源脚本及 Docker 安装与换源脚本",
+      "created_at": "2021-01-25T08:29:07Z",
+      "updated_at": "2026-05-29T21:01:18Z",
+      "daily_growth": 0,
+      "weekly_growth": 10,
+      "monthly_growth": 10,
+      "growth_slope": 3.33,
+      "burst_time": "2026-05-30",
+      "history": [
+        {
+          "date": "2026-05-26",
+          "stars": 7521,
+          "daily_growth": 0
+        },
+        {
+          "date": "2026-05-29",
+          "stars": 7524,
+          "daily_growth": 3
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 7531,
+          "daily_growth": 7
+        }
+      ],
+      "local_ai_summary": "GNU/Linux 更换系统软件源脚本及 Docker 安装与换源脚本"
+    },
+    {
+      "name": "leebaird/discover",
+      "category": "骇客工具",
+      "url": "https://github.com/leebaird/discover",
+      "stars": 3886,
+      "forks": 871,
+      "language": "Shell",
+      "description": "Custom bash scripts used to automate various penetration testing tasks including recon, scanning,  enumeration, and malicious payload creation using Metasploit. For use with Kali Linux and Ubuntu.",
+      "created_at": "2013-10-28T17:05:04Z",
+      "updated_at": "2026-05-29T19:13:41Z",
+      "daily_growth": 0,
+      "weekly_growth": 4,
+      "monthly_growth": 4,
+      "growth_slope": 1.33,
+      "burst_time": "2026-05-29",
+      "history": [
+        {
+          "date": "2026-05-26",
+          "stars": 3882,
+          "daily_growth": 0
+        },
+        {
+          "date": "2026-05-29",
+          "stars": 3885,
+          "daily_growth": 3
+        },
+        {
+          "date": "2026-05-30",
+          "stars": 3886,
+          "daily_growth": 1
+        }
+      ],
+      "local_ai_summary": "Custom bash scripts used to automate various penetration testing tasks including recon, scanning,  enumeration, and malicious payload creation using Metasploit. For use with Kali Linux and Ubuntu."
     }
   ]
 }
