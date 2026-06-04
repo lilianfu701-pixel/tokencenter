@@ -44,6 +44,11 @@
       "date": "2026-06-03",
       "stars": 178532,
       "daily_growth": 996
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 179330,
+      "daily_growth": 798
     }
   ],
   "Snailclimb/JavaGuide": [
@@ -91,6 +96,11 @@
       "date": "2026-06-03",
       "stars": 156091,
       "daily_growth": 19
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 156095,
+      "daily_growth": 4
     }
   ],
   "langflow-ai/langflow": [
@@ -145,6 +155,11 @@
       "date": "2026-06-03",
       "stars": 143712,
       "daily_growth": 123
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 143754,
+      "daily_growth": 42
     }
   ],
   "x1xhlol/system-prompts-and-models-of-ai-tools": [
@@ -199,6 +214,11 @@
       "date": "2026-06-03",
       "stars": 138418,
       "daily_growth": 64
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 138448,
+      "daily_growth": 30
     }
   ],
   "firecrawl/firecrawl": [
@@ -260,6 +280,11 @@
       "date": "2026-06-03",
       "stars": 205157,
       "daily_growth": 1005
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 205904,
+      "daily_growth": 747
     }
   ],
   "Significant-Gravitas/AutoGPT": [
@@ -335,6 +360,11 @@
       "date": "2026-06-03",
       "stars": 166621,
       "daily_growth": 618
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 166987,
+      "daily_growth": 366
     }
   ],
   "n8n-io/n8n": [
@@ -382,6 +412,11 @@
       "date": "2026-06-03",
       "stars": 190918,
       "daily_growth": 105
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 190983,
+      "daily_growth": 65
     }
   ],
   "open-webui/open-webui": [
@@ -443,6 +478,11 @@
       "date": "2026-06-03",
       "stars": 90380,
       "daily_growth": 886
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 90725,
+      "daily_growth": 345
     }
   ],
   "netdata/netdata": [
@@ -539,6 +579,11 @@
       "date": "2026-06-03",
       "stars": 129790,
       "daily_growth": 145
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 129907,
+      "daily_growth": 117
     }
   ],
   "garrytan/gstack": [
@@ -698,6 +743,11 @@
       "date": "2026-06-03",
       "stars": 96948,
       "daily_growth": 126
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 97046,
+      "daily_growth": 98
     }
   ],
   "gohugoio/hugo": [
@@ -864,6 +914,11 @@
       "date": "2026-05-26",
       "stars": 54955,
       "daily_growth": 2
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 55650,
+      "daily_growth": 695
     }
   ],
   "metabase/metabase": [
@@ -953,6 +1008,11 @@
       "date": "2026-06-03",
       "stars": 37906,
       "daily_growth": 13
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 37918,
+      "daily_growth": 12
     }
   ],
   "lissy93/web-check": [
@@ -1000,6 +1060,11 @@
       "date": "2026-06-03",
       "stars": 33295,
       "daily_growth": 7
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 33300,
+      "daily_growth": 5
     }
   ],
   "enaqx/awesome-pentest": [
@@ -1047,6 +1112,11 @@
       "date": "2026-06-03",
       "stars": 26300,
       "daily_growth": 12
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 26308,
+      "daily_growth": 8
     }
   ],
   "vxcontrol/pentagi": [
@@ -1094,6 +1164,11 @@
       "date": "2026-06-03",
       "stars": 17420,
       "daily_growth": 14
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 17428,
+      "daily_growth": 8
     }
   ],
   "SuperManito/LinuxMirrors": [
@@ -1126,6 +1201,11 @@
       "date": "2026-06-03",
       "stars": 7544,
       "daily_growth": 3
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 7546,
+      "daily_growth": 2
     }
   ],
   "leebaird/discover": [
@@ -1158,6 +1238,11 @@
       "date": "2026-06-03",
       "stars": 3886,
       "daily_growth": 0
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 3886,
+      "daily_growth": 0
     }
   ],
   "swisskyrepo/PayloadsAllTheThings": [
@@ -1165,6 +1250,11 @@
       "date": "2026-05-26",
       "stars": 77968,
       "daily_growth": 0
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 78182,
+      "daily_growth": 214
     }
   ],
   "x64dbg/x64dbg": [
@@ -1172,6 +1262,11 @@
       "date": "2026-05-26",
       "stars": 48478,
       "daily_growth": 0
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 48556,
+      "daily_growth": 78
     }
   ],
   "sherlock-project/sherlock": [
@@ -1179,6 +1274,11 @@
       "date": "2026-05-26",
       "stars": 83987,
       "daily_growth": 0
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 84489,
+      "daily_growth": 502
     }
   ],
   "projectdiscovery/nuclei": [
@@ -1186,6 +1286,11 @@
       "date": "2026-05-26",
       "stars": 28892,
       "daily_growth": 0
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 29023,
+      "daily_growth": 131
     }
   ],
   "shadow1ng/fscan": [
@@ -1193,6 +1298,11 @@
       "date": "2026-05-26",
       "stars": 13880,
       "daily_growth": 0
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 13916,
+      "daily_growth": 36
     }
   ],
   "future-architect/vuls": [
@@ -1200,6 +1310,11 @@
       "date": "2026-05-26",
       "stars": 12160,
       "daily_growth": 0
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 12168,
+      "daily_growth": 8
     }
   ],
   "dkhamsing/open-source-ios-apps": [
@@ -1275,6 +1390,11 @@
       "date": "2026-06-03",
       "stars": 216687,
       "daily_growth": 688
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 217059,
+      "daily_growth": 372
     }
   ],
   "anomalyco/opencode": [
@@ -1322,6 +1442,11 @@
       "date": "2026-06-03",
       "stars": 169298,
       "daily_growth": 310
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 169531,
+      "daily_growth": 233
     }
   ],
   "ChromeDevTools/chrome-devtools-mcp": [
@@ -1369,6 +1494,11 @@
       "date": "2026-06-03",
       "stars": 42711,
       "daily_growth": 68
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 42745,
+      "daily_growth": 34
     }
   ],
   "ansible/ansible": [
@@ -1416,6 +1546,11 @@
       "date": "2026-06-03",
       "stars": 68733,
       "daily_growth": -16
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 68736,
+      "daily_growth": 3
     }
   ],
   "modelcontextprotocol/servers": [
@@ -1463,6 +1598,11 @@
       "date": "2026-06-03",
       "stars": 86680,
       "daily_growth": 27
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 86696,
+      "daily_growth": 16
     }
   ],
   "modelcontextprotocol/python-sdk": [
@@ -1510,6 +1650,11 @@
       "date": "2026-06-03",
       "stars": 23216,
       "daily_growth": 8
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 23226,
+      "daily_growth": 10
     }
   ],
   "openclaw/openclaw": [
@@ -1557,6 +1702,11 @@
       "date": "2026-06-03",
       "stars": 376491,
       "daily_growth": 178
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 376624,
+      "daily_growth": 133
     }
   ],
   "bradtraversy/design-resources-for-developers": [
@@ -1651,6 +1801,11 @@
       "date": "2026-06-03",
       "stars": 187602,
       "daily_growth": 11
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 187611,
+      "daily_growth": 9
     }
   ],
   "surrealdb/surrealdb": [
@@ -1698,6 +1853,11 @@
       "date": "2026-06-03",
       "stars": 32324,
       "daily_growth": 8
+    },
+    {
+      "date": "2026-06-04",
+      "stars": 32328,
+      "daily_growth": 4
     }
   ],
   "academicpages/academicpages.github.io": [
@@ -1846,6 +2006,27 @@
       "date": "2026-06-03",
       "stars": 38317,
       "daily_growth": 6
+    }
+  ],
+  "nextlevelbuilder/ui-ux-pro-max-skill": [
+    {
+      "date": "2026-06-04",
+      "stars": 87012,
+      "daily_growth": 0
+    }
+  ],
+  "TauricResearch/TradingAgents": [
+    {
+      "date": "2026-06-04",
+      "stars": 82720,
+      "daily_growth": 0
+    }
+  ],
+  "FoundationAgents/MetaGPT": [
+    {
+      "date": "2026-06-04",
+      "stars": 68496,
+      "daily_growth": 0
     }
   ]
 }
