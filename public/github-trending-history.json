@@ -124,6 +124,11 @@
       "date": "2026-06-19",
       "stars": 197415,
       "daily_growth": 365
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 197698,
+      "daily_growth": 283
     }
   ],
   "Snailclimb/JavaGuide": [
@@ -385,6 +390,11 @@
       "date": "2026-06-19",
       "stars": 145825,
       "daily_growth": 62
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 145859,
+      "daily_growth": 34
     }
   ],
   "x1xhlol/system-prompts-and-models-of-ai-tools": [
@@ -519,6 +529,11 @@
       "date": "2026-06-19",
       "stars": 139697,
       "daily_growth": 34
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 139725,
+      "daily_growth": 28
     }
   ],
   "firecrawl/firecrawl": [
@@ -660,6 +675,11 @@
       "date": "2026-06-19",
       "stars": 218059,
       "daily_growth": 234
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 218325,
+      "daily_growth": 266
     }
   ],
   "Significant-Gravitas/AutoGPT": [
@@ -815,6 +835,11 @@
       "date": "2026-06-19",
       "stars": 178685,
       "daily_growth": 290
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 178858,
+      "daily_growth": 173
     }
   ],
   "n8n-io/n8n": [
@@ -942,6 +967,11 @@
       "date": "2026-06-19",
       "stars": 193149,
       "daily_growth": 66
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 193229,
+      "daily_growth": 80
     }
   ],
   "open-webui/open-webui": [
@@ -1078,6 +1108,11 @@
       "date": "2026-06-18",
       "stars": 104065,
       "daily_growth": 492
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 104764,
+      "daily_growth": 699
     }
   ],
   "netdata/netdata": [
@@ -1254,6 +1289,11 @@
       "date": "2026-06-19",
       "stars": 133312,
       "daily_growth": 70
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 133379,
+      "daily_growth": 67
     }
   ],
   "garrytan/gstack": [
@@ -1493,6 +1533,11 @@
       "date": "2026-06-19",
       "stars": 99571,
       "daily_growth": 72
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 99621,
+      "daily_growth": 50
     }
   ],
   "gohugoio/hugo": [
@@ -1655,6 +1700,11 @@
       "date": "2026-06-19",
       "stars": 39418,
       "daily_growth": 23
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 39427,
+      "daily_growth": 9
     }
   ],
   "ripienaar/free-for-dev": [
@@ -1913,6 +1963,11 @@
       "date": "2026-06-19",
       "stars": 39376,
       "daily_growth": 10
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 39383,
+      "daily_growth": 7
     }
   ],
   "lissy93/web-check": [
@@ -2040,6 +2095,11 @@
       "date": "2026-06-19",
       "stars": 33788,
       "daily_growth": 9
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 33796,
+      "daily_growth": 8
     }
   ],
   "enaqx/awesome-pentest": [
@@ -2167,6 +2227,11 @@
       "date": "2026-06-19",
       "stars": 26438,
       "daily_growth": 5
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 26442,
+      "daily_growth": 4
     }
   ],
   "vxcontrol/pentagi": [
@@ -2294,6 +2359,11 @@
       "date": "2026-06-19",
       "stars": 17835,
       "daily_growth": 7
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 17842,
+      "daily_growth": 7
     }
   ],
   "SuperManito/LinuxMirrors": [
@@ -2376,6 +2446,11 @@
       "date": "2026-06-19",
       "stars": 7589,
       "daily_growth": 1
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 7592,
+      "daily_growth": 3
     }
   ],
   "leebaird/discover": [
@@ -2675,6 +2750,11 @@
       "date": "2026-06-19",
       "stars": 233032,
       "daily_growth": 536
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 233439,
+      "daily_growth": 407
     }
   ],
   "anomalyco/opencode": [
@@ -2874,6 +2954,11 @@
       "date": "2026-06-19",
       "stars": 44004,
       "daily_growth": 48
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 44021,
+      "daily_growth": 17
     }
   ],
   "ansible/ansible": [
@@ -3001,6 +3086,11 @@
       "date": "2026-06-19",
       "stars": 68999,
       "daily_growth": 8
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 69000,
+      "daily_growth": 1
     }
   ],
   "modelcontextprotocol/servers": [
@@ -3128,6 +3218,11 @@
       "date": "2026-06-19",
       "stars": 87446,
       "daily_growth": 21
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 87463,
+      "daily_growth": 17
     }
   ],
   "modelcontextprotocol/python-sdk": [
@@ -3255,6 +3350,11 @@
       "date": "2026-06-19",
       "stars": 23375,
       "daily_growth": 5
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 23377,
+      "daily_growth": 2
     }
   ],
   "openclaw/openclaw": [
@@ -3382,6 +3482,11 @@
       "date": "2026-06-19",
       "stars": 379488,
       "daily_growth": 72
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 379537,
+      "daily_growth": 49
     }
   ],
   "bradtraversy/design-resources-for-developers": [
@@ -3509,6 +3614,11 @@
       "date": "2026-06-19",
       "stars": 66153,
       "daily_growth": 9
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 66153,
+      "daily_growth": 0
     }
   ],
   "ohmyzsh/ohmyzsh": [
@@ -3636,6 +3746,11 @@
       "date": "2026-06-19",
       "stars": 188124,
       "daily_growth": 10
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 188138,
+      "daily_growth": 14
     }
   ],
   "surrealdb/surrealdb": [
@@ -3763,6 +3878,11 @@
       "date": "2026-06-19",
       "stars": 32420,
       "daily_growth": 8
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 32424,
+      "daily_growth": 4
     }
   ],
   "academicpages/academicpages.github.io": [
@@ -4059,6 +4179,11 @@
       "date": "2026-06-19",
       "stars": 57500,
       "daily_growth": 1
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 57499,
+      "daily_growth": -1
     }
   ],
   "ant-design/ant-design-pro": [
@@ -4181,6 +4306,11 @@
       "date": "2026-06-19",
       "stars": 38413,
       "daily_growth": 2
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 38414,
+      "daily_growth": 1
     }
   ],
   "nextlevelbuilder/ui-ux-pro-max-skill": [
@@ -4276,6 +4406,11 @@
       "date": "2026-06-19",
       "stars": 20434,
       "daily_growth": 20
+    },
+    {
+      "date": "2026-06-20",
+      "stars": 20439,
+      "daily_growth": 5
     }
   ]
 }
