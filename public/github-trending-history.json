@@ -254,6 +254,11 @@
       "date": "2026-07-15",
       "stars": 215276,
       "daily_growth": 338
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 215526,
+      "daily_growth": 250
     }
   ],
   "Snailclimb/JavaGuide": [
@@ -650,6 +655,11 @@
       "date": "2026-07-15",
       "stars": 148927,
       "daily_growth": 76
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 148980,
+      "daily_growth": 53
     }
   ],
   "x1xhlol/system-prompts-and-models-of-ai-tools": [
@@ -914,6 +924,11 @@
       "date": "2026-07-15",
       "stars": 141835,
       "daily_growth": 45
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 141873,
+      "daily_growth": 38
     }
   ],
   "firecrawl/firecrawl": [
@@ -1185,6 +1200,11 @@
       "date": "2026-07-15",
       "stars": 229985,
       "daily_growth": 218
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 230158,
+      "daily_growth": 173
     }
   ],
   "Significant-Gravitas/AutoGPT": [
@@ -1470,6 +1490,11 @@
       "date": "2026-07-15",
       "stars": 192661,
       "daily_growth": 337
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 192863,
+      "daily_growth": 202
     }
   ],
   "n8n-io/n8n": [
@@ -1727,6 +1752,11 @@
       "date": "2026-07-15",
       "stars": 196541,
       "daily_growth": 81
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 196599,
+      "daily_growth": 58
     }
   ],
   "open-webui/open-webui": [
@@ -1993,6 +2023,11 @@
       "date": "2026-07-15",
       "stars": 117532,
       "daily_growth": 271
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 117630,
+      "daily_growth": 98
     }
   ],
   "netdata/netdata": [
@@ -2304,6 +2339,11 @@
       "date": "2026-07-15",
       "stars": 137954,
       "daily_growth": 108
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 138006,
+      "daily_growth": 52
     }
   ],
   "garrytan/gstack": [
@@ -2683,6 +2723,11 @@
       "date": "2026-07-15",
       "stars": 104855,
       "daily_growth": 88
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 104931,
+      "daily_growth": 76
     }
   ],
   "gohugoio/hugo": [
@@ -3353,6 +3398,11 @@
       "date": "2026-07-15",
       "stars": 40125,
       "daily_growth": 7
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 40130,
+      "daily_growth": 5
     }
   ],
   "lissy93/web-check": [
@@ -3807,6 +3857,11 @@
       "date": "2026-07-15",
       "stars": 26644,
       "daily_growth": 8
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 26648,
+      "daily_growth": 4
     }
   ],
   "vxcontrol/pentagi": [
@@ -4161,6 +4216,11 @@
       "date": "2026-07-15",
       "stars": 7633,
       "daily_growth": 2
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 7634,
+      "daily_growth": 1
     }
   ],
   "leebaird/discover": [
@@ -4640,6 +4700,11 @@
       "date": "2026-07-15",
       "stars": 255225,
       "daily_growth": 458
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 255448,
+      "daily_growth": 223
     }
   ],
   "anomalyco/opencode": [
@@ -4969,6 +5034,11 @@
       "date": "2026-07-15",
       "stars": 47003,
       "daily_growth": 58
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 47030,
+      "daily_growth": 27
     }
   ],
   "ansible/ansible": [
@@ -5226,6 +5296,11 @@
       "date": "2026-07-15",
       "stars": 69685,
       "daily_growth": 8
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 69692,
+      "daily_growth": 7
     }
   ],
   "modelcontextprotocol/servers": [
@@ -5483,6 +5558,11 @@
       "date": "2026-07-15",
       "stars": 88506,
       "daily_growth": 26
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 88515,
+      "daily_growth": 9
     }
   ],
   "modelcontextprotocol/python-sdk": [
@@ -5740,6 +5820,11 @@
       "date": "2026-07-15",
       "stars": 23617,
       "daily_growth": 3
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 23621,
+      "daily_growth": 4
     }
   ],
   "openclaw/openclaw": [
@@ -5997,6 +6082,11 @@
       "date": "2026-07-15",
       "stars": 383011,
       "daily_growth": 58
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 383052,
+      "daily_growth": 41
     }
   ],
   "bradtraversy/design-resources-for-developers": [
@@ -6254,6 +6344,11 @@
       "date": "2026-07-15",
       "stars": 66414,
       "daily_growth": 10
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 66420,
+      "daily_growth": 6
     }
   ],
   "ohmyzsh/ohmyzsh": [
@@ -6511,6 +6606,11 @@
       "date": "2026-07-15",
       "stars": 188737,
       "daily_growth": 9
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 188745,
+      "daily_growth": 8
     }
   ],
   "surrealdb/surrealdb": [
@@ -6768,6 +6868,11 @@
       "date": "2026-07-15",
       "stars": 32697,
       "daily_growth": 20
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 32701,
+      "daily_growth": 4
     }
   ],
   "academicpages/academicpages.github.io": [
@@ -7324,6 +7429,11 @@
       "date": "2026-07-15",
       "stars": 57555,
       "daily_growth": 3
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 57556,
+      "daily_growth": 1
     }
   ],
   "ant-design/ant-design-pro": [
@@ -7576,6 +7686,11 @@
       "date": "2026-07-15",
       "stars": 38554,
       "daily_growth": 7
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 38554,
+      "daily_growth": 0
     }
   ],
   "nextlevelbuilder/ui-ux-pro-max-skill": [
@@ -7766,6 +7881,11 @@
       "date": "2026-07-15",
       "stars": 21240,
       "daily_growth": 31
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 21250,
+      "daily_growth": 10
     }
   ],
   "wasp-lang/open-saas": [
@@ -7894,6 +8014,11 @@
       "date": "2026-07-15",
       "stars": 41753,
       "daily_growth": 356
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 41893,
+      "daily_growth": 140
     }
   ],
   "hesreallyhim/awesome-claude-code": [
@@ -7961,6 +8086,11 @@
       "date": "2026-07-15",
       "stars": 50079,
       "daily_growth": 74
+    },
+    {
+      "date": "2026-07-16",
+      "stars": 50111,
+      "daily_growth": 32
     }
   ],
   "roots/sage": [
