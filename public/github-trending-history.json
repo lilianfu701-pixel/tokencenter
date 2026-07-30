@@ -274,6 +274,11 @@
       "date": "2026-07-29",
       "stars": 222167,
       "daily_growth": 205
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 222403,
+      "daily_growth": 236
     }
   ],
   "Snailclimb/JavaGuide": [
@@ -690,6 +695,11 @@
       "date": "2026-07-29",
       "stars": 150690,
       "daily_growth": 93
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 150729,
+      "daily_growth": 39
     }
   ],
   "x1xhlol/system-prompts-and-models-of-ai-tools": [
@@ -974,6 +984,11 @@
       "date": "2026-07-29",
       "stars": 142875,
       "daily_growth": 46
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 142925,
+      "daily_growth": 50
     }
   ],
   "firecrawl/firecrawl": [
@@ -1265,6 +1280,11 @@
       "date": "2026-07-29",
       "stars": 235324,
       "daily_growth": 416
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 235662,
+      "daily_growth": 338
     }
   ],
   "Significant-Gravitas/AutoGPT": [
@@ -1570,6 +1590,11 @@
       "date": "2026-07-29",
       "stars": 197524,
       "daily_growth": 252
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 197666,
+      "daily_growth": 142
     }
   ],
   "n8n-io/n8n": [
@@ -1847,6 +1872,11 @@
       "date": "2026-07-29",
       "stars": 198528,
       "daily_growth": 71
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 198604,
+      "daily_growth": 76
     }
   ],
   "open-webui/open-webui": [
@@ -2133,6 +2163,11 @@
       "date": "2026-07-29",
       "stars": 122233,
       "daily_growth": 194
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 122315,
+      "daily_growth": 82
     }
   ],
   "netdata/netdata": [
@@ -2469,6 +2504,11 @@
       "date": "2026-07-29",
       "stars": 139428,
       "daily_growth": 36
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 139574,
+      "daily_growth": 146
     }
   ],
   "garrytan/gstack": [
@@ -2878,6 +2918,11 @@
       "date": "2026-07-29",
       "stars": 107191,
       "daily_growth": 46
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 107247,
+      "daily_growth": 56
     }
   ],
   "gohugoio/hugo": [
@@ -3608,6 +3653,11 @@
       "date": "2026-07-29",
       "stars": 40199,
       "daily_growth": 4
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 40225,
+      "daily_growth": 26
     }
   ],
   "lissy93/web-check": [
@@ -4082,6 +4132,11 @@
       "date": "2026-07-29",
       "stars": 26754,
       "daily_growth": 5
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 26770,
+      "daily_growth": 16
     }
   ],
   "vxcontrol/pentagi": [
@@ -4456,6 +4511,11 @@
       "date": "2026-07-29",
       "stars": 7662,
       "daily_growth": 1
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 7665,
+      "daily_growth": 3
     }
   ],
   "leebaird/discover": [
@@ -5005,6 +5065,11 @@
       "date": "2026-07-29",
       "stars": 263045,
       "daily_growth": 270
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 263364,
+      "daily_growth": 319
     }
   ],
   "anomalyco/opencode": [
@@ -5354,6 +5419,11 @@
       "date": "2026-07-29",
       "stars": 47818,
       "daily_growth": 54
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 47848,
+      "daily_growth": 30
     }
   ],
   "ansible/ansible": [
@@ -5631,6 +5701,11 @@
       "date": "2026-07-29",
       "stars": 69731,
       "daily_growth": 7
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 69740,
+      "daily_growth": 9
     }
   ],
   "modelcontextprotocol/servers": [
@@ -5908,6 +5983,11 @@
       "date": "2026-07-29",
       "stars": 89026,
       "daily_growth": 25
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 89031,
+      "daily_growth": 5
     }
   ],
   "modelcontextprotocol/python-sdk": [
@@ -6185,6 +6265,11 @@
       "date": "2026-07-29",
       "stars": 23773,
       "daily_growth": 9
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 23781,
+      "daily_growth": 8
     }
   ],
   "openclaw/openclaw": [
@@ -6462,6 +6547,11 @@
       "date": "2026-07-29",
       "stars": 384451,
       "daily_growth": 12
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 384507,
+      "daily_growth": 56
     }
   ],
   "bradtraversy/design-resources-for-developers": [
@@ -6739,6 +6829,11 @@
       "date": "2026-07-29",
       "stars": 66527,
       "daily_growth": 6
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 66530,
+      "daily_growth": 3
     }
   ],
   "ohmyzsh/ohmyzsh": [
@@ -7016,6 +7111,11 @@
       "date": "2026-07-29",
       "stars": 188866,
       "daily_growth": 0
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 188880,
+      "daily_growth": 14
     }
   ],
   "surrealdb/surrealdb": [
@@ -7879,6 +7979,11 @@
       "date": "2026-07-29",
       "stars": 57571,
       "daily_growth": 0
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 57573,
+      "daily_growth": 2
     }
   ],
   "ant-design/ant-design-pro": [
@@ -8151,6 +8256,11 @@
       "date": "2026-07-29",
       "stars": 38600,
       "daily_growth": 1
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 38599,
+      "daily_growth": -1
     }
   ],
   "nextlevelbuilder/ui-ux-pro-max-skill": [
@@ -8361,6 +8471,11 @@
       "date": "2026-07-29",
       "stars": 21710,
       "daily_growth": 29
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 21721,
+      "daily_growth": 11
     }
   ],
   "wasp-lang/open-saas": [
@@ -8519,6 +8634,11 @@
       "date": "2026-07-29",
       "stars": 45383,
       "daily_growth": 175
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 45640,
+      "daily_growth": 257
     }
   ],
   "hesreallyhim/awesome-claude-code": [
@@ -8606,6 +8726,11 @@
       "date": "2026-07-29",
       "stars": 51172,
       "daily_growth": 34
+    },
+    {
+      "date": "2026-07-30",
+      "stars": 51278,
+      "daily_growth": 106
     }
   ],
   "roots/sage": [
@@ -8688,6 +8813,13 @@
       "date": "2026-07-29",
       "stars": 108848,
       "daily_growth": 1018
+    }
+  ],
+  "stablyai/orca": [
+    {
+      "date": "2026-07-30",
+      "stars": 32933,
+      "daily_growth": 0
     }
   ]
 }
