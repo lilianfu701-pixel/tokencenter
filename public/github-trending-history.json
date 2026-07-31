@@ -279,6 +279,11 @@
       "date": "2026-07-30",
       "stars": 222733,
       "daily_growth": 330
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 222939,
+      "daily_growth": 206
     }
   ],
   "Snailclimb/JavaGuide": [
@@ -700,6 +705,11 @@
       "date": "2026-07-30",
       "stars": 150810,
       "daily_growth": 81
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 150846,
+      "daily_growth": 36
     }
   ],
   "x1xhlol/system-prompts-and-models-of-ai-tools": [
@@ -989,6 +999,11 @@
       "date": "2026-07-30",
       "stars": 143000,
       "daily_growth": 75
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 143051,
+      "daily_growth": 51
     }
   ],
   "firecrawl/firecrawl": [
@@ -1285,6 +1300,11 @@
       "date": "2026-07-30",
       "stars": 236055,
       "daily_growth": 393
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 236275,
+      "daily_growth": 220
     }
   ],
   "Significant-Gravitas/AutoGPT": [
@@ -1595,6 +1615,11 @@
       "date": "2026-07-30",
       "stars": 197861,
       "daily_growth": 195
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 197960,
+      "daily_growth": 99
     }
   ],
   "n8n-io/n8n": [
@@ -1877,6 +1902,11 @@
       "date": "2026-07-30",
       "stars": 198696,
       "daily_growth": 92
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 198777,
+      "daily_growth": 81
     }
   ],
   "open-webui/open-webui": [
@@ -2168,6 +2198,11 @@
       "date": "2026-07-30",
       "stars": 122515,
       "daily_growth": 200
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 122602,
+      "daily_growth": 87
     }
   ],
   "netdata/netdata": [
@@ -2509,6 +2544,11 @@
       "date": "2026-07-30",
       "stars": 139639,
       "daily_growth": 65
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 139707,
+      "daily_growth": 68
     }
   ],
   "garrytan/gstack": [
@@ -2923,6 +2963,11 @@
       "date": "2026-07-30",
       "stars": 107307,
       "daily_growth": 60
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 107348,
+      "daily_growth": 41
     }
   ],
   "gohugoio/hugo": [
@@ -3658,6 +3703,11 @@
       "date": "2026-07-30",
       "stars": 40236,
       "daily_growth": 11
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 40246,
+      "daily_growth": 10
     }
   ],
   "lissy93/web-check": [
@@ -4137,6 +4187,11 @@
       "date": "2026-07-30",
       "stars": 26772,
       "daily_growth": 2
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 26775,
+      "daily_growth": 3
     }
   ],
   "vxcontrol/pentagi": [
@@ -4516,6 +4571,11 @@
       "date": "2026-07-30",
       "stars": 7666,
       "daily_growth": 1
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 7665,
+      "daily_growth": -1
     }
   ],
   "leebaird/discover": [
@@ -5070,6 +5130,11 @@
       "date": "2026-07-30",
       "stars": 263785,
       "daily_growth": 421
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 264012,
+      "daily_growth": 227
     }
   ],
   "anomalyco/opencode": [
@@ -5424,6 +5489,11 @@
       "date": "2026-07-30",
       "stars": 47931,
       "daily_growth": 83
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 48102,
+      "daily_growth": 171
     }
   ],
   "ansible/ansible": [
@@ -5706,6 +5776,11 @@
       "date": "2026-07-30",
       "stars": 69789,
       "daily_growth": 49
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 69914,
+      "daily_growth": 125
     }
   ],
   "modelcontextprotocol/servers": [
@@ -5988,6 +6063,11 @@
       "date": "2026-07-30",
       "stars": 89054,
       "daily_growth": 23
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 89065,
+      "daily_growth": 11
     }
   ],
   "modelcontextprotocol/python-sdk": [
@@ -6270,6 +6350,11 @@
       "date": "2026-07-30",
       "stars": 23793,
       "daily_growth": 12
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 23804,
+      "daily_growth": 11
     }
   ],
   "openclaw/openclaw": [
@@ -6552,6 +6637,11 @@
       "date": "2026-07-30",
       "stars": 384583,
       "daily_growth": 76
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 384623,
+      "daily_growth": 40
     }
   ],
   "bradtraversy/design-resources-for-developers": [
@@ -6834,6 +6924,11 @@
       "date": "2026-07-30",
       "stars": 66533,
       "daily_growth": 3
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 66539,
+      "daily_growth": 6
     }
   ],
   "ohmyzsh/ohmyzsh": [
@@ -7116,6 +7211,11 @@
       "date": "2026-07-30",
       "stars": 188894,
       "daily_growth": 14
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 188904,
+      "daily_growth": 10
     }
   ],
   "surrealdb/surrealdb": [
@@ -7984,6 +8084,11 @@
       "date": "2026-07-30",
       "stars": 57573,
       "daily_growth": 0
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 57573,
+      "daily_growth": 0
     }
   ],
   "ant-design/ant-design-pro": [
@@ -8261,6 +8366,11 @@
       "date": "2026-07-30",
       "stars": 38603,
       "daily_growth": 4
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 38605,
+      "daily_growth": 2
     }
   ],
   "nextlevelbuilder/ui-ux-pro-max-skill": [
@@ -8476,6 +8586,11 @@
       "date": "2026-07-30",
       "stars": 21758,
       "daily_growth": 37
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 21771,
+      "daily_growth": 13
     }
   ],
   "wasp-lang/open-saas": [
@@ -8639,6 +8754,11 @@
       "date": "2026-07-30",
       "stars": 45772,
       "daily_growth": 132
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 45940,
+      "daily_growth": 168
     }
   ],
   "hesreallyhim/awesome-claude-code": [
@@ -8731,6 +8851,11 @@
       "date": "2026-07-30",
       "stars": 51329,
       "daily_growth": 51
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 51354,
+      "daily_growth": 25
     }
   ],
   "roots/sage": [
@@ -8820,6 +8945,11 @@
       "date": "2026-07-30",
       "stars": 33550,
       "daily_growth": 617
+    },
+    {
+      "date": "2026-07-31",
+      "stars": 33984,
+      "daily_growth": 434
     }
   ]
 }
