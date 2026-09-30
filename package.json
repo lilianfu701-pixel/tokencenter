@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "sync:models": "node scripts/fetch-openrouter.mjs && node scripts/generate-zh-desc.mjs && node scripts/generate-fr-desc.mjs && node scripts/generate-es-desc.mjs && node scripts/generate-pt-desc.mjs && node scripts/generate-de-desc.mjs && node scripts/generate-ja-desc.mjs && node scripts/generate-ko-desc.mjs && node scripts/generate-ru-desc.mjs && node scripts/generate-ar-desc.mjs && node scripts/generate-id-desc.mjs && node scripts/generate-vi-desc.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",

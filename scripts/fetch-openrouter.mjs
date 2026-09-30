@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 /**
- * 从 OpenRouter 公开 API 拉取所有大模型数据，转换格式后写入
- * src/data/generated-models.json
+ * 从 OpenRouter 公开 API 拉取所有大模型数据，与现有
+ * src/data/generated-models.json 合并后写回：
+ *   - 已有模型：保留 id（页面网址）和手工字段，更新价格等 OpenRouter 数据
+ *   - 新模型：新增；OpenRouter 已下架的：删除
+ *   - 非英文描述清空，由 generate-*-desc 脚本按模板重新生成（描述里含价格）
  *
- * 运行方式: node scripts/fetch-openrouter.mjs
+ * 运行方式: npm run sync:models（抓取 + 重新生成 11 种语言描述）
  */
 
-import { writeFileSync } from "fs";
+import { existsSync, readFileSync, writeFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
@@ -144,19 +147,32 @@ async function main() {
   const { data } = await res.json();
   console.log(`✓ 获取到 ${data.length} 个模型`);
 
+  const existing = existsSync(OUT_PATH) ? JSON.parse(readFileSync(OUT_PATH, "utf8")) : [];
+  const existingByOpenrouterId = new Map(existing.map((e) => [e.openrouterId, e]));
+
   const generated = [];
-  const seen = new Set(CURATED_IDS);
+  // Existing slugs are reserved first so a new model can never take over an
+  // established page URL.
+  const seen = new Set([...CURATED_IDS, ...existing.map((e) => e.id)]);
   let skipped = 0;
+  const stats = { updated: 0, added: 0, priceChanged: 0 };
 
   for (const m of data) {
     // 基本验证
     if (!m.id || !m.name) { skipped++; continue; }
+    // Routers (openrouter/auto etc.) report "-1": they have no price of their own.
+    if (Number(m.pricing?.prompt) < 0 || Number(m.pricing?.completion) < 0) { skipped++; continue; }
 
-    const slug = toSlug(m.id);
-
-    // 跳过已有精选模型（含 slug 碰撞）
-    if (seen.has(slug)) { skipped++; continue; }
-    seen.add(slug);
+    const previous = existingByOpenrouterId.get(m.id);
+    let slug;
+    if (previous) {
+      slug = previous.id;
+    } else {
+      slug = toSlug(m.id);
+      // 跳过已有精选模型（含 slug 碰撞）
+      if (seen.has(slug)) { skipped++; continue; }
+      seen.add(slug);
+    }
 
     const inputPrice  = perMillion(m.pricing?.prompt);
     const outputPrice = perMillion(m.pricing?.completion);
@@ -174,7 +190,7 @@ async function main() {
       ...(inputPrice === 0 && !isImage && !isVideo && { note: "Free via OpenRouter" }),
     };
 
-    generated.push({
+    const entry = {
       id:           slug,
       openrouterId: m.id,
       name:         m.name,
@@ -203,8 +219,23 @@ async function main() {
       bestFor:  [],
       isTrending: false,
       isLatest:   false,
-    });
+    };
+
+    if (previous) {
+      // Hand-maintained fields survive a refresh.
+      for (const key of ["tags", "ratingCoding", "ratingWriting", "ratingReasoning", "useCases", "bestFor", "isTrending", "isLatest"]) {
+        entry[key] = previous[key];
+      }
+      stats.updated++;
+      if (previous.pricing.input !== entry.pricing.input || previous.pricing.output !== entry.pricing.output) {
+        stats.priceChanged++;
+      }
+    } else {
+      stats.added++;
+    }
+    generated.push(entry);
   }
+  const removed = existing.filter((e) => !data.some((m) => m.id === e.openrouterId));
 
   // 按厂商 + 模型名排序
   generated.sort((a, b) => {
@@ -213,7 +244,7 @@ async function main() {
     return a.name.localeCompare(b.name);
   });
 
-  console.log(`✓ 生成 ${generated.length} 个新模型（跳过 ${skipped} 个）`);
+  console.log(`✓ 共 ${generated.length} 个模型：更新 ${stats.updated}（价格变动 ${stats.priceChanged}），新增 ${stats.added}，下架删除 ${removed.length}，跳过 ${skipped}`);
   writeFileSync(OUT_PATH, JSON.stringify(generated, null, 2), "utf8");
   console.log(`✓ 已写入 ${OUT_PATH}`);
 
