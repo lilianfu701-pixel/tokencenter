@@ -31,6 +31,8 @@ const PROVIDER_NAMES = {
   "microsoft":          "Microsoft",
   "amazon":             "Amazon",
   "moonshot":           "Moonshot",
+  "moonshotai":         "Moonshot",
+  "z-ai":               "Z.ai",
   "01-ai":              "01.AI",
   "nousresearch":       "Nous Research",
   "nvidia":             "NVIDIA",
@@ -60,16 +62,18 @@ const PROVIDER_NAMES = {
 };
 
 // ── 已手工维护的模型 ID（跳过，避免重复）──────────────────────────────────────
+// Must match the ids of curatedModels in src/data/models.ts.
 const CURATED_IDS = new Set([
-  "gpt-4o", "gpt-4.1", "gpt-5",
-  "claude-opus-4-7", "claude-sonnet-4-6", "claude-haiku-4-5",
-  "gemini-2.5-pro", "gemini-2.0-flash",
-  "deepseek-v3", "deepseek-r1",
-  "qwen-2.5-72b",
-  "moonshot-kimi-k1.5",
+  "gpt-6-astra", "gpt-6-1-sol", "gpt-6-luna",
+  "claude-fable-5-1", "claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-4-5",
+  "gemini-3-1-pro-preview", "gemini-3-8-flash",
+  "deepseek-v4-pro", "deepseek-v4-1-flash",
+  "qwen3-8-max-0902", "kimi-k3", "grok-4-7", "glm-5-3",
   "flux-1", "midjourney-v6", "sdxl",
   "sora", "kling", "veo-2", "runway-gen3",
 ]);
+
+const REDIRECTS_PATH = join(__dirname, "../src/data/redirects.json");
 
 // ── 工具函数 ────────────────────────────────────────────────────────────────
 
@@ -164,6 +168,7 @@ async function main() {
     if (Number(m.pricing?.prompt) < 0 || Number(m.pricing?.completion) < 0) { skipped++; continue; }
 
     const previous = existingByOpenrouterId.get(m.id);
+    if (previous && CURATED_IDS.has(previous.id)) { skipped++; continue; }
     let slug;
     if (previous) {
       slug = previous.id;
@@ -235,7 +240,19 @@ async function main() {
     }
     generated.push(entry);
   }
-  const removed = existing.filter((e) => !data.some((m) => m.id === e.openrouterId));
+  const removed = existing.filter(
+    (e) => !CURATED_IDS.has(e.id) && !data.some((m) => m.id === e.openrouterId),
+  );
+
+  // Delisted models keep their old URL alive as a 301 to their category page;
+  // a slug that comes back loses its redirect.
+  const redirects = existsSync(REDIRECTS_PATH)
+    ? JSON.parse(readFileSync(REDIRECTS_PATH, "utf8"))
+    : { models: {}, compare: {} };
+  for (const e of removed) redirects.models[e.id] = `/category/${e.category}`;
+  for (const m of generated) delete redirects.models[m.id];
+  for (const id of CURATED_IDS) delete redirects.models[id];
+  writeFileSync(REDIRECTS_PATH, JSON.stringify(redirects, null, 2) + "\n", "utf8");
 
   // 按厂商 + 模型名排序
   generated.sort((a, b) => {

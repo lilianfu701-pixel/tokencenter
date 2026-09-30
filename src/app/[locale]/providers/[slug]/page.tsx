@@ -75,6 +75,21 @@ const PROVIDER_INFO: Record<string, ProviderInfo> = {
     website: "https://kimi.moonshot.cn",
     apiUrl: "https://platform.moonshot.cn/docs",
   },
+  xai: {
+    description: {
+      en: "xAI develops the Grok series — frontier models for coding, agentic tasks and real-time knowledge work.",
+      zh: "xAI 开发 Grok 系列模型，面向编程、智能体任务和实时知识型工作的前沿模型。",
+    },
+    website: "https://x.ai",
+    apiUrl: "https://docs.x.ai",
+  },
+  zai: {
+    description: {
+      en: "Z.ai (Zhipu AI) develops the GLM series — large Chinese models for reasoning, coding and long-horizon agent tasks.",
+      zh: "Z.ai（智谱）开发 GLM 系列模型，是面向推理、编程和长周期智能体任务的中国大模型。",
+    },
+    website: "https://z.ai",
+  },
 };
 
 export function generateStaticParams() {
@@ -113,6 +128,8 @@ export default async function ProviderPage({ params }: { params: Params }) {
     DeepSeek: "bg-sky-500/15 text-sky-400",
     Alibaba: "bg-violet-500/15 text-violet-400",
     Moonshot: "bg-indigo-500/15 text-indigo-400",
+    xAI: "bg-zinc-500/15 text-zinc-300",
+    "Z.ai": "bg-teal-500/15 text-teal-400",
   };
 
   const desc = info ? (locale === "zh" ? info.description.zh : info.description.en) : null;
