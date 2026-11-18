@@ -90,6 +90,9 @@ function buildHreflang(path: string = "") {
   return languages;
 }
 
+// Unknown first segments (for example /privacy) 404 without a function render.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }

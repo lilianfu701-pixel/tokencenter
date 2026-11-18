@@ -4,10 +4,9 @@ import { models, COMPARE_PRESETS, PROVIDER_SLUGS } from "@/data/models";
 /**
  * Sitemaps, split by language.
  *
- * One file listing every page in every language (5,800+ URLs, each carrying 13
- * hreflang links) grew to ~9 MB and Search Console never managed to fetch it.
- * /sitemap.xml is now an index; each language has its own file at
- * /sitemaps/{locale}.xml, every entry still listing all its alternates.
+ * /sitemap.xml is an index. Each language has its own file at
+ * /sitemaps/{locale}.xml listing every page in that language, including every
+ * model page. Hreflang alternates live in the page HTML, not in these files.
  */
 export const BASE_URL = "https://www.tokencenter.cc";
 
@@ -53,20 +52,12 @@ export function localeFromFileName(file: string): Locale | null {
 const escapeXml = (s: string) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
 
-function alternateLinks(path: string): string {
-  const links = locales.map(
-    (l) => `<xhtml:link rel="alternate" hreflang="${l}" href="${escapeXml(localeUrl(l, path))}" />`,
-  );
-  links.push(`<xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(localeUrl("en", path))}" />`);
-  return links.join("\n");
-}
-
 export function localeSitemapXml(locale: Locale, pages = sitemapPages()): string {
   const urls = pages.map(
     (p) =>
-      `<url>\n<loc>${escapeXml(localeUrl(locale, p.path))}</loc>\n${alternateLinks(p.path)}\n<lastmod>${BUILT_AT}</lastmod>\n<changefreq>${p.changeFrequency}</changefreq>\n<priority>${p.priority}</priority>\n</url>`,
+      `<url>\n<loc>${escapeXml(localeUrl(locale, p.path))}</loc>\n<lastmod>${BUILT_AT}</lastmod>\n<changefreq>${p.changeFrequency}</changefreq>\n<priority>${p.priority}</priority>\n</url>`,
   );
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls.join("\n")}\n</urlset>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`;
 }
 
 export function sitemapIndexXml(): string {

@@ -18,6 +18,8 @@ const CATEGORY_META: Record<ModelCategory, { icon: string; nameKey: string; desc
 
 const VALID_CATEGORIES = Object.keys(CATEGORY_META) as ModelCategory[];
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
     VALID_CATEGORIES.map((id) => ({ locale, id }))

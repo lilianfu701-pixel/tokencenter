@@ -24,7 +24,31 @@ function toRedirects(section: "models" | "compare") {
 
 const nextConfig: NextConfig = {
   async redirects() {
-    return [...toRedirects("models"), ...toRedirects("compare")];
+    return [
+      // English pages are served at unprefixed URLs. /en is only the internal
+      // rewrite target below, so a direct visit bounces back to the canonical URL.
+      { source: "/en", destination: "/", statusCode: 301 as const },
+      { source: "/en/:path*", destination: "/:path*", statusCode: 301 as const },
+      ...toRedirects("models"),
+      ...toRedirects("compare"),
+    ];
+  },
+  async rewrites() {
+    // Platform rewrite (no Node proxy): unprefixed URLs are the English pages,
+    // which live under the [locale] segment. Checked after public files and
+    // static routes, before the [locale] dynamic segment.
+    return {
+      afterFiles: [
+        { source: "/", destination: "/en" },
+        { source: "/calculator", destination: "/en/calculator" },
+        { source: "/compare", destination: "/en/compare" },
+        { source: "/compare/:slug", destination: "/en/compare/:slug" },
+        { source: "/models/:id", destination: "/en/models/:id" },
+        { source: "/category/:id", destination: "/en/category/:id" },
+        { source: "/providers/:slug", destination: "/en/providers/:slug" },
+        { source: "/gt", destination: "/en/gt" },
+      ],
+    };
   },
 };
 

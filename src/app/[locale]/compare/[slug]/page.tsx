@@ -20,6 +20,8 @@ function formatContext(tokens: number) {
   return tokens.toString();
 }
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
     COMPARE_PRESETS.map((p) => ({ locale, slug: p.slug }))

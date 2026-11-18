@@ -8,13 +8,15 @@ import { ArrowLeft, CheckCircle2, XCircle, ExternalLink } from "lucide-react";
 
 type Params = Promise<{ locale: string; id: string }>;
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
     models.map((model) => ({ locale, id: model.id }))
   );
 }
 
-const BASE_URL = "https://tokencenter.cc";
+const BASE_URL = "https://www.tokencenter.cc";
 
 export async function generateMetadata({ params }: { params: Params }) {
   const { locale, id } = await params;
