@@ -92,6 +92,8 @@ const PROVIDER_INFO: Record<string, ProviderInfo> = {
   },
 };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
     Object.keys(PROVIDER_SLUGS).map((slug) => ({ locale, slug }))

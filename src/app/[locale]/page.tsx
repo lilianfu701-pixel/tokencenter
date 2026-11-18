@@ -111,25 +111,33 @@ export default async function HomePage({ params }: { params: Params }) {
     };
   });
 
-  // Schema.org JSON-LD
-  const apiModels = models.filter((m) => m.pricing.input > 0);
+  // Schema.org JSON-LD — only the models this page actually renders.
+  const shownModels: typeof featuredModels = [];
+  const shownIds = new Set<string>();
+  for (const m of [...featuredModels, ...CATEGORIES.flatMap((c) => c.catModels), ...latest]) {
+    if (shownIds.has(m.id)) continue;
+    shownIds.add(m.id);
+    shownModels.push(m);
+  }
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "AI Language Models Comparison",
     description: "Comprehensive list of AI models with pricing and capabilities",
-    numberOfItems: apiModels.length,
-    itemListElement: apiModels.map((m, i) => ({
+    numberOfItems: shownModels.length,
+    itemListElement: shownModels.map((m, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: m.name,
-      url: `https://tokencenter.cc/models/${m.id}`,
+      url: `https://www.tokencenter.cc/models/${m.id}`,
       item: {
         "@type": "SoftwareApplication",
         name: m.name,
         applicationCategory: "Artificial Intelligence",
         operatingSystem: "Cloud",
-        offers: { "@type": "Offer", price: m.pricing.input, priceCurrency: "USD" },
+        ...(m.pricing.input > 0 && {
+          offers: { "@type": "Offer", price: m.pricing.input, priceCurrency: "USD" },
+        }),
       },
     })),
   };

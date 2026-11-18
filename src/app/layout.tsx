@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tokencenter.cc"),
+  metadataBase: new URL("https://www.tokencenter.cc"),
   title: {
     template: "%s | TokenCenter",
     default: "TokenCenter — AI Model Pricing",
